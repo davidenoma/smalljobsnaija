@@ -15,12 +15,21 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input class="form-control {{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}"
+                                type="text" id="name" value="{{ old('username') ?: old('email') }}" 
+                                 placeholder="E-mail Address/Phone" name="name" required >
 
+                                
+                                @error('username')
+                                <span 
+                                class="invalid-feedback" role="alert">
+                                     <strong >{{ $message }}</strong>
+                                 </span>
+                                @enderror
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert" >
+                                     <strong>{{ $message }}</strong>
+                                 </span>
                                 @enderror
                             </div>
                         </div>
@@ -63,8 +72,14 @@
                                     </a>
                                 @endif
                             </div>
+                            <div class="other-links"    >
+                                    <span>Or login with</span><a href="/auth/facebook"><img src="assets/icons/icons8-facebook-64 (1).png" alt="" > </a> 
+                                    <a href="/auth/google"><img src="assets/icons/icons8-google-64.png" alt=""></a>
+                                </div>
                         </div>
+                      
                     </form>
+                   
                 </div>
             </div>
         </div>

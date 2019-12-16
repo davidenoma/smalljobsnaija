@@ -5,15 +5,15 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
 @endsection
 
 @section('styles')
-<style>
-        #navbar{
-            color: white;
-        }
-        .navbar-nav{
-            color: white;
-        }
-        
-    </style>
+    <style>
+            #navbar{
+                color: white;
+            }
+            .navbar-nav{
+                color: white;
+            }
+            
+        </style>
 @endsection
 
 @section('content')
@@ -32,17 +32,23 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                         <div class="collapse navbar-collapse" id="navbar">
                             <!--Main navigation list-->
                             <ul class="navbar-nav" style="color: white;">
-                                <li class="nav-item active has-child">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="#" style="color: white; font-size: 16px;">Home</a>
                                     
                                 </li>
-                                <li class="nav-item has-child" >
-                                    <a class="nav-link" href="faqs.html" style="color: white;">FAQS</a>
+                                <li class="nav-item " >
+                                    <a class="nav-link" href="forums.html" style="color: white;">Forums</a>
                                     
                                 
                                 <li class="nav-item" >
                                     <a class="nav-link" href="about.html" style="color: white;">About</a>
                                 </li>
+                                <li class="nav-item" >
+                                    <a class="nav-link" href="faqs.html" style="color: white;">FAQs</a>
+                                </li>
+                                <li class="nav-item" >
+                                        <a class="nav-link" href="/blog" style="color: white;">Blog</a>
+                                    </li>
                                 
                             </ul>
                             <!--Main navigation list-->
@@ -58,8 +64,9 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                 <!--============ Page Title =========================================================================-->
                 <div class="page-title">
                     <div class="container">
-                        <h1 class="opacity-60 center">
-                                     Find, Connect and Showcase Talents in your Area.
+                        <h1 class="opacity-60 center ">
+                            We all love searching for things, <br/><br/>
+                            but Our passion is helping you find top Talents in your area!
                         </h1>
                     </div>
                     <!--end container-->
@@ -74,7 +81,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                                     <div class="col-md-3 col-sm-3">
                                         <div class="form-group">
                                             <label for="what" class="col-form-label">Find Talent:</label>
-                                            <input name="keyword" type="text" class="form-control" id="what" placeholder="What talent do you need?">
+                                            <input name="keyword" type="text" class="form-control" id="what" placeholder="e.g. Plumber, Tailor, Writer, DJ, Programmer">
                                         </div>
                                         <!--end form-group-->
                                     </div>
@@ -82,7 +89,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                                     <div class="col-md-3 col-sm-3">
                                         <div class="form-group">
                                             <label for="input-location" class="col-form-label">Your Area:</label>
-                                            <input name="location" type="text" class="form-control" id="input-location" placeholder="Enter Location">
+                                            <input name="location" type="text" class="form-control" id="input-location" placeholder="e.g. Covenant Uni, Ikeja, Rumuola,">
                                             <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                                         </div>
                                         <!--end form-group-->
@@ -168,7 +175,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                        
                             <input class="form-control {{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}"
                              type="text" id="name" value="{{ old('username') ?: old('email') }}" 
-                              placeholder="E-mail Address/Phone" name="name" required autofocus>
+                              placeholder="E-mail Address/Phone" name="name" required >
                               @error('username')
                              <span 
                              class="invalid-feedback" role="alert">
@@ -206,7 +213,9 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
             <section class="block has-dark-background">
                 <div class="container">
                     <div class="block">
-                        <h2 style="text-align: center;">Small Jobs is easy to use and its free!</h2>
+                        <h2 style="text-align: center;">We care about helping people 
+                            find talents to help solve their problem and render service so
+                            Small Jobs is easy to use and its free!</h2>
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="feature-box">
@@ -226,7 +235,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                                         <img src="assets/icons/feature-upload.png" alt="">
                                         <span>2</span>
                                     </figure>
-                                    <h3>Update your talent profile </h3>
+                                    <h3>Update your talent profile or:</h3>
                                     
                                 </div>
                                 <!--end feature-box-->
@@ -250,7 +259,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                                         <img src="assets/icons/feature-wallet.png" alt="">
                                         <span>4</span>
                                     </figure>
-                                    <h3>Connect and get small jobs done</h3>
+                                    <h3>Connect with talents for no cv works, part-time or Student jobs.</h3>
                                     
                                 </div>
                                 <!--end feature-box-->

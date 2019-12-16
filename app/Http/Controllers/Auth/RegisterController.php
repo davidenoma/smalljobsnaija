@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'phone' => ['required','integer','digits:11']
         ]);
     }
 
@@ -68,6 +69,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'phone' => $data['phone']
         ]);
     }
     //Redirect to the facebook authentication page
@@ -91,7 +93,7 @@ class RegisterController extends Controller
         if(!$socialProvider){
             //create a new user and provider
            // dd($socialProvider);
-                    
+            
             $user = User::firstOrCreate(
                 ['email' => $socialUser->getEmail()],
                 ['username' => $socialUser->getName()]

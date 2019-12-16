@@ -13,8 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                        @if($welcomeName->username === 'null')
+                        Welcome to SmallJobs   {{$welcomeName->email }}
+                        @else
+                        Welcome to SmallJobs  {{$welcomeName ->username}}
+                        @endif
 
-                    Welcome to SmallJobs {{$welcomeName->username}}
+                     
                 </div>
             </div>
         </div>

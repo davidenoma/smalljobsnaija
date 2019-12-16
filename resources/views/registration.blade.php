@@ -48,10 +48,15 @@ SmallJobsNaija- Registration Form
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                        <input class="form-control" id="phone" type="tel" 
+                        <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                         name="phone" placeholder="Phone Number" 
                     value="{{old('phone')}}"
                         required>
+                        @error('phone')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
                         <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Password" required>
                         @error('password')
                         <span class="invalid-feedback" role="alert">

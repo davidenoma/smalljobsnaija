@@ -14,17 +14,38 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans|Libre+Franklin|Montserrat&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/shortcodes.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+    {{-- <link rel="stylesheet" type="text/css" href="assets/css/iofrm-style.css"> --}}
+    <link rel="stylesheet" type="text/css" href="assets/css/iofrm-theme8.css">
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="icon" href="assets/img/logo-crop.png" sizes="192x192" >
+    <style>
+            #navbar{
+                color: white;
+            }
+            .navbar-nav{
+                color: white;
+            }
+            
+        </style>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app"> 
+          {{-- bg-white shadow-sm --}}
+        <nav class="navbar navbar-expand-md navbar-light justify-content-between" style="
+        background-color: #008000;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                     <img src="assets/img/small-jobs-logo.svg" alt="" width="130" height="130">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -45,7 +66,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('registration') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
