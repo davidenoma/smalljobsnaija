@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user/home';
 
     /**
      * Create a new controller instance.
@@ -52,8 +52,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'username' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'talent' => ['required'],
+            'location' => ['required'],        
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'phone' => ['required','integer','digits:11']
+            'phone' => ['required','string','max:15']
         ]);
     }
 
@@ -69,7 +71,9 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'phone' => $data['phone']
+            'phone' => $data['phone'],
+            'location' => $data['location'],
+            'talent' => $data['talent']
         ]);
     }
     //Redirect to the facebook authentication page

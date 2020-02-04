@@ -2,3 +2,30 @@
 .navbar-nav .a{
     font-size: 20;
 }
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-fw {
+    width: 1.285714em;
+    text-align: center;
+}
+
+
+.fa-star:before {
+    content: "";
+}
+.text-warning {
+    color: #ffca28!important;
+}
+.has-error .checkbox,.has-error .checkbox-inline,.has-error .control-label,.has-error .help-block,.has-error .radio,.has-error .radio-inline,.has-error.checkbox label,.has-error.checkbox-inline label,.has-error.radio label,.has-error.radio-inline label
+{color:#a94442}
+.has-error .form-control{border-color:#a94442;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}
+.has-error .form-control:focus{border-color:#843534;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483}
+.has-error .input-group-addon
+{color:#a94442;background-color:#f2dede;border-color:#a94442}
+.has-error .form-control-feedback{color:#a94442}

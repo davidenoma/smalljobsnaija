@@ -17,12 +17,12 @@ SmallJobsNaija- Registration Form
     </style>
 
 @endsection
-@include('layouts.nav')
-@section('content')
 
+@section('content')
+@include('layouts.nav_new')
     <div class="form-body">
     
-        <div class="row">
+        {{-- <div class="row"> --}}
              <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
@@ -48,21 +48,48 @@ SmallJobsNaija- Registration Form
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+
                         <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                         name="phone" placeholder="Phone Number" 
                     value="{{old('phone')}}"
                         required>
+
                         @error('phone')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
+                        
+                        <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
+                        name="talent" placeholder="Enter your skill" 
+                    value="{{old('talent')}}"
+                        required>
+
+                        @error('talent')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+
+                        <input class="form-control @error('location') is-invalid @enderror" id="phone" type="text" 
+                        name="location" placeholder="Your location" 
+                    value="{{old('location')}}"
+                        required>
+
+                        @error('location')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+
                         <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Password" required>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
+
+
                         <input id="password-confirm" class="form-control" type="password" name="password" placeholder="Password" required>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Register</button>
@@ -87,6 +114,6 @@ SmallJobsNaija- Registration Form
                     </div>  
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
     </div>
     @endsection

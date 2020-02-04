@@ -3867,8 +3867,12 @@ tbody.collapse.show {
   border-bottom: 1px solid #dee2e6;
 }
 
-.nav-tabs .nav-item {
+.nav-tabs .nav-item .a {
   margin-bottom: -1px;
+ 
+}
+.nav-item .nav-link{
+  color: white;
 }
 
 .nav-tabs .nav-link {

@@ -16,4 +16,7 @@ class UserController extends Controller
         ]);
        // $user = DB::insert('insert into user (user_id, username,email) values (?, ?,?)', [1, 'Dayle','d@b.com']);
     }
+    public function profile(){
+        
+    }
 }

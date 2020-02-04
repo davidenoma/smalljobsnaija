@@ -11,7 +11,8 @@ class User extends Authenticatable
     use Notifiable;
 
     public $table = 'users';
-    protected $fillable = ['username','email','password','phone'];
+    protected $fillable = ['username','email',
+    'password','phone','location','talent','about','first_name','last_name'];
     public $timestamps = false;
     protected $hidden = [
         'password', 'remember_token',

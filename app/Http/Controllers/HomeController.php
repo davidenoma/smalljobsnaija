@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+      
     }
 
     /**
@@ -27,8 +27,11 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-    $welcomeName = Auth::user();
+        if(auth()->guest()){
+            return view('index');
+        }
+        $welcomeName = Auth::user();
         
-        return view('home',compact('welcomeName'));
+        return view('/user/home',compact('welcomeName'));
     }
 }

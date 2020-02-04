@@ -3190,7 +3190,13 @@ textarea.form-control {
 .block {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: #000C00;
+
+}
+.blockofindex{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+   background-color:#000c00;
+
 }
 .block section {
     margin-bottom: 6rem;

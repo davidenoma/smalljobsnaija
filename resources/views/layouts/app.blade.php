@@ -1,16 +1,13 @@
 <!DOCTYPE html>
+{{-- This utilizes the markup from craigs list template --}}
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
+   <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Scripts -->
+    {{-- <script src="{{ asset('/assets/js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,25 +15,19 @@
 
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    {{-- <link rel="stylesheet" id="css-main" href="/assets/css/codebase.min.css"> --}}
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="/assets/css/style.css">
+  
+    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.css" >
+    <link rel="stylesheet" href="/assets/css/user.css" type="text/css">
     
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">  
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/shortcodes.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
-    {{-- <link rel="stylesheet" type="text/css" href="assets/css/iofrm-style.css"> --}}
-    <link rel="stylesheet" type="text/css" href="assets/css/iofrm-theme8.css">
-    <link rel="stylesheet" href="assets/css/user.css">
-    <link rel="icon" href="assets/img/logo-crop.png" sizes="192x192" >
-    <style>
-            #navbar{
-                color: white;
-            }
-            .navbar-nav{
-                color: white;
-            }
-            
-        </style>
+    <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
+    
+    
+        <title>@yield('title')</title>
 </head>
 <body>
     <div id="app"> 
@@ -45,7 +36,7 @@
         background-color: #008000;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                     <img src="assets/img/small-jobs-logo.svg" alt="" width="130" height="130">
+                     <img src="/assets/img/small-jobs-logo.svg" alt="" width="130" height="130">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -62,11 +53,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a style="color:white;" class="nav-link" href="{{ route('login') }}" >{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('registration') }}">{{ __('Register') }}</a>
+                                    <a style="color:white;" class="nav-link" href="{{ route('registration') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -92,10 +83,17 @@
                 </div>
             </div>
         </nav>
-
+{{-- 
         <main class="py-4">
             @yield('content')
-        </main>
+        </main> --}}
     </div>
+    @yield('content')
+   
+    <script src="/assets/js/codebase.core.min.js"></script>
+    <script src="/assets/js/codebase.app.min.js"></script>
+    <script src="/assets/js/be_comp_rating.min.js"></script>
+    <script src="/assets/js/jquery-raty/jquery.raty.js"></script>
+    
 </body>
 </html>
