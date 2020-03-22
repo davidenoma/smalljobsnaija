@@ -71,11 +71,11 @@ class ProfileController extends Controller
    
     Mail::to('davidenoma@gmail.com')->send(new WelcomeMail);
     $data = array('name'=>'SmallJobsNaija');
-Mail::send('emails.welcomemail', $data, function ($message) {
-			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
-			$message->to('davidenom@gmail.com');
-			$message->subject('Contact form submitted on SmalljobsNaija');
-         });
+// Mail::send('emails.welcomemail', $data, function ($message) {
+// 			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
+// 			$message->to('davidenom@gmail.com');
+// 			$message->subject('Contact form submitted on SmalljobsNaija');
+//          });
          
     
        
