@@ -61,8 +61,8 @@ class ProfileController extends Controller
 
         $user -> update();
  
-    Mail::to('davidenoma@gmail.com')->send(new WelcomeMail);
-    Mail::to('davidenoma@gmail.com')->send(new ConnectTalent);
+    
+    
 
          
     

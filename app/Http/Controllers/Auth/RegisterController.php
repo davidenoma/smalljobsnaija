@@ -67,6 +67,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],
@@ -75,6 +77,8 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'talent' => $data['talent']
         ]);
+        Mail::to($data['email'])->send(new WelcomeMail);
+
     }
     //Redirect to the facebook authentication page
     public function redirectToProvider($provider){
