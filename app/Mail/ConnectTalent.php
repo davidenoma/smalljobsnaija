@@ -28,7 +28,6 @@ class ConnectTalent extends Mailable
      */
     public function build()
     {
-        return $this->
-        from('Sales')->markdown('emails.connecttalent');
+        return $this->markdown('emails.connecttalent');
     }
 }
