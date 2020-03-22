@@ -58,15 +58,15 @@ class ProfileController extends Controller
         $user -> last_name = $request -> last_name;
 
         $user -> update();
-        $mail = new MailController();
-        $mail -> index($welcomeName);
+        // $mail = new MailController();
+        // $mail -> index($welcomeName);
         
         // mail($to_email_address,$subject,$message,[$headers],[$parameters]);
         $to_email = 'davidenoma@gmail.com';
-$subject = 'Testing PHP Mail';
-$message = 'This mail is sent using the PHP mail function';
-$headers = 'From: Small Jobs Naija';
-mail($to_email,$subject,$message,$headers);
+    $subject = 'Testing PHP Mail';
+    $message = 'This mail is sent using the PHP mail function';
+    $headers = 'From: Small Jobs Naija';
+    mail($to_email,$subject,$message,$headers);
        
 
         return view('user/publicprofile',compact('welcomeName'));
