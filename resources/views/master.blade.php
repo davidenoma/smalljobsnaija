@@ -25,14 +25,14 @@
     
     
     <link href="https://fonts.googleapis.com/css?family=DM+Sans|Libre+Franklin|Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">     
-    <link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/shortcodes.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">     
+    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/iofrm-style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/iofrm-theme8.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-theme8.css">
     
 
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
