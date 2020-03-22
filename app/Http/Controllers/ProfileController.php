@@ -5,6 +5,7 @@ use App\Http\Controllers\MailController;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Support\Facades\Auth;
 
