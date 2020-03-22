@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\MailController;
-
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Mail;
@@ -70,12 +70,13 @@ class ProfileController extends Controller
     // mail($to_email,$subject,$message,$headers);
    
     Mail::to('davidenoma@gmail.com')->send(new WelcomeMail);
-
-Mail::send('emails.welcomemail',$data, function ($message) {
+    $data = array('name'=>'SmallJobsNaija');
+Mail::send('emails.welcomemail', $data, function ($message) {
 			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
 			$message->to('davidenom@gmail.com');
 			$message->subject('Contact form submitted on SmalljobsNaija');
- 		});
+         });
+         
     
        
 
