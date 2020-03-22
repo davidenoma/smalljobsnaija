@@ -62,11 +62,29 @@ class ProfileController extends Controller
         // $mail -> index($welcomeName);
         
         // mail($to_email_address,$subject,$message,[$headers],[$parameters]);
-        $to_email = 'davidenoma@gmail.com';
-    $subject = 'Testing PHP Mail';
-    $message = 'This mail is sent using the PHP mail function';
-    $headers = 'From: Small Jobs Naija';
-    mail($to_email,$subject,$message,$headers);
+    //     $to_email = 'davidenoma@gmail.com';
+    // $subject = 'Testing PHP Mail';
+    // $message = 'This mail is sent using the PHP mail function';
+    // $headers = 'From: Small Jobs Naija';
+    // mail($to_email,$subject,$message,$headers);
+    Mail::send('Html.view', $data, function ($message) {
+        $message->from('john@johndoe.com', 'John Doe');
+        $message->sender('john@johndoe.com', 'John Doe');
+        $message->to('john@johndoe.com', 'John Doe');
+        $message->cc('john@johndoe.com', 'John Doe');
+        $message->bcc('john@johndoe.com', 'John Doe');
+        $message->replyTo('john@johndoe.com', 'John Doe');
+        $message->subject('Subject');
+        $message->priority(3);
+        $message->attach('pathToFile');
+    });
+    Mail::to('davidenoma@gmail.com')->send(new MailableClass);
+Mail::send('emails.welcomemail',$data, function ($message) {
+			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
+			$message->to('davidenom@gmail.com');
+			$message->subject('Contact form submitted on SmalljobsNaija');
+ 		});
+    
        
 
         return view('user/publicprofile',compact('welcomeName'));
