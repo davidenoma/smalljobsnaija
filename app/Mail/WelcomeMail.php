@@ -28,7 +28,6 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->from('admin@smalljobsnaija.com')
-                    ->view('emails.welcomemail');
+        return $this->markdown('emails.welcomemail');
     }
 }
