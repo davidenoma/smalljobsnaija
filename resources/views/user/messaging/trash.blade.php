@@ -127,7 +127,7 @@
                                         <div class="block-content ">
                                             <ul class="nav-users">
                                                 <li>
-                                                    <a href="be_pages_generic_profile.html">
+                                                    <a href="/user/home">
                                                         <img class="img-avatar" src="assets/media/avatars/avatar8.jpg" alt="">
                                                         <i class="fa fa-circle text-success"></i> Daniella Jumbo
                                                         <div class="font-w400 font-size-xs text-muted"><i class="fa fa-briefcase"></i> Interior painter</div>
@@ -137,7 +137,7 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="be_pages_generic_profile.html">
+                                                    <a href="/user/home">
                                                         <img class="img-avatar" src="assets/media/avatars/avatar11.jpg" alt="">
                                                         <i class="fa fa-circle text-success"></i> Oluchi Adenike
                                                         
