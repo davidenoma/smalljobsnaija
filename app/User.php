@@ -20,5 +20,9 @@ class User extends Authenticatable
     function socialProviders(){
         return $this -> hasMany(SocialProvider::class);
     }
+    
+    function messages(){
+        return $this -> hasMany(Message::class);
+    }
    
 }

@@ -10,15 +10,16 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class WelcomeMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $welcomeAddress;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($welcomeAddress)
     {
         //
+        $this -> welcomeAddress = $welcomeAddress;
     }
 
     /**

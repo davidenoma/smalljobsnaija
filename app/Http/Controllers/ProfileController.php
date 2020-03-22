@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\MailController;
-use App\Mail\WelcomeMail;
+
 use App\Mail\ConnectTalent;
 use Illuminate\Http\Request;
 use App\User;
-use Illuminate\Support\Facades\Mail;
+
 
 use Illuminate\Support\Facades\Auth;
 

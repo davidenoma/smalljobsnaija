@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use  Socialite;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
 use App\SocialProvider;
 class RegisterController extends Controller
 {
@@ -58,7 +60,7 @@ class RegisterController extends Controller
             'phone' => ['required','string','max:15']
         ]);
     }
-
+ 
     /**
      * Create a new user instance after a valid registration.
      *
@@ -68,8 +70,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-
-        return User::create([
+        
+        
+        $user =  User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
@@ -77,9 +80,13 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'talent' => $data['talent']
         ]);
-        Mail::to($data['email'])->send(new WelcomeMail);
+
+        Mail::to($data['email'])->send(new WelcomeMail($data['username']));
+        
+        return $user;
 
     }
+
     //Redirect to the facebook authentication page
     public function redirectToProvider($provider){
         return Socialite::driver($provider)->redirect();

@@ -1,5 +1,5 @@
 @component('mail::message')
-Welcome to SmallJobsNaija, {{ Auth::user()->username   }} 
+Welcome to SmallJobsNaija, {{ $welcomeAddress   }} 
 
 We care about connecting and finding talents near by. <br>
 Please stay tuned for new features.
