@@ -26,9 +26,11 @@
                             </a>
                         </nav>
                     </div>
+                   
                     <!--end col-md-3-->
                     <div class="col-md-9">
-                        <form class="form" method="POST" action="/updateProfile">
+                        <form class="form" method="POST" action="/user/updateProfile">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-8">
                                     <h2>Profile</h2>
@@ -63,7 +65,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group {{$errors->has('firstname')? 'has-error':''}}">
                                                     <label for="name" class="col-form-label ">First name</label>
-                                                    <input name="name" type="text" class="form-control has-error" id="name" placeholder="" value="{{$welcomeName->first_name}}" >
+                                                    <input name="firstname" type="text" class="form-control has-error" id="firstname" placeholder="" value="{{$welcomeName->first_name}}" >
                                                     <span class="text-danger">{{$errors->has('firstname')?$errors -> first('firstname'):''}}</span>
                                                 </div>
                                                 <!--end form-group-->
@@ -75,7 +77,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group {{$errors->has('lastname')? 'has-error':''}}">
                                                     <label for="name" class="col-form-label ">Last Name</label>
-                                                <input name="name" type="text" class="form-control has-error" id="name" placeholder="" value="{{$welcomeName->last_name}}" >
+                                                <input name="lastname" type="text" class="form-control has-error" id="lastname" placeholder="" value="{{$welcomeName->last_name}}" >
                                                     <span class="text-danger">{{$errors->has('lastname')?$errors -> first('lastname'):''}}</span>
                                                 </div>
                                                 <!--end form-group-->
@@ -100,7 +102,7 @@
                                         <!--end form-group-->
                                         <div class="form-group">
                                             <label for="phone" class="col-form-label required">Phone</label>
-                                            <input name="phone" type="text" class="form-control" id="phone" placeholder="Your Phone Number" value="{{"0".$welcomeName->phone    }}" required>
+                                            <input name="phone" type="text" class="form-control" id="phone" placeholder="Your Phone Number" value="{{   $welcomeName->phone    }}" required>
                                         </div>
                                         <!--end form-group-->
                                         <div class="form-group">

@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'from' => ['address' => 'admin@smalljobsnaija.com', 'name' => 'Admin'],
+    'reply_to' => ['address' => 'admin@smalljobsnaija.com', 'name' => 'Admin'],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -16,7 +19,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------

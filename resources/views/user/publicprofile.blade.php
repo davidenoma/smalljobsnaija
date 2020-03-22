@@ -37,7 +37,13 @@
                                     <div class="section-title">
                                        
                                         <h2>{{$welcomeName->first_name . " " .$welcomeName->last_name}}</h2>
+                                        <h4 class="">
+                                            <a href="#">{{$welcomeName->talent}}</a>
+                                        </h4>
                                         <h4 class="location">
+                                            <a href="#">{{$welcomeName->location}}</a>
+                                        </h4>
+                                        <h4 class="email">
                                             <a href="#">{{$welcomeName->email}}</a>
                                         </h4>
                                         <figure>

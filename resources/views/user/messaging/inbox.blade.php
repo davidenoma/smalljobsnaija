@@ -203,27 +203,14 @@
                                                         <span class="css-control-indicator"></span>
                                                     </label>
                                                 </td>
-                                                <td class="d-none d-sm-table-cell font-w600" style="width: 140px;">Albert Ray</td>
+                                                <td class="d-none d-sm-table-cell font-w600" style="width: 140px;">Small Jobs Naija</td>
                                                 <td>
                                                     <a class="font-w600" data-toggle="modal" data-target="#modal-message" href="#">Welcome to our service</a>
                                                     <div class="text-muted mt-5">It's a pleasure to have you on our service..</div>
                                                 </td>
                                                 <td class="d-none d-xl-table-cell font-w600 font-size-sm text-muted" style="width: 120px;">WED</td>
                                             </tr>
-                                            <tr>
-                                                <td class="text-center">
-                                                    <label class="css-control css-control-primary css-checkbox">
-                                                        <input type="checkbox" class="css-control-input">
-                                                        <span class="css-control-indicator"></span>
-                                                    </label>
-                                                </td>
-                                                <td class="d-none d-sm-table-cell font-w600">Brian Cruz</td>
-                                                <td>
-                                                    <a class="font-w600" data-toggle="modal" data-target="#modal-message" href="#">Your subscription was updated</a>
-                                                    <div class="text-muted mt-5">We are glad you decided to go with a vip..</div>
-                                                </td>
-                                                <td class="d-none d-xl-table-cell font-w600 font-size-sm text-muted">WED</td>
-                                            </tr>
+                                            
                                            
                                         </tbody>
                                     </table>
