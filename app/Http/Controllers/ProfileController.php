@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\MailController;
 use App\Mail\WelcomeMail;
+use App\Mail\ConnectTalent;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Mail;
@@ -59,23 +60,10 @@ class ProfileController extends Controller
         $user -> last_name = $request -> last_name;
 
         $user -> update();
-        // $mail = new MailController();
-        // $mail -> index($welcomeName);
-        
-        // mail($to_email_address,$subject,$message,[$headers],[$parameters]);
-    //     $to_email = 'davidenoma@gmail.com';
-    // $subject = 'Testing PHP Mail';
-    // $message = 'This mail is sent using the PHP mail function';
-    // $headers = 'From: Small Jobs Naija';
-    // mail($to_email,$subject,$message,$headers);
-   
+ 
     Mail::to('davidenoma@gmail.com')->send(new WelcomeMail);
-    $data = array('name'=>'SmallJobsNaija');
-// Mail::send('emails.welcomemail', $data, function ($message) {
-// 			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
-// 			$message->to('davidenom@gmail.com');
-// 			$message->subject('Contact form submitted on SmalljobsNaija');
-//          });
+    Mail::to('davidenoma@gmail.com')->send(new ConnectTalent);
+
          
     
        
