@@ -69,7 +69,8 @@ class ProfileController extends Controller
     // $headers = 'From: Small Jobs Naija';
     // mail($to_email,$subject,$message,$headers);
    
-    Mail::to('davidenoma@gmail.com')->send(new MailableClass);
+    Mail::to('davidenoma@gmail.com')->send(new WelcomeMail);
+
 Mail::send('emails.welcomemail',$data, function ($message) {
 			$message->from('admin@smalljobsnaija.com','Small Jobs Naija');
 			$message->to('davidenom@gmail.com');
