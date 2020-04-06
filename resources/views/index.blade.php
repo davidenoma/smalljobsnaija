@@ -51,7 +51,7 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
 
                             <input class="form-control" id="password" @error('password') is-invalid @enderror  type="password" name="password" placeholder="Password" required>
                             <div class="form-button">
-                                <button id="submit" type="submit" class="ibtn">Login</button> <a href="forget.html">Forget password?</a>
+                            <button id="submit" type="submit" class="ibtn">Login</button> <a href="/password/reset">Forget password?</a>
                             </div>
                         </form>
                         <div class="other-links">
