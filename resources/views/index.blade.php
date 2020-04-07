@@ -54,10 +54,10 @@ SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area
                             <button id="submit" type="submit" class="ibtn">Login</button> <a href="/password/reset">Forget password?</a>
                             </div>
                         </form>
-                        <div class="other-links">
+                        {{-- <div class="other-links">
                             <span>Or login with</span><a href="/auth/facebook"><img src="assets/icons/icons8-facebook-64 (1).png" alt="" > </a> 
                             <a href="/auth/google"><img src="assets/icons/icons8-google-64.png" alt=""></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
