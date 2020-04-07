@@ -36,19 +36,19 @@
                                 <div class="author-description">
                                     <div class="section-title">
                                        
-                                        <h2>{{$welcomeName->first_name . " " .$welcomeName->last_name}}</h2>
-                                        <h4 class="">
+                                        <h2>{{$welcomeName->first_name . " " .$welcomeName->last_name . " (".$welcomeName->username.")"}}</h2>
+                                        <h3 class="">
                                             <a href="#">{{$welcomeName->talent}}</a>
-                                        </h4>
-                                        <h4 class="location">
+                                        </h3>
+                                        <h3 class="location">
                                             <a href="#">{{$welcomeName->location}}</a>
-                                        </h4>
-                                        <h4 class="email">
+                                        </h3>
+                                        <h3 class="email">
                                             <a href="#">{{$welcomeName->email}}</a>
-                                        </h4>
+                                        </h3>
                                         <figure>
                                             <div class="float-left">
-                                                Rate me 
+                                                Total Rating
                                                 <div class="js-rating" data-score="3" style="cursor: pointer;">
                                                     <i data-alt="1" class="fa fa-fw fa-star text-warning" title="Just Bad!"></i>
                                                     <i data-alt="2" class="fa fa-fw fa-star text-warning" title="Almost There!"></i>
@@ -60,13 +60,15 @@
                                             </div>
                                             <div class="text-align-right social">
                                                 Hire me!
+                                                
                                                
-                                                <a href="#">
+                                                <a href="/user/chat">
                                                     <br>
                                                     <i class="fa fa-inbox"></i>
                                                 </a>
                                               
                                             </div>
+                                        
                                         </figure>
                                     </div>
                                     <div class="additional-info">
@@ -96,5 +98,6 @@
         </section>
         
     </section>
+    
     
 @endsection

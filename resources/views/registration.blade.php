@@ -33,13 +33,13 @@ SmallJobsNaija- Registration Form
                             @csrf
                             <input type="text" name="username" placeholder="User Name" id="username" 
                             type="text" class="form-control @error('username') is-invalid @enderror" 
-                             value="{{ old('username') }}" required autocomplete="username" autofocus>
+                             value="{{ old('username') }}" required autocomplete="username" autofocus >
                             @error('username')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                            <input class="form-control" id = "email"type="email" 
+                            <input class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
                             name="email" placeholder="E-mail Address" 
                         value="{{old('email')}}"
                             required>
@@ -82,7 +82,7 @@ SmallJobsNaija- Registration Form
                         </span>
                         @enderror
 
-                        <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password_confirmation" autocomplete="new-password" placeholder="Password" required>
+                        <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -90,13 +90,13 @@ SmallJobsNaija- Registration Form
                         @enderror
 
 
-                        <input id="password-confirm" class="form-control" type="password" name="password" placeholder="Password" required>
+                        <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Password" required>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Register</button>
                             </div>
                         </form>
                         
-                        <div class="other-links">
+                        {{-- <div class="other-links">
                         <span>Or register with</span>
                             <ul> 
                                       <a href="/auth/facebook">  <img src="assets/icons/icons8-facebook-64 (1).png" alt="" ></a>
@@ -110,7 +110,7 @@ SmallJobsNaija- Registration Form
                             
                           
 
-                        </div>
+                        </div> --}}
                     </div>  
                 </div>
             </div>

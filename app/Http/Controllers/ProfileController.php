@@ -51,13 +51,14 @@ class ProfileController extends Controller
         $user = User::find($welcomeName->id);
         $user -> email = $request->email;
         $user -> username = $request->name;
+        
         // $user -> password = $request->password;
         $user -> phone = $request->phone;
         $user -> location = $request->location ;
         $user -> talent = $request -> talent;
         $user -> about = $request -> about;
-        $user -> first_name = $request -> first_name;
-        $user -> last_name = $request -> last_name;
+        $user -> first_name = $request -> firstname;
+        $user -> last_name = $request -> lastname;
 
         $user -> update();
  
