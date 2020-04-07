@@ -18,13 +18,14 @@
                                 <i class="fa fa-user"></i>Public Profile
                             </a>
                           
-                            <a class="nav-link icon" href="/password/reset">
+                            <a class="nav-link icon" href="/password/reset" onclick="function hi(){alert('Pleasae logout and reset password from the homepage')};hi()">
                                 <i class="fa fa-recycle"></i>Change Password
                             </a>
                             <a class="nav-link active icon" href="/user/home">
                                 <i class="fa fa-home"></i>Back to Dashboard
                             </a>
                         </nav>
+                  
                     </div>
                    
                     <!--end col-md-3-->
