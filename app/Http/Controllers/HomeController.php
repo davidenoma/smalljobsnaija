@@ -34,4 +34,8 @@ class HomeController extends Controller
         
         return view('/user/home',compact('welcomeName'));
     }
+    public function search(){
+        return view ('/registration');
+    }
+    
 }

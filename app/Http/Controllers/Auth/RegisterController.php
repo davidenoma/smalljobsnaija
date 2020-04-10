@@ -82,8 +82,14 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'talent' => $data['talent']
         ]);
+        try{
+            Mail::to($data['email'])->send(new WelcomeMail($data['username']));
+        }
+        catch(Exception $e){
+            auth()->login($user);
+        }
 
-        Mail::to($data['email'])->send(new WelcomeMail($data['username']));
+        
         
         return $user;
 

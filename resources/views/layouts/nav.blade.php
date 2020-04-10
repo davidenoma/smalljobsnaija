@@ -150,7 +150,8 @@
     <!-- Header Search -->
     <div id="page-header-search" class="overlay-header">
         <div class="content-header content-header-fullrow">
-            <form action="be_pages_generic_search.html" method="post">
+            <form action="/search" method="post">
+                @csrf
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <!-- Close Search Section -->
@@ -160,7 +161,7 @@
                         </button>
                         <!-- END Close Search Section -->
                     </div>
-                    <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                    <input type="text" class="form-control" placeholder="Enter talent that you want" id="page-header-search-input" name="page-header-search-input">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-secondary">
                             <i class="fa fa-search"></i>

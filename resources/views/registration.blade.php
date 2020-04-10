@@ -27,7 +27,7 @@ SmallJobsNaija- Registration Form
                 <div class="form-content">
                     <div class="form-items">
                             <div class="page-links">    
-                            <a href="{{route('register')}}" class="active">Registration Form</a>
+                            <a href="{{route('registration')}}" class="active">Registration Form</a>
                         </div>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf

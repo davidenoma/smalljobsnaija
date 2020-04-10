@@ -1,7 +1,10 @@
-@extends('master')
-
+@extends('layouts.chatmaster')
 @section('title')
 SmallJobsNaija- Community based forums
 @endsection
-@include('layouts.nav_new')
 
+@section('content')
+<div id="page-container" class="main-content-boxed" >
+    @include('layouts.nav')
+</div>
+@endsection

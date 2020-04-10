@@ -11,14 +11,14 @@
                 <div class="row">
                     <div class="col-md-3">
                         <nav class="nav flex-column side-nav">
-                            <a class="nav-link active icon" href="/user/profile">
-                                <i class="fa fa-user"></i>My Profile
-                            </a>
                             <a class="nav-link icon" href="{{url('/user/publicprofile')}}">
                                 <i class="fa fa-user"></i>Public Profile
                             </a>
+                            <a class="nav-link active icon" href="/user/profile">
+                                <i class="fa fa-user"></i>Edit Profile
+                            </a>                        
                           
-                            <a class="nav-link icon" href="/password/reset" onclick="function hi(){alert('Pleasae logout and reset password from the homepage')};hi()">
+                            <a class="nav-link icon" href="/password/reset" onclick="function hi(){alert('Pleasae logout and reset your password from the homepage!')};hi()">
                                 <i class="fa fa-recycle"></i>Change Password
                             </a>
                             <a class="nav-link active icon" href="/user/home">

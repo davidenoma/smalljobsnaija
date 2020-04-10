@@ -29,7 +29,7 @@
             
             <div class="row">
                 <div class="col-6 col-xl-3">
-                    <a class="block block-rounded" href="javascript:void(0)">
+                    <a class="block block-rounded" href="/user/feeds">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center" style="color: #008000;">
                                 <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Feeds</div>
@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="col-6 col-xl-3">
-                    <a class="block block-rounded" href="/user/profile">
+                    <a class="block block-rounded" href="/user/publicprofile">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center" style="color: #008000;">
                                 <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Profile</div>

@@ -141,8 +141,8 @@ Headers:		'Varela Round', sans-serif;
     top: 22.5rem;
 }
 .author .author-image {
-    width: 6rem;
-    height: 6rem;
+    width: 10rem;
+    height: 10rem;
     float: left;
     border-radius: 50%;
     overflow: hidden;
@@ -153,11 +153,11 @@ Headers:		'Varela Round', sans-serif;
     margin-left: 8rem;
 }
 .author.big {
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
 }
 .author.big .author-image {
-    width: 26rem;
-    height: 26rem;
+    width: 20rem;
+    height: 20rem;
     box-shadow: 0 .1rem 2rem rgba(0,0,0,.15);
 }
 .author.big .author-description {
@@ -3563,7 +3563,7 @@ textarea.form-control {
     }
     .author {}
     .author.big {
-        padding-top: 28rem;
+        padding-top: 19rem;
         position: relative;
     }
     .author.big .author-image {
