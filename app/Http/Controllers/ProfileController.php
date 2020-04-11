@@ -72,6 +72,9 @@ class ProfileController extends Controller
         return view('user/publicprofile',compact('welcomeName'));
 
 }
+    public function publicSearchProfile(){
+        return view('searchResult');
+    }
 
 }
 

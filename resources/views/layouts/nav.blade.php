@@ -27,8 +27,9 @@
 
         <!-- Right Section -->
         <div class="content-header-section">
-        <ul class="nav-bar ml-auto"> 
-            {{-- Input attached by me --}}
+
+        <ul class="ml-auto"> 
+           
             @guest
            <li class="nav-item">
                 <a style="color:white;" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -60,7 +61,7 @@
                         <span><i class="si si-envelope-open mr-5"></i> Inbox</span>
                         <span class="badge badge-primary">1</span>
                     </a>
-                <a class="dropdown-item" href="{{url('/forums')}}">
+                <a class="dropdown-item" href="{{url('/forumtopics')}}">
                         <i class="si si-note mr-5"></i> Forums
                     </a>
                     <div class="dropdown-divider"></div>

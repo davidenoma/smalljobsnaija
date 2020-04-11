@@ -65,17 +65,25 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-
+                                @if (Route::has('register'))
+                                <a style="color:#008000" class="btn btn-link" href="{{ route('registration') }}">
+                                    Register
+                                </a>
+                                    
+                                @endif
                                 @if (Route::has('password.request'))
                                     <a style="color:#008000" class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                            
                             </div>
-                            <div class="other-links"    >
+
+                            {{-- <div class="other-links"    >
                                     <span>Or login with</span><a href="/auth/facebook"><img src="assets/icons/icons8-facebook-64 (1).png" alt="" > </a> 
                                     <a href="/auth/google"><img src="assets/icons/icons8-google-64.png" alt=""></a>
-                                </div>
+                                </div> --}}
                         </div>
                       
                     </form>

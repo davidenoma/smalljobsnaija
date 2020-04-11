@@ -56,6 +56,7 @@
 </head>
 <body>
         @yield('content')
+
         <footer style="position: fixed" class="footer"> <a target="_new"href="https://nomatechnology.com"> Noma Technology  &#169; 2016 </a> </footer>
 </body>
 
@@ -65,7 +66,7 @@
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>-->
 <script src="assets/js/selectize.min.js"></script>
--->
+
 <script src="assets/js/codebase.core.min.js"></script>
 
 <!--

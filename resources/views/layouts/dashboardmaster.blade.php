@@ -32,7 +32,7 @@
     web design and development,    backend developer,    web programming, do part time job web sites,  photography jobs website,
     freelance writing website, article writing service, 
     "> 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('/assets/js/app.js') }}" defer></script> --}}

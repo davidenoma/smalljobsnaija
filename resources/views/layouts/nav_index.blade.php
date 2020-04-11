@@ -17,7 +17,7 @@
                             
                         </li>
                         <li class="nav-item active" >
-                            <a class="nav-link" href="{{ url('/forums') }}" style="color: white; font-size: 16px;">Forums</a>
+                            <a class="nav-link" href="{{ url('/forumtopics') }}" style="color: white; font-size: 16px;">Forums</a>
                             
                         
                         <li class="nav-item active" >
@@ -53,7 +53,7 @@
         </div>
         <!--============ End Page Title =====================================================================-->
         <!--============ Hero Form ======================\'/'/'====================================================-->
-        <form class="hero-form form" target="/registration">
+        <form class="hero-form form" action="/search" method="GET">
                 <div class="container">
                     <!--Main Form-->
                     <div class="main-search-form">
@@ -93,7 +93,7 @@
                             </div>
                             <!--end col-md-3-->
                             <div class="col-md-3 col-sm-3">
-                                <button type="submit" class="btn btn-primary width-100" onclick="onClickAlert()">Search</button>
+                                <button type="submit" class="btn btn-primary width-100" >Search</button>
                             </div>
                             <script>
                                 function onClickAlert(){

@@ -18,7 +18,7 @@
                                 
                             </li>
                             <li class="nav-item active" >
-                                <a class="nav-link" href="{{ url('/forums') }}" style="color: white; font-size: 16px;">Forums</a>
+                                <a class="nav-link" href="{{ url('/forumtopics') }}" style="color: white; font-size: 16px;">Forums</a>
                                 
                             
                             <li class="nav-item active" >

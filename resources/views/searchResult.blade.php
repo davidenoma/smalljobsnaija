@@ -37,7 +37,20 @@ SmallJobsNaija- Community based forums
                                 </select>
                             </div> --}}
                             <!--end form-group-->
-                            <button type="submit" class="btn btn-primary width-100">Search</button>
+                            <button type="submit" class="btn btn-primary width-100" onclick=" @guest
+                                onClickAlert()
+                            @endguest ">Search</button>
+                            <script>
+                                function onClickAlert(){
+                                alert('Please register a profile and login to continue');
+                                    location.href='/registration';
+                               
+                                
+
+                                    
+                                    }
+                                
+                                </script>
 
                             <!--Alternative Form-->
                             {{-- <div class="alternative-search-form">

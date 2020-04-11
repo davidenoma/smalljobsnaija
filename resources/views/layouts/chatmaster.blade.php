@@ -30,7 +30,7 @@
     web design and development,    backend developer,    web programming, do part time job web sites,  photography jobs website,
     freelance writing website, article writing service, 
     "> 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('/assets/js/app.js') }}" defer></script> --}}
@@ -40,8 +40,9 @@
        
     <link rel="stylesheet" type="text/css" id="css-main" href="/assets/css/codebase.min.css">
     
-    {{-- <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">   --}}
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">  
     <link rel="stylesheet" type="text/css" id="css-theme" href="/assets/css/earth.css">
+    {{-- <link rel="stylesheet" href="/assets/css/forum-style.css"> --}}
     
     <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
     <title> @yield('title') </title>
@@ -55,22 +56,12 @@
   
         
     
-        {{-- <main class="py-4"> --}}
+
           
             @yield('content')
           
      
-    {{-- </main>  --}}
 
-    
- 
-    {{-- <script src="/assets/js/codebase/jquery.min.js"></script>
-    <script src="/assets/js/codebase/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/codebase/simplebar.min.js"></script>
-    <script src="/assets/js/codebase/jquery-scrollLock.min.js"></script>
-    <script src="/assets/js/codebase/jquery.appear.min.js"></script>
-    <script src="/assets/js/codebase/jquery.countTo.min.js"></script>
-    <script src="/assets/js/codebase/js.cookie.min.js"></script> --}}
     
 
     <script src="/assets/js/codebase.core.min.js"></script>
