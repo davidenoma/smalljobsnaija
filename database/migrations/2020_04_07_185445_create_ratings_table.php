@@ -15,6 +15,10 @@ class CreateRatingsTable extends Migration
     {
         Schema::create('ratings', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table -> bigInteger('giver_id',$autoIncrement = false,$unsigned=true);
+            $table -> bigInteger('receiver_id',$autoIncrement = false,$unsigned=true);
+            $table -> foreign('giver_id')->references('id')->on('users');
+            $table -> foreign('receiver_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

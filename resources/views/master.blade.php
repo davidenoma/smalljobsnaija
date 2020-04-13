@@ -37,6 +37,7 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Sans|Libre+Franklin|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">     
     <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.css">
     <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -48,8 +49,8 @@
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
     
-    <link rel="stylesheet" href="assets/css/user.css">
-    <link rel="icon" src="assets/img/logo-crop.png" sizes="192x192" >
+    <link rel="stylesheet" href="/assets/css/user.css">
+    <link rel="icon" src="/assets/img/logo-crop.png" sizes="192x192" >
   <title>  @yield('title') </title>
     @yield('styles')
     

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForumPostsTable extends Migration
+class SearchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateForumPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_posts', function (Blueprint $table) {
+        Schema::create('searches', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table -> string('post');
-            $table -> integer('likes');
-            $table -> integer('dislikes');
-            $table -> integer('forum_topic_id');
-            $table -> string('username');
+            $table -> string('location');
+            $table -> string('talent');
+            $table -> bigInteger('user_id',$autoIncrement = false,$unsigned = true);
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateForumPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forum_posts');
+        Schema::dropIfExists('searches');
     }
 }

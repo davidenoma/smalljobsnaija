@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForumsTable extends Migration
+class AddForeignKeyToforumTopics extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateForumsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forums', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table -> string('topic');
-            $table -> string('username');
-            $table->timestamps();
+        Schema::table('Forum_topics', function (Blueprint $table) {
+            //
+            
         });
     }
 
@@ -28,6 +26,8 @@ class CreateForumsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forums');
+        Schema::table('Forum_topics', function (Blueprint $table) {
+            //
+        });
     }
 }

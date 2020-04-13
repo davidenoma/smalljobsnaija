@@ -53,7 +53,8 @@
         </div>
         <!--============ End Page Title =====================================================================-->
         <!--============ Hero Form ======================\'/'/'====================================================-->
-        <form class="hero-form form" action="/search" method="GET">
+        <form class="hero-form form" method="POST" action="/search" >
+            @csrf
                 <div class="container">
                     <!--Main Form-->
                     <div class="main-search-form">
@@ -61,7 +62,7 @@
                             <div class="col-md-3 col-sm-3">
                                 <div class="form-group">
                                     <label for="what" class="col-form-label">Find Talent:</label>
-                                    <input name="keyword" type="text" class="form-control" id="what" placeholder="e.g. Plumber, Tailor, Writer, DJ, Programmer">
+                                    <input name="talent" type="text" class="form-control" id="what" placeholder="e.g. Plumber, Tailor, Writer, DJ, Programmer">
                                 </div>
                                 <!--end form-group-->
                             </div>

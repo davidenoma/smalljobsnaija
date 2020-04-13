@@ -16,9 +16,12 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table -> string('content');
-            $table -> string('from');
-            $table -> string('to');
+     
+            $table-> bigInteger('source_id',$autoIncrement = false,$unsigned = true);
+            $table-> bigInteger('loc_id',$autoIncrement = false,$unsigned = true);
             $table->timestamps();
+            $table -> foreign('source_id')->references('id')->on('users');
+            $table -> foreign('loc_id')->references('id')->on('users');
         });
     }
 

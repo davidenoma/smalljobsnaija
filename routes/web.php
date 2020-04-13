@@ -70,7 +70,7 @@ Route::get('/user/profile', 'ProfileController@index');
 
 Route::get('/user/publicprofile', 'ProfileController@publicProfile');
 
-Route::get('/{username}', 'ProfileController@publicSearchProfile');
+Route::get('/talent/{username}', 'SearchController@publicSearchProfile');
 
 //Controllers for Search
 Route::get('users/{id}', function ($id) {
@@ -81,7 +81,8 @@ Route::get('/search', function(){
     return view('searchResult');
 
 });
-Route::post('/search', 'SearchController@index');
+Route::post('/search', 'SearchController@search');
+
 //Controllers for Mail 
 Route::get('/welcomeMail', 'MailController@index');
 // });

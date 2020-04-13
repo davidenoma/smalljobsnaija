@@ -2,23 +2,7 @@
 .navbar-nav .a{
     font-size: 20;
 }
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.fa-fw {
-    width: 1.285714em;
-    text-align: center;
-}
 
-
-.fa-star:before {
-    content: "";
-}
 .text-warning {
     color: #ffca28!important;
 }
@@ -29,3 +13,41 @@
 .has-error .input-group-addon
 {color:#a94442;background-color:#f2dede;border-color:#a94442}
 .has-error .form-control-feedback{color:#a94442}
+.single-result{
+    background-color: white;
+    
+    
+    margin-bottom: 3rem;
+}
+.single-result-row{
+    border-radius: 1rem;
+    border-color:#008000;
+    box-shadow: black;
+    margin-right: 2rem;  
+    margin-left: 2rem;  
+    padding: 2rem;
+    border-style: solid;
+    margin-bottom: 1rem;
+}
+@media (max-width:480px){
+    .single-result{
+        background-color: white;
+        width:50%;
+        border-bottom: black;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+    }
+    .single-result-row{
+        width:90%;
+        margin-left: 1rem;
+        border-radius: 1rem;
+        border-color:#008000;
+        border-style: solid;
+        margin-bottom: 1rem;
+        width: 90%;
+     
+        margin-left: 1rem;
+ 
+    }
+
+}

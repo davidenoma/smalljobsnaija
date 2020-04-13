@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\MailController;
-
+use Illuminate\Database\Eloquent\Model;
 use App\Mail\ConnectTalent;
 use Illuminate\Http\Request;
 use App\User;
-
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -40,18 +40,13 @@ class ProfileController extends Controller
         $welcomeName = Auth::user();
         return view('/user/publicprofile',compact('welcomeName'));
     }
-    public function updateProfile(Request $request){
-        
-        
-        // $user = App\User::find(1);
-        
-        $welcomeName = Auth::user();
-        
-      
+    public function updateProfile(Request $request){    
+            
+        // $user = App\User::find(1);        
+        $welcomeName = Auth::user();    
         $user = User::find($welcomeName->id);
         $user -> email = $request->email;
-        $user -> username = $request->name;
-        
+        $user -> username = $request->name;       
         // $user -> password = $request->password;
         $user -> phone = $request->phone;
         $user -> location = $request->location ;
@@ -61,20 +56,11 @@ class ProfileController extends Controller
         $user -> last_name = $request -> lastname;
 
         $user -> update();
- 
-    
-    
-
-         
-    
-       
 
         return view('user/publicprofile',compact('welcomeName'));
 
 }
-    public function publicSearchProfile(){
-        return view('searchResult');
-    }
+ 
 
 }
 

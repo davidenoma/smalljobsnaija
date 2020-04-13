@@ -829,7 +829,7 @@ Headers:		'Varela Round', sans-serif;
 }
 /*------ Image ------*/
 .items:not(.selectize-input) .item .image {
-    height: 26rem;
+    height: 20rem;
     position: relative;
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
@@ -873,8 +873,8 @@ Headers:		'Varela Round', sans-serif;
     position: absolute;
     z-index: 1;
     left: 1.8rem;
-    color: white;
-    bottom: 6rem;
+    
+    bottom: 0.1rem;
     padding-right: 1.8rem;
     margin-bottom: .5rem;
 }
@@ -1100,11 +1100,12 @@ Headers:		'Varela Round', sans-serif;
     float: left;
 }
 .items:not(.selectize-input).grid .item p, .items:not(.selectize-input).masonry .item p {
-    height: 6rem;
+    padding: 1.2em;
     overflow: hidden;
+    padding-bottom: 1.2em;
 }
 .items:not(.selectize-input).masonry .item .wrapper {
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 .items:not(.selectize-input).grid .item {
     height: 43rem;
@@ -1116,7 +1117,9 @@ Headers:		'Varela Round', sans-serif;
     height: inherit;
 }
 .items:not(.selectize-input).grid.compact .item .wrapper {
-    height: 31rem;
+    height: 18rem;
+    padding: 3;
+    
 }
 .items:not(.selectize-input).grid.compact .item .wrapper .detail {
     display: none;
@@ -3422,8 +3425,8 @@ textarea.form-control {
 }
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 992px - 1199px
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media (min-width: 992px) and (max-width: 1199px) {
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    @media (min-width: 992px) and (max-width: 1199px) {
     .items.grid, .items.masonry {}
     .items.grid.grid-lg-4-items .item, .items.masonry.grid-lg-4-items .item {
         width: 25%;
