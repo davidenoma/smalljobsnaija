@@ -16,7 +16,7 @@ class SearchController extends Controller
     }
     public function publicSearchProfile($username){           
       $welcomeName = User::where('username',$username)->first();
-      return view('/user/publicProfile',compact('welcomeName'));
+      return view('user.publicProfile',compact('welcomeName'));
   }
   public function search(Request $request){
     $location = $request->location ;
