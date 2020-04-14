@@ -42,6 +42,9 @@ Route::get('/forums', function () {
 
 Route::get('/forumtopics', 'Forum\ForumTopicController@index');
 Route::get('/createforumtopic', 'Forum\ForumTopicController@create');
+
+Route::post('/createforumtopic', 'Forum\ForumTopicController@save');
+
 Route::get('/forumtopics/single', 'Forum\SingleForumTopicController@index');
 
 
@@ -73,16 +76,9 @@ Route::get('/user/publicprofile', 'ProfileController@publicProfile');
 Route::get('/talent/{username}', 'SearchController@publicSearchProfile');
 
 //Controllers for Search
-Route::get('users/{id}', function ($id) {
-    
-});
 
-Route::get('/search', function(){
-    return view('searchResult');
-
-});
-Route::post('/search', 'SearchController@search');
-
+Route::get('/searchtalent', 'SearchController@index');
+Route::get('/search', 'SearchController@search');
 //Controllers for Mail 
 Route::get('/welcomeMail', 'MailController@index');
 // });

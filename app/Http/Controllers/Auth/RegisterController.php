@@ -74,14 +74,14 @@ class RegisterController extends Controller
 
         
         
-        $user =  User::create([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'phone' => $data['phone'],
-            'location' => $data['location'],
-            'talent' => $data['talent']
-        ]);
+            $user =  User::create([
+                'username' => $data['username'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'phone' => $data['phone'],
+                'location' => $data['location'],
+                'talent' => $data['talent']
+            ]);
         try{
             Mail::to($data['email'])->send(new WelcomeMail($data['username']));
         }

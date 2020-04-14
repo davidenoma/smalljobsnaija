@@ -9,23 +9,27 @@ class SearchController extends Controller
 {
     //
     public function __construct(){
-      $users = null;
+      
     }
-   public function index(){
-       return view('searchResult');
+   public function index(Request $request){
+  
+      $users = User::paginate(12)->onEachSide(1);           
+      return view('/searchResult',compact('users'));
     }
     public function publicSearchProfile($username){           
       $welcomeName = User::where('username',$username)->first();
       return view('user.publicprofile',compact('welcomeName'));
   }
-  public function search(Request $request){
-    $location = $request->location ;
-    $talent  = $request -> talent;
-    $users = User::where([
-        ['talent',$talent],['location',$location]
-    ])->get();
 
-    return view('/searchResult',compact('users'));
+  public function search(Request $request){
+    
+    $location = $request->location;
+    $talent  = $request ->talent;
+      
+    $users = User::where('talent',$talent)->where('location',$location)->paginate(12);
+
+    return view('/searchResult')->with('users',$users);
     
   }
+
 }

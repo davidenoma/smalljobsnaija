@@ -53,7 +53,7 @@
         </div>
         <!--============ End Page Title =====================================================================-->
         <!--============ Hero Form ======================\'/'/'====================================================-->
-        <form class="hero-form form" method="POST" action="/search" >
+        <form class="hero-form form" method="GET    " action="/search" >
             @csrf
                 <div class="container">
                     <!--Main Form-->

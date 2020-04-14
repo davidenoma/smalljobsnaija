@@ -16,8 +16,7 @@ class SearchesTable extends Migration
         Schema::create('searches', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table -> string('location');
-            $table -> string('talent');
-            $table -> bigInteger('user_id',$autoIncrement = false,$unsigned = true);
+            $table -> $table -> bigInteger('user_id',$autoIncrement = false,$unsigned = true);
             $table->timestamps();
         });
     }

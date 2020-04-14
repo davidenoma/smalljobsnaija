@@ -7,7 +7,7 @@ SmallJobsNaija- Search Top Talents
 <section class="content">
     <section class="block">
         <div class="container">
-      
+            
             <div class="row">
                 <div class="col-md-3">
                     <!--============ Side Bar ===============================================================-->
@@ -68,7 +68,7 @@ SmallJobsNaija- Search Top Talents
                         </div>
                     </div>
                     
-                   
+                 <h2></h2>  
                     <div class="row">
                       
                             @foreach($users as $user)
@@ -112,50 +112,20 @@ SmallJobsNaija- Search Top Talents
                             <!--end item-->                       
     
                         </div>
-                    
-                    <!--============ Items ==========================================================================-->
-                   
-                    <!--============ End Items ==============================================================-->
+
                     <div class="page-pagination">
                         <nav aria-label="Pagination">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">
-                                    <i class="fa fa-chevron-left"></i>
-                                </span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">
-                                    <i class="fa fa-chevron-right"></i>
-                                </span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-                            </ul>
+                            {{$users->links()}}
                         </nav>
+                        
                     </div>
-                    <!--end page-pagination-->
+      
                 </div>
-                <!--end col-md-9-->
-               
-                <!--end col-md-3-->
+      
             </div>
-            <!--end row-->
+            
         </div>
-        <!--end container-->
+        
     </section>
-    <!--end block-->
+    
 </section>
