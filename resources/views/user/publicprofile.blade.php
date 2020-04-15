@@ -65,8 +65,11 @@
                                                 <h4>Rating & 1 Review(s)</h4>
                                                
                                             </div>
-                                            <br>                                                                               
+                                                                                                                         
                                         </figure>
+                                        <br>
+                                        
+                                        <button type="button" class="btn btn-sm btn-rounded btn-success float-left" data-toggle="modal" data-target="#modal-compose">Send Message</button>
                                     </div>
                                     <div class="additional-info">
                                         <ul>
@@ -144,6 +147,69 @@
             
 
         
+    </div>
+    <div class="modal fade" id="modal-compose" tabindex="-1" role="dialog" aria-labelledby="modal-compose" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-top" role="document">
+            <div class="modal-content">
+                <div class="block block-themed block-transparent mb-0">
+                    <div class="block-header">
+                        <h3 class="block-title">
+                            <i class="fa fa-pencil mr-5"></i> New Message
+                        </h3>
+                        <div class="block-options">
+                            <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                                <i class="si si-close"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <form class="my-10" action="be_pages_generic_inbox.html" method="post" onsubmit="return false;">
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <div class="form-material form-material-primary input-group">
+                                        <input type="email" class="form-control" id="message-email" name="message-email" placeholder="Where to send?">
+                                        <label for="message-email">Email</label>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="si si-envelope-open"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <div class="form-material form-material-primary input-group">
+                                        <input type="text" class="form-control" id="message-subject" name="message-subject" placeholder="What is this about?">
+                                        <label for="message-subject">Subject</label>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="si si-book-open"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-12">
+                                    <div class="form-material form-material-primary">
+                                        <textarea class="form-control" id="message-msg" name="message-msg" rows="6" placeholder="Write your message.."></textarea>
+                                        <label for="message-msg">Message</label>
+                                    </div>
+                                    <div class="form-text font-size-sm text-muted">Feel free to use common tags: &lt;blockquote&gt;, &lt;strong&gt;, &lt;em&gt;</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-alt-primary" data-dismiss="modal">
+                                    <i class="fa fa-send mr-5"></i> Send Message
+                                </button>
+                                <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <br><br>

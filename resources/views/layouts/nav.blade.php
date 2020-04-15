@@ -3,29 +3,16 @@
     <div class="content-header">
         <!-- Left Section -->
         <div class="content-header-section">
-            <!-- Toggle Sidebar -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            
-            <!-- END Toggle Sidebar -->
-
-            <!-- Open Search Section -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+     
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="/assets/img/small-jobs-logo.svg" alt="" width="130" height="130">
                 </a>
             <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
                 <i class="fa fa-search" style="color:white;"></i>
             </button>
-            <!-- END Open Search Section -->
-
-            <!-- Layout Options (used just for demonstration) -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            
-            <!-- END Layout Options -->
+        
         </div>
-        <!-- END Left Section -->
 
-        <!-- Right Section -->
         <div class="content-header-section">
 
         <ul class="ml-auto"> 
@@ -46,7 +33,7 @@
                 <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-user d-sm-none" style="color: white"></i>
                     <span class="d-none d-sm-inline-block" style="color:white"> {{ Auth::user()->username }}</span>
-                    <i class="fa fa-angle-down ml-5"></i>
+                    <i class="fa fa-angle-down ml-5 " style="color:white"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right min-width-200" aria-labelledby="page-header-user-dropdown" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(57px, 34px, 0px);">
                     
@@ -131,18 +118,7 @@
             <!-- END Notifications -->
 
             @endguest
-        </ul>
 
-            {{-- END input attached by me for user drop down--}}
-
-
-
-         
-
-            <!-- Toggle Side Overlay -->
-            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            
-            <!-- END Toggle Side Overlay -->
         </div>
         <!-- END Right Section -->
     </div>
@@ -151,18 +127,17 @@
     <!-- Header Search -->
     <div id="page-header-search" class="overlay-header">
         <div class="content-header content-header-fullrow">
-            <form action="/search" method="post">
+            <form action="/search" method="POST">
                 @csrf
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <!-- Close Search Section -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+
                         <button type="button" class="btn btn-secondary" data-toggle="layout" data-action="header_search_off">
                             <i class="fa fa-times"></i>
                         </button>
-                        <!-- END Close Search Section -->
+                        
                     </div>
-                    <input type="text" class="form-control" placeholder="Enter talent that you want" id="page-header-search-input" name="page-header-search-input">
+                    <input type="text" class="form-control" placeholder="Enter talent that you want" id="page-header-search-input" name="talent">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-secondary">
                             <i class="fa fa-search"></i>

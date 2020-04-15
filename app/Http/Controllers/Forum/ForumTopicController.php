@@ -15,18 +15,27 @@ class ForumTopicController extends Controller
     public function index(){
         return view('forum.forumtopics');
     }
+    public function show(){      
+         $forumtopics = ForumTopic::paginate(12);        
+        return view('forum.forumtopics',compact('forumtopics'));       
+            
+    }
     public function create(){
         if(auth()->guest()){
             return view('/auth/login');
         }
         else{
+                    
             return view('forum.createforumtopic');
-        }
-            
     }
+}
+    
     public function save(Request $request){
 
-        // dd($request);
+        if($request -> topic == null){
+            return  redirect()->back();
+        }
+        
         $forumtopic =  ForumTopic::create([
             'topic' => $request->topic,
             'description' => $request ->description,
@@ -34,8 +43,21 @@ class ForumTopicController extends Controller
             'user_id' => Auth::user()->id,
          
         ]);
+        $forumtopics = ForumTopic::paginate(12);    
 
-            return view('forum.forumtopics');
+            return view('forum.forumtopics',compact('forumtopics'));
+    }
+    public function category(Request $request, $category){
+
+        $forumtopics = ForumTopic::where('category', $category)->paginate(12);
+
+        return view('forum.forumtopics')->with('forumtopics',$forumtopics);
+    }
+    public function topic(Request $request, $topic){
+
+        $forumtopic = ForumTopic::where('topic', $topic)->first();
+        
+        return view('forum.singleforumtopic',compact('forumtopic'));
     }
     
 }

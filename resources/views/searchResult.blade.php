@@ -115,7 +115,8 @@ SmallJobsNaija- Search Top Talents
 
                     <div class="page-pagination">
                         <nav aria-label="Pagination">
-                            {{$users->links()}}
+                            {{$users->appends(Request::except('page'))->links()}}
+                            
                         </nav>
                         
                     </div>

@@ -12,7 +12,7 @@ class ForumTopic extends Model
 
     public function forumposts(){
 
-    return $this->hasMany('ForumPost::class', 'forum_topic_id');;
+    return $this->hasMany(ForumPost::class);;
         
     }
     public function user(){

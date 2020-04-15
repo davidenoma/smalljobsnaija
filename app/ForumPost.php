@@ -13,5 +13,8 @@ class ForumPost extends Model
     public function comments(){
         return $this -> hasMany(ForumComment::class);
     }
+    public function forumtopic(){
+        return $this -> belongsTo(ForumTopic::class);
+    }
     
 }

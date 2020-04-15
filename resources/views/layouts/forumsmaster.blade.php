@@ -39,7 +39,7 @@
     <!-- icon -->
     <link rel="stylesheet" href="/assets/fonts/icons/main/mainfont/style.css">
     <link rel="stylesheet" href="/assets/fonts/icons/font-awesome/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" id="css-main" href="/assets/css/codebase.min.css">
     <!-- Vendor -->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.css">
@@ -137,6 +137,9 @@
    
     @yield('main')
       </main> 
+      <script src="/assets/js/codebase.core.min.js"></script>
+      <script src="/assets/js/codebase.app.min.js"></script>
+      <script src="/assets/js/codebase/app.js"></script>
     
     <script src="/assets/js/jquery.min.js"></script>
         <script src="/assets/js/velocity.min.js"></script>

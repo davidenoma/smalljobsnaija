@@ -36,16 +36,18 @@ Auth::routes();
 
 
 //Controllers for forums
-Route::get('/forums', function () {
-    return view('forums');
-});
 
-Route::get('/forumtopics', 'Forum\ForumTopicController@index');
+
+Route::get('/forumtopics', 'Forum\ForumTopicController@show');
+
 Route::get('/createforumtopic', 'Forum\ForumTopicController@create');
 
 Route::post('/createforumtopic', 'Forum\ForumTopicController@save');
 
-Route::get('/forumtopics/single', 'Forum\SingleForumTopicController@index');
+Route::get('/forumtopics/title/{topic}', 'Forum\ForumTopicController@topic');
+
+Route::get('forumtopics/{category}', 'Forum\ForumTopicController@category');
+
 
 
 //Controllers for messaging 
@@ -79,6 +81,8 @@ Route::get('/talent/{username}', 'SearchController@publicSearchProfile');
 
 Route::get('/searchtalent', 'SearchController@index');
 Route::get('/search', 'SearchController@search');
+Route::post('/search', 'SearchController@search');
+
 //Controllers for Mail 
 Route::get('/welcomeMail', 'MailController@index');
 // });

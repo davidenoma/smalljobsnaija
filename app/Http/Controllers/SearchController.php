@@ -16,6 +16,7 @@ class SearchController extends Controller
       $users = User::paginate(12)->onEachSide(1);           
       return view('/searchResult',compact('users'));
     }
+
     public function publicSearchProfile($username){           
       $welcomeName = User::where('username',$username)->first();
       return view('user.publicprofile',compact('welcomeName'));
@@ -26,7 +27,7 @@ class SearchController extends Controller
     $location = $request->location;
     $talent  = $request ->talent;
       
-    $users = User::where('talent',$talent)->where('location',$location)->paginate(12);
+    $users = User::where('talent',$talent)->orWhere('location',$location)->paginate(12);
 
     return view('/searchResult')->with('users',$users);
     
