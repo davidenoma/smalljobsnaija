@@ -53,7 +53,6 @@ SmallJobsNaija- Forum  Topic Discussion
                 @foreach ($forumposts as $post)
                 {{-- {{$forumtopic->first()->forumposts->count()}} --}}
                         
-<<<<<<< HEAD
                 <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
@@ -95,49 +94,6 @@ SmallJobsNaija- Forum  Topic Discussion
                 <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
-=======
-                <div class="topic">
-                    <div class="topic__head">
-                        <div class="topic__avatar">
-
-                            <a href="/talent/{{$post -> user -> username}}" class="avatar"><img src="/assets/fonts/icons/avatars/{{$post -> user -> username[0] }}.svg" alt="avatar"></a>
-                        </div>
-                        <div class="topic__caption">
-                            <div class="topic__name">
-                                <a href="/talent/{{$post -> user -> username}}">{{$post -> user -> username}}</a>
-                            </div>
-                        <div class="topic__date"><i class="icon-Watch_Later"></i>{{$post->created_at}}</div>
-                        </div>
-                    </div>
-                    <div class="topic__content">
-                        <div class="topic__text">
-                        <p>{{$post -> post}}</p>
-                        </div>
-                        <div class="topic__footer">
-                            <div class="topic__footer-likes">
-                                <div>
-                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-                                    
-                                    <span>201</span>
-                                </div>
-                                <div>
-                                    <a href="#"> <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> </a>
-                                    <span>08</span>
-                                </div>
-                                <div>
-                                    <a href="#" type="button" data-toggle="modal" data-target="#modal-compose"><i class="icon-Reply_Fill"></i>Reply</a>                                                                       
-                                </div>
-                            </div>
-                      
-                        </div>
-                    </div>
-                </div>  
-                @endforeach
-             
-                <div class="topic">
-                    <div class="topic__head">
-                        <div class="topic__avatar">
->>>>>>> refs/remotes/smalljobsnaija/master
                           
                         {{-- <h4>{{$forumtopic->forumposts()->count()}}</h4> --}}
                         {{-- <h4>{{$forumtopic->forumposts()->get()[0]['id']}}</h4> --}}
@@ -553,10 +509,7 @@ SmallJobsNaija- Forum  Topic Discussion
             </div>
         </div>  
     </div> --}}
-<<<<<<< HEAD
      
-=======
->>>>>>> refs/remotes/smalljobsnaija/master
 </div>
 
 @endsection
