@@ -32,7 +32,7 @@ class User extends Authenticatable
         return $this -> hasMany(ForumComment::class);
     }
   public   function forumposts(){
-        return $this -> belongsToMany(ForumPost::class);
+        return $this -> hasMany(ForumPost::class);
     }
 public function ratings(){
     return $this -> hasMany(Ratings::class);

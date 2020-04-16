@@ -23,7 +23,7 @@ SmallJobsNaija- Forum Create Topic
         <div class="row">
             <div class="col-md-6">
                 <div class="create__section">
-                    <label class="create__label" for="category">Select Category</label>
+                    <label class="create__label" for="category">Category</label>
                     <label class="custom-select">
                         <select id="category" name="category" >                                                                       
                           

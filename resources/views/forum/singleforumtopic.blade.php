@@ -40,19 +40,63 @@ SmallJobsNaija- Forum  Topic Discussion
     </div>
     <div class="topics">
         <div class="topics__heading">
-        <h2 class="topics__heading-title">{{$forumtopic->topic}}</h2>
+        <h2 class="topics__heading-title" name="forum_topic">{{$forumtopic->topic}}</h2>
             <div class="topics__heading-info">
             <a href="#" class="category"><i class="bg-3ebafa"></i> {{$forumtopic->category}} </a>
           <p>  </p>
        
             </div>
         </div>
+
         <div class="topics__body">
             <div class="topics__content">
+                @foreach ($forumposts as $post)
+                {{-- {{$forumtopic->first()->forumposts->count()}} --}}
+                        
                 <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
-                            
+
+                            <a href="/talent/{{$post -> user -> username}}" class="avatar"><img src="/assets/fonts/icons/avatars/{{$post -> user -> username[0] }}.svg" alt="avatar"></a>
+                        </div>
+                        <div class="topic__caption">
+                            <div class="topic__name">
+                                <a href="/talent/{{$post -> user -> username}}">{{$post -> user -> username}}</a>
+                            </div>
+                        <div class="topic__date"><i class="icon-Watch_Later"></i>{{$post->created_at}}</div>
+                        </div>
+                    </div>
+                    <div class="topic__content">
+                        <div class="topic__text">
+                        <p>{{$post -> post}}</p>
+                        </div>
+                        <div class="topic__footer">
+                            <div class="topic__footer-likes">
+                                <div>
+                                    <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                                    
+                                    <span>201</span>
+                                </div>
+                                <div>
+                                    <a href="#"> <i class="fa fa-thumbs-o-down" aria-hidden="true"></i> </a>
+                                    <span>08</span>
+                                </div>
+                                <div>
+                                    <a href="#" type="button" data-toggle="modal" data-target="#modal-compose"><i class="icon-Reply_Fill"></i>Reply</a>                                                                       
+                                </div>
+                            </div>
+                      
+                        </div>
+                    </div>
+                </div>  
+                @endforeach
+             
+                <div class="topic">
+                    <div class="topic__head">
+                        <div class="topic__avatar">
+                          
+                        {{-- <h4>{{$forumtopic->forumposts()->count()}}</h4> --}}
+                        {{-- <h4>{{$forumtopic->forumposts()->get()[0]['id']}}</h4> --}}
                             <a href="/talent/{{$forumtopic -> user -> username}}" class="avatar"><img src="/assets/fonts/icons/avatars/{{$forumtopic -> user -> username[0] }}.svg" alt="avatar"></a>
                         </div>
                         <div class="topic__caption">
@@ -86,7 +130,9 @@ SmallJobsNaija- Forum  Topic Discussion
                     </div>
                 </div>
  
-                <div class="topic">
+              
+              
+                {{-- <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
                             <a href="/talent/{{$forumtopic -> user -> username}}" class="avatar"><img src="/assets/fonts/icons/avatars/{{$forumtopic -> user -> username[0] }}.svg" alt="avatar"></a>
@@ -121,7 +167,7 @@ SmallJobsNaija- Forum  Topic Discussion
                                 </div>
                       
                                 <div>
-                                    {{-- <button type="button" class=" btn icon-Reply_Fill float-right" data-toggle="modal" data-target="#modal-compose">New Message</button> --}}
+                                   
                                     <a href="#" type="button" data-toggle="modal" data-target="#modal-compose"><i class="icon-Reply_Fill"></i>Reply</a>
 
                                 </div>
@@ -129,8 +175,10 @@ SmallJobsNaija- Forum  Topic Discussion
 
                         </div>
                     </div>
-                </div>
-              
+                </div> --}}
+
+                
+{{--               
                 <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
@@ -179,8 +227,8 @@ SmallJobsNaija- Forum  Topic Discussion
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="topic topic--comment">
+                </div> --}}
+                {{-- <div class="topic topic--comment">
                     <div class="topic__head">
                         <div class="topic__avatar">
                             <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/L.svg" alt="avatar"></a>
@@ -197,11 +245,11 @@ SmallJobsNaija- Forum  Topic Discussion
                             <p>Can you stop ADP, and create new option for author can create coupon code, Author will give for their customer. It's better than now.</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             
                 
                 
-                <div class="topic">
+                {{-- <div class="topic">
                     <div class="topic__head">
                         <div class="topic__avatar">
                             <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/L.svg" alt="avatar"></a>
@@ -252,7 +300,7 @@ SmallJobsNaija- Forum  Topic Discussion
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="topics__calendar">
                 <div class="calendar">
@@ -280,7 +328,14 @@ SmallJobsNaija- Forum  Topic Discussion
       
         <div class="topics__title">Suggested Topics</div>
     </div>
-    <div class="posts">
+    <div class="page-pagination">
+        <nav aria-label="Pagination">
+            {{$forumposts->appends(Request::except('page'))->links()}}
+            
+        </nav>
+        
+    </div>
+    {{-- <div class="posts">
         <div class="posts__head">
             <div class="posts__topic">Topic</div>
             <div class="posts__category">Category</div>
@@ -365,13 +420,14 @@ SmallJobsNaija- Forum  Topic Discussion
                             </div>
                         </div>
                         <div class="block-content">
-                            <form class="my-10" action="be_pages_generic_inbox.html" method="post" onsubmit="return false;">
+                            <form class="my-10" action="/forumtopics/{{$forumtopic->id}}/comment" method="POST">
+                                @csrf
                               
                                 <div class="form-group row">
                                     <div class="col-12">
                                         <div class="form-material form-material-primary input-group">
-                                        <input type="text" class="form-control" id="message-subject" name="message-subject" value="{{$forumtopic ->topic}}" disabled>
-                                            <label for="message-subject">Forum Topic</label>
+                                        <input type="text" class="form-control" id="forum_topic" name="forum_topic" value="{{$forumtopic ->topic}}" disabled>
+                                            <label for="forum_topic">Forum Topic</label>
                                             <div class="input-group-append">
                                                 <span class="input-group-text">
                                                     <i class="si si-book-open"></i>
@@ -383,14 +439,14 @@ SmallJobsNaija- Forum  Topic Discussion
                                 <div class="form-group row">
                                     <div class="col-12">
                                         <div class="form-material form-material-primary">
-                                            <textarea class="form-control" id="message-msg" name="message-msg" rows="6" placeholder="Write your message.."></textarea>
-                                            <label for="message-msg">Your Comment / Reply</label>
+                                            <textarea class="form-control" id="reply" name="reply" rows="6" placeholder="Write your reply.."></textarea>
+                                            <label for="reply">Your Comment / Reply</label>
                                         </div>
                                        
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-alt-primary" data-dismiss="modal">
+                                    <button type="submit" class="btn btn-alt-primary" >
                                         <i class="fa fa-send mr-5" style="color:white"></i> Reply
                                     </button>
                                     <button type="button" class="btn btn-alt-secondary" data-dismiss="modal"> <i class="fa fa-backward"  style="color:white" aria-hidden="true"></i> Cancel</button>
@@ -401,7 +457,7 @@ SmallJobsNaija- Forum  Topic Discussion
                 </div>
             </div>
         </div>  
-    </div>
+    </div> --}}
 </div>
 
 @endsection
