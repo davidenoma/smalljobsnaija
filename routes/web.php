@@ -40,11 +40,14 @@ Auth::routes();
 
 Route::get('/forumtopics', 'Forum\ForumTopicController@show');
 
+
 Route::get('/createforumtopic', 'Forum\ForumTopicController@create');
 
 Route::post('/createforumtopic', 'Forum\ForumTopicController@save');
 
-Route::get('/forumtopics/title/{topic}', 'Forum\ForumTopicController@topic');
+Route::get('/forumtopics/title/{id}/{topic}', 'Forum\ForumTopicController@topic');
+
+Route::post('/forumtopics/{id}/comment','Forum\ForumCommentController@create')->name('addcomment');
 
 Route::get('forumtopics/{category}', 'Forum\ForumTopicController@category');
 

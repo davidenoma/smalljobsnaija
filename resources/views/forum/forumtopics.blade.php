@@ -15,9 +15,9 @@ SmallJobsNaija- Forum Categories
 
             <div class="nav__select">
                
-                <div class="btn-select" data-dropdown-btn="categories" style="color:white">Choose Category</div>
+                <div class="btn-select" data-dropdown-btn="categories" style="color:white"> Category</div>
                 
-                <nav class="dropdown dropdown--design-01" data-dropdown-list="categories">
+                <nav class="dropdown dropdown--design-01" style="color:white" data-dropdown-list="categories">
                     
                     <ul class="dropdown__catalog row">
                         <li class="col-xs-6"><a href="/forumtopics/politics" class="category"><i class="bg-f9bc64"></i>Politics</a></li>
@@ -42,7 +42,7 @@ SmallJobsNaija- Forum Categories
             <div class="nav__select" style="float:right">
                 
                 
-                <a href="/createforumtopic"><div class="btn" >Create new  <i class="fa fa-forumbee" aria-hidden="true" style="color:white"></i> </div></a>
+                <a href="/createforumtopic"><div class="btn" >New  <i class="fa fa-forumbee" aria-hidden="true" style="color:white"></i> </div></a>
 
             </div>
         </div>
@@ -62,7 +62,7 @@ SmallJobsNaija- Forum Categories
         <div class="posts__head">
             <div class="posts__topic">Topic</div>
             <div class="posts__category">Category</div>
-            <div class="posts__users">Author and Top users</div>
+            <div class="posts__users">Creator</div>
             <div class="posts__replies">Replies</div>            
             <div class="posts__activity">Last Active Time</div>
         </div>
@@ -104,7 +104,7 @@ SmallJobsNaija- Forum Categories
                 <div class="posts__section-left">
                     <div class="posts__topic">
                         <div class="posts__content">
-                            <a href="/forumtopics/title/{{$topic -> topic}}">
+                        <a href="/forumtopics/title/{{$topic->id}}/{{$topic -> topic}}">
                                 
                             <h3>{{$topic -> topic}}</h3>
                             </a>
@@ -115,7 +115,8 @@ SmallJobsNaija- Forum Categories
                 <div class="posts__section-right">
                     <div class="posts__users">
                         <div>
-                            <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/{{ $topic ->user->username[0] }}.svg" alt="avatar"></a>
+                          
+                            <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/{{ $topic ->user->username[0] }}.svg" alt="avatar">{{ $topic ->user->username }}</a>
                         </div>
                         {{-- <div>
                             <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/G.svg" alt="avatar"></a>
@@ -126,7 +127,7 @@ SmallJobsNaija- Forum Categories
                     </div>
                 <div class="posts__replies">{{$topic -> forumposts()->count()}}</div>
                     
-                    <div class="posts__activity">13d</div>
+                <div class="posts__activity">{{$topic ->  mostRecentPost($topic->id)}}</div>
                 </div>
             </div>
                       

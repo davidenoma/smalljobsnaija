@@ -37,9 +37,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
 
     <!-- icon -->
+    <link rel="stylesheet" type="text/css" id="css-main" href="/assets/css/codebase.min.css">
     <link rel="stylesheet" href="/assets/fonts/icons/main/mainfont/style.css">
     <link rel="stylesheet" href="/assets/fonts/icons/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" id="css-main" href="/assets/css/codebase.min.css">
+    
     <!-- Vendor -->
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.css">
