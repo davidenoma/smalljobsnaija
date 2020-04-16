@@ -324,7 +324,58 @@ SmallJobsNaija- Forum  Topic Discussion
                 </div>
             </div>
         </div>
-        
+        <div class="modal fade" id="modal-compose" tabindex="-1" role="dialog" aria-labelledby="modal-compose" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-top" role="document">
+                <div class="modal-content">
+                    <div class="block block-themed block-transparent mb-0">
+                        <div class="block-header" style="background-color: #008000">
+                            <h3 class="block-title">
+                                <i class="fa fa-pencil mr-5"></i>Reply / Comment
+                            </h3>
+                            <div class="block-options">
+                                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                                    <i class="si si-close"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="block-content">
+                            <form class="my-10" action="/forumtopics/{{$forumtopic->id}}/comment" method="POST">
+                                @csrf
+                              
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <div class="form-material form-material-primary input-group">
+                                        <input type="text" class="form-control" id="forum_topic" name="forum_topic" value="{{$forumtopic ->topic}}" disabled>
+                                            <label for="forum_topic">Forum Topic</label>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="si si-book-open"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-12">
+                                        <div class="form-material form-material-primary">
+                                            <textarea class="form-control" id="reply" name="reply" rows="6" placeholder="Write your reply.."></textarea>
+                                            <label for="reply">Your Comment / Reply</label>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-alt-primary" >
+                                        <i class="fa fa-send mr-5" style="color:white"></i> Reply
+                                    </button>
+                                    <button type="button" class="btn btn-alt-secondary" data-dismiss="modal"> <i class="fa fa-backward"  style="color:white" aria-hidden="true"></i> Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
       
         <div class="topics__title">Suggested Topics</div>
     </div>
@@ -458,6 +509,7 @@ SmallJobsNaija- Forum  Topic Discussion
             </div>
         </div>  
     </div> --}}
+     
 </div>
 
 @endsection
