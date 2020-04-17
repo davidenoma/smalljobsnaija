@@ -24,10 +24,11 @@ class SearchController extends Controller
 
   public function search(Request $request){
     
-    $location = $request->location;
-    $talent  = $request ->talent;
-      
-    $users = User::where('talent',$talent)->orWhere('location',$location)->paginate(12);
+    $location = substr($request->location,0,3);
+    $talent  = substr($request ->talent,0,3);
+    // dd($location,$talent);
+    $users = User::where('talent', 'like', '%'. $talent. '%')->where('location','like', '%'.$location.'%')->inRandomOrder()->paginate(12);
+    
 
     return view('/searchResult')->with('users',$users);
     
