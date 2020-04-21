@@ -7,8 +7,9 @@ use App\Mail\ConnectTalent;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Image;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 
 class ProfileController extends Controller
@@ -41,7 +42,9 @@ class ProfileController extends Controller
         return view('/user/publicprofile',compact('welcomeName'));
     }
     public function updateProfile(Request $request){    
-            
+          $request -> validate([
+            'image' => 'image'
+          ]);
         // $user = App\User::find(1);        
         $welcomeName = Auth::user();    
         $user = User::find($welcomeName->id);
@@ -55,7 +58,27 @@ class ProfileController extends Controller
         $user -> first_name = $request -> firstname;
         $user -> last_name = $request -> lastname;
 
-        $user -> update();
+    
+        
+        if ($request ->file('image') == null){
+            $user -> update();
+        }
+        else{
+            // Storage::putFileAs(
+            //     'public', $request->file('image'), Auth::user()->id."_".$request->file('image')->getClientOriginalName()
+            // );
+            $image = $request -> file('image');
+            
+            $image ->move('storage', $image ->getClientOriginalName());
+            
+            $user -> image = $image->getClientOriginalName();
+            // Auth::user()->id."_".$request->file('image')->getClientOriginalName();
+            $user -> update();  
+        }
+        
+        
+        // dd($user);
+        
 
         return view('user/publicprofile',compact('welcomeName'));
 

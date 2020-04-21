@@ -12,7 +12,7 @@ class User extends Authenticatable
 
     public $table = 'users';
     protected $fillable = ['username','email',
-    'password','phone','location','talent','about','first_name','last_name'];
+    'password','phone','location','talent','about','first_name','last_name','image'];
     protected $searchable = ['talent', 'location'];
     public $timestamps = true;
     protected $hidden = [

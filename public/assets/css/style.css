@@ -144,7 +144,7 @@ Headers:		'Varela Round', sans-serif;
     width: 10rem;
     height: 10rem;
     float: left;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     overflow: hidden;
     position: relative;
 }
@@ -446,19 +446,19 @@ Headers:		'Varela Round', sans-serif;
     margin-bottom: 1rem;
 }
 .footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     padding-top: 0rem;
     padding-bottom: 0rem;
     background-color: wheat;
-    text-align: center;
+    /* text-align: center; */
 }
 .footer .background {
     background-color: #fff;
 }
 .footer .brand {
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     display: block;
 }
 .footer nav ul {
@@ -3597,7 +3597,7 @@ textarea.form-control {
         width: 100%;
         display: block;
     }
-    .items:not(.selectize-input).list .item .wrapper, .items:not(.selectize-input).list.compact .item .wrapper {
+    .items:not(.selectize-input).list .item .wrapper, .items:not(.selectize-input).list.compact .item            {
         min-height: inherit;
     }
     .items:not(.selectize-input).list .item .wrapper .image, .items:not(.selectize-input).list.compact .item .wrapper .image {

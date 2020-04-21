@@ -30,19 +30,20 @@
                    
                     <!--end col-md-3-->
                     <div class="col-md-9">
-                        <form class="form" method="POST" action="/user/updateProfile">
+                        <form class="form" method="POST" action="/user/updateProfile" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-md-8">
                                     <h2>Profile</h2>
                                     <section>   
+                                            
                                             <div class="col-md-6">
-                                                <div class="profile-image">
-                                                    <div class="image background-image">
-                                                        <img src="assets/img/author-09.jpg" alt="">
+                                                <div class="">
+                                                    <div class="">
+                                                    <img src="/storage/{{Auth::user()->image}}"  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
                                                     </div>
-                                                    <div class="single-file-input {{$errors->has('name')? 'has-error':''}}">
-                                                        <input type="file" id="user_image" name="user_image">
+                                                    <div class="single-file-input {{$errors->has('image')? 'has-error':''}}">
+                                                    <input type="file" id="image" name="image" value="">
                                                         <div class="btn btn-framed btn-primary small">Upload a picture</div>
                                                     </div>
                                                 </div>      
@@ -113,50 +114,14 @@
                                     </section>
 
                                     <section>
-                                        {{-- <h2>Contact</h2> --}}
-                                        {{-- <div class="form-group">
-                                            <label for="phone" class="col-form-label">Phone</label>
-                                            <input name="phone" type="text" class="form-control" id="phone" placeholder="Your Phone" value="312-238-3329">
-                                        </div> --}}
-                                        <!--end form-group-->
-                                        {{-- <div class="form-group">
-                                            <label for="email" class="col-form-label">Email</label>
-                                            <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" value="jane.doe@example.com">
-                                        </div> --}}
+                                 
                                         
                                     </section>
-
-                                    {{-- <section>
-                                        <h2>Social</h2>
-                                        <div class="form-group">
-                                            <label for="twitter" class="col-form-label">Twitter</label>
-                                            <input name="twitter" type="text" class="form-control" id="twitter" placeholder="http://" value="http://www.twitter.com/jane.doe">
-                                        </div>
-                                        <!--end form-group-->
-                                        <div class="form-group">
-                                            <label for="facebook" class="col-form-label">Facebook</label>
-                                            <input name="facebook" type="text" class="form-control" id="facebook" placeholder="http://" value="http://www.facebook.com/jane.doe">
-                                        </div>
-                                        <!--end form-group-->
-                                    </section> --}}
-
-                                    <section class="clearfix">
+                 <section class="clearfix">
                                         <button type="submit" class="btn btn-primary float-right">Save Changes</button>
                                     </section>
                                 </div>
-                                <!--end col-md-8-->
-                                {{-- <div class="col-md-4">
-                                    <div class="profile-image">
-                                        <div class="image background-image">
-                                            <img src="assets/img/author-09.jpg" alt="">
-                                        </div>
-                                        <div class="single-file-input">
-                                            <input type="file" id="user_image" name="user_image">
-                                            <div class="btn btn-framed btn-primary small">Upload a picture</div>
-                                        </div>
-                                    </div>
-                                </div> --}}
-                                <!--end col-md-3-->
+         
                             </div>
                         </form>
                     </div>

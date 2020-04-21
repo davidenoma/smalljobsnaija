@@ -1,0 +1,1 @@
+$sql = "ALTER TABLE `messages` CHANGE `loc_id` `loc_id` BIGINT(20) UNSIGNED NULL";

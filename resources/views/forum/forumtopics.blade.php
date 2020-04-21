@@ -118,12 +118,7 @@ SmallJobsNaija- Forum Categories
                           
                             <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/{{ $topic ->user->username[0] }}.svg" alt="avatar">{{ $topic ->user->username }}</a>
                         </div>
-                        {{-- <div>
-                            <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/G.svg" alt="avatar"></a>
-                        </div>
-                        <div>
-                            <a href="#" class="avatar"><img src="/assets/fonts/icons/avatars/P.svg" alt="avatar"></a>
-                        </div> --}}
+                
                     </div>
                 <div class="posts__replies">{{$topic -> forumposts()->count()}}</div>
                     

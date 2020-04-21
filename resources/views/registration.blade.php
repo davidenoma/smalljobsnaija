@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.master')
 @section('title')
 SmallJobsNaija- Registration Form
 @endsection
@@ -71,17 +71,66 @@ SmallJobsNaija- Registration Form
                         </span>
                         @enderror
 
-                        <input class="form-control @error('location') is-invalid @enderror" id="phone" type="text" 
-                        name="location" placeholder="Your location" 
-                    value="{{old('location')}}"
+                        <input class="form-control @error('area') is-invalid @enderror" id="area" type="text" 
+                        name="area" placeholder="Your area" 
+                    value="{{old('area')}}"
                         required>
 
-                        @error('location')
+                        @error('area')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-
+                     
+                        <label for="state">Choose state</label>
+                        <select name="state" id="state" class=" @error('state') is-invalid @enderror" id="state" type="text" 
+                        name="state" placeholder="Your state" 
+                    value="{{old('state')}}" data-placeholder="Select State" >
+                            <option>Abia
+                            </option><option>Adamawa 
+                            </option><option>Akwa Ibom
+                            </option><option>Anambra
+                            </option><option>Bauchi 
+                            </option><option>Bayelsa 
+                            </option><option>Benue
+                            </option><option>Borno 
+                            </option><option>Cross River 
+                            </option><option>Delta 
+                            </option><option>Ebonyi 
+                            </option><option>Edo
+                            </option><option>Ekiti
+                            </option><option>Enugu 
+                            </option><option>FCT 
+                            </option><option>Gombe 
+                            </option><option>Imo 
+                            </option><option>Jigawa 
+                            </option><option>Kaduna 
+                            </option><option>Kano 
+                            </option><option>Katsina
+                            </option><option>Kebbi 
+                            </option><option>Kogi 
+                            </option><option>Kwara
+                            </option><option>Lagos
+                            </option><option>Nassarawa 
+                            </option><option>Niger
+                            </option><option>Ogun 
+                            </option><option>Ondo 
+                            </option><option>Osun
+                            </option><option>Oyo 
+                            </option><option>Plateau 
+                            </option><option>Rivers 
+                            </option><option>Sokoto 
+                            </option><option>Taraba 
+                            </option><option>Yobe 
+                            </option><option>Zamfara</option>
+                        </select>
+                        <br>
+                        @error('state')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                        <br>
                         <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -90,11 +139,18 @@ SmallJobsNaija- Registration Form
                         @enderror
 
 
-                        <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Password" required>
+                        <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
+                        By clicking "Register" button, you agree with our <a href="/termsofservice" style="color:white;">Terms & Conditions.</a>and 
+                        <a href="/privacypolicy"  style="color:white;">Privacy Policy.</a>
                             <div class="form-button">
                                 <button id="submit" type="submit" class="ibtn">Register</button>
                             </div>
+                           
                         </form>
+                        
+                            
+                               
+                            
                         
                         {{-- <div class="other-links">
                         <span>Or register with</span>

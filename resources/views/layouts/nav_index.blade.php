@@ -9,25 +9,28 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbar">
+                <div class="collapse navbar-collapse" id="navbar" style="font-size: 40px">
                     <!--Main navigation list-->
                     <ul class="navbar-nav" >
                         <li class="nav-item active">
-                        <a class="nav-link" href="{{url('/')}}" style="color: white; font-size: 16px;">Home</a>
+                        <a class="nav-link" href="{{url('/')}}" style="color: white; font-size:23px;">Home</a>
                             
                         </li>
                         <li class="nav-item active" >
-                            <a class="nav-link" href="{{ url('/forumtopics') }}" style="color: white; font-size: 16px;">Forums</a>
+                            <a class="nav-link" href="{{ url('/forumtopics') }}" style="color: white; font-size:23px;">Forums</a>
                             
                         
                         <li class="nav-item active" >
-                        <a class="nav-link" href="{{url('/about')}}" style="color: white; font-size: 16px;">About</a>
+                        <a class="nav-link" href="{{url('/about')}}" style="color: white; font-size:23px;">About</a>
                         </li>
                         <li class="nav-item active" >
-                            <a class="nav-link" href="{{url('/faqs')}}" style="color: white; font-size: 16px; ">FAQs</a>
+                            <a class="nav-link" href="{{url('/registration')}}" style="color: white; font-size:23px; ">Register</a>
                         </li>
                         <li class="nav-item active" >
-                                <a class="nav-link" href="https://smalljobsnaija.com" target="_new" style="color: white; font-size: 16px;">Blog</a>
+                            <a class="nav-link" href="{{url('/login')}}" style="color: white; font-size:23px; ">Login</a>
+                        </li>
+                        <li class="nav-item active" >
+                                <a class="nav-link" href="/faqs"  style="color: white; font-size:23px;">FAQS</a>
                             </li>
                         
                     </ul>
@@ -44,7 +47,7 @@
         <!--============ Page Title =========================================================================-->
         <div class="page-title">
             <div class="container">
-                <h1 class="opacity-60 center ">
+                <h1 class="opacity-60 center">
                     We all love searching for things, <br/><br/>
                     but Our passion is helping you find top Talents in your area!
                 </h1>
@@ -53,7 +56,7 @@
         </div>
         <!--============ End Page Title =====================================================================-->
         <!--============ Hero Form ======================\'/'/'====================================================-->
-        <form class="hero-form form" method="GET    " action="/search" >
+        <form class="hero-form form" method="GET" action="/search" >
             @csrf
                 <div class="container">
                     <!--Main Form-->
@@ -96,25 +99,14 @@
                             <div class="col-md-3 col-sm-3">
                                 <button type="submit" class="btn btn-primary width-100" >Search</button>
                             </div>
-                            <script>
-                                function onClickAlert(){
-                                alert('Please register a profile and login to continue');
-                                    location.href='/registration';
-                               
-                                
-
-                                    
-                                    }
-                                
-                                </script>
+                      
                             
                             </div>
                             <!--end col-md-3-->
                         </div>
                         <!--end form-row-->
                     </div>
-                    <!--end main-search-form-->
-                    <!--Alternative Form-->
+               
                     <div class="alternative-search-form">
 
                         </div>

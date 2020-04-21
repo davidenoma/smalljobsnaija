@@ -36,9 +36,9 @@
                     <div class="col-sm-9 col-md-9">
                         <div class="content">
                             <div class="author big">
-                                <div class="author-image">
-                                    <div class="background-image">
-                                        <img src="assets/img/author-09.jpg" alt="">
+                                <div class="">
+                                    <div class="">
+                                        <img  src="/storage/{{$welcomeName->image}}" alt="{{$welcomeName->image}}" style="width:150px;height: 150px;">
                                     </div>
                                 </div>
                                 <!--end author-image-->
@@ -81,7 +81,8 @@
                                                 <figure>Email</figure>
                                             <aside>{{$welcomeName->email}}</aside>
                                             </li>
-                                            <li><figure>About</figure>
+                                        <li><h5>JOINED: {{$welcomeName->created_at->diffForHumans()}}</h5>
+                                                <figure>About</figure>
                                                 <aside> {{$welcomeName->about}}       </aside>
                                             </li>
                                           

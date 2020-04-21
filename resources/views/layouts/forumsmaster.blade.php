@@ -142,7 +142,7 @@
       <script src="/assets/js/codebase/app.js"></script>
     
     <script src="/assets/js/jquery.min.js"></script>
-        <script src="/assets/js/velocity.min.js"></script>
+    <script src="/assets/js/velocity.min.js"></script>
         
         <script src="/assets/js/forum-app.js"></script>
 </body>

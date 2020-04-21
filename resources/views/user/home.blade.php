@@ -32,7 +32,7 @@
                     <a class="block block-rounded" href="/user/feeds">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center" style="color: #008000;">
-                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Feeds</div>
+                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Timeline</div>
                                 <i class="si si-feed fa-2x"></i>
                             </div>
                         </div>

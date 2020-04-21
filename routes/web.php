@@ -31,6 +31,12 @@ Route::get('/about', function () {
 Route::get('/faqs', function () {
     return view('homepage.faqs');
 });
+Route::get('/privacypolicy',function(){
+    return view('homepage.privacypolicy');
+});
+Route::get('/termsofservice',function(){
+    return view('homepage.termsofservice');
+});
 
 Auth::routes();
 
@@ -89,3 +95,9 @@ Route::post('/search', 'SearchController@search');
 //Controllers for Mail 
 Route::get('/welcomeMail', 'MailController@index');
 // });
+
+//Controllers for Admin Dashboard 
+Route::get('/admin/home', 'AdminController@index' );
+
+Route::get('/admin/login', 'AdminController@login');
+
