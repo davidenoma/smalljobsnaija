@@ -45,7 +45,7 @@ class ProfileController extends Controller
    public function correctImageOrientation($filename) {
         if (function_exists('exif_read_data')) {
           $exif = exif_read_data($filename);
-          dd($exif);
+        //   dd($exif);
           if($exif && isset($exif['Orientation'])) {
             $orientation = $exif['Orientation'];
             if($orientation != 1){
