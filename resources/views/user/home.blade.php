@@ -27,6 +27,7 @@
 
         <div class="content">
             
+            
             <div class="row">
                 <div class="col-6 col-xl-3">
                     <a class="block block-rounded" href="/user/feeds">
@@ -69,10 +70,34 @@
                         </div>
                     </a>
                 </div>
+               
+                <div class="col-6 col-xl-3">
+                    <a class="block block-rounded" href="/user/jobboard">
+                        <div class="block-content block-content-full">
+                            <div class="py-20 text-center" style="color: #008000;">
+                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Job Board</div>
+                                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-xl-3">
+                    <a class="block block-rounded" href="/search">
+                        <div class="block-content block-content-full">
+                            <div class="py-20 text-center" style="color: #008000;">
+                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Search</div>
+                                <i class="fa fa-search-plus fa-2x" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+             
             </div>
         </div>
     {{-- </main> --}}
+    
 
 </div>
+
 
 @endsection

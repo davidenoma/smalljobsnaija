@@ -136,7 +136,83 @@
   <main>
    
     @yield('main')
+    <footer class="footer" style="background-color: #008000;color:white;padding-top: 0">
+        <div class="wrapper">
+            <div class="container" style="color:white;padding-top:0">
+                <div class="row" >
+                    <div class="col-md-3" style="color:white;padding-top:0">
+                        <a href="#" class="brand">
+                            <img src="assets/img/logo-crop.png" alt="" height="100px" width="100px">
+                        </a>
+                        <p>
+                            We are a community based social platform that helps you showcase your talent 
+                            and connect or find talents in your area to for gigs.
+                          
+                        </p>
+                    </div>
+                    <!--end col-md-5-->
+                    <div class="col-md-5">
+                        <h4>Navigation</h4>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <nav>
+                                    <ul class="list-unstyled" style="color:white;padding-top:0">
+                                        <li>
+                                            <a style="color:white" href="/">Home</a>
+                                        </li>
+                                        <li>
+                                            <a style="color:white" href="/about">About</a>
+                                        </li>
+                                        <li>
+                                            <a style="color:white" href="/termsofservice">Terms of Service</a>
+                                        </li>
+                                        <li>
+                                            <a style="color:white" href="/privacypolicy">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a style="color:white" href="/faqs">Frequently Asked Questions</a>
+                                        </li>
+                                        <li>
+                                            <a style="color:white" href="/forumtopics">Forums</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                    <!--end col-md-3-->
+                    <div class="col-md-4">
+                        <h4>Social Links</h4>
+                        <i class="fa fa-facebook" aria-hidden="true"><a href="https://facebook.com/nomatechnology">Facebook</a></i>
+                        <i class="fa fa-instagram" aria-hidden="true"> <a href="https://instagram.com/nomatechnology">Instagram</a></i>
+                        <i class="fa fa-twitter" aria-hidden="true"><a href="https://twitter.com/smalljobsnaija">Twitter</a></i>
+                                                    <address>
+                            <figure>
+                                <a href="https://nomatechnology.com"></a>
+                                Noma Integrated Technology Solutions<br>
+                                <i class="fa fa-copyright" aria-hidden="true"></i>2016
+                            </figure>
+                            
+                            
+                            <strong>Email:</strong> <a href="mailto:admin@smalljobsnaija.com">admin@smalljobsnaija.com</a>
+                            <br>
+                            
+                          
+                            
+                        </address>
+                    </div>
+                    <!--end col-md-4-->
+                </div>
+                <!--end row-->
+            </div>
+           
+            <!--end background-->
+        </div>
+    </footer>
       </main> 
+      
       <script src="/assets/js/codebase.core.min.js"></script>
       <script src="/assets/js/codebase.app.min.js"></script>
       <script src="/assets/js/codebase/app.js"></script>

@@ -65,12 +65,20 @@ Route::get('forumtopics/{category}', 'Forum\ForumTopicController@category');
 
 Route::prefix('/user') -> group(function(){
     Route::get('/home', 'HomeController@index');
+
+
     Route::get('/chat', 'MessageController@index');
+
+    
     Route::get('/chat/archive', 'MessageController@archive');
     Route::get('/chat/sent', 'MessageController@sent');
     Route::get('/chat/starred', 'MessageController@starred');
     Route::get('/chat/draft', 'MessageController@draft');
     Route::get('/chat/trash', 'MessageController@trash');
+
+
+
+
     Route::post('/updateProfile', 'ProfileController@updateProfile');
 });
 //Controllers for feed

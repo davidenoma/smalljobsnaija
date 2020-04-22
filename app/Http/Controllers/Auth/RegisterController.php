@@ -51,13 +51,15 @@ class RegisterController extends Controller
     //  */
     protected function validator(array $data)
     {
+            
         return Validator::make($data, [
             'username' => ['required', 'string', 'max:255', 'unique:users', 'alpha_num'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'talent' => ['required'],
             'first_name' => ['string'],
             'last_name' => ['string'],
-            'location' => ['required'],        
+
+            // 'location' => ['required'],        
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'phone' => ['required','string','max:15']
         ]);
@@ -79,9 +81,11 @@ class RegisterController extends Controller
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'phone' => $data['phone'],
-                'location' => $data['location'],
+                
+                'location' => $data['area'].' '.$data['state'],
                 'talent' => $data['talent']
             ]);
+            
         try{
             Mail::to($data['email'])->send(new WelcomeMail($data['username']));
         }

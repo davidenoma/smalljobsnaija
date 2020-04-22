@@ -105,18 +105,19 @@
                         </div>
                         <!--end col-md-3-->
                         <div class="col-md-4">
-                            <h2>Social Links</h2>
-                            <i class="fa fa-facebook" aria-hidden="true"><a href="facebook.com/nomatechnology">Facebook</a></i>
-                            <i class="fa fa-instagram" aria-hidden="true"> <a href="instagram.com/nomatechnology">Instagram</a></i>
-                            <i class="fa fa-twitter" aria-hidden="true"><a href="twitter.com/smalljobsnaija">Twitter</a></i>
+                            <h4>Social Links</h4>
+                            <i class="fa fa-facebook" aria-hidden="true"><a href="https://facebook.com/nomatechnology">Facebook</a></i>
+                            <i class="fa fa-instagram" aria-hidden="true"> <a href="https://instagram.com/nomatechnology">Instagram</a></i>
+                            <i class="fa fa-twitter" aria-hidden="true"><a href="https://twitter.com/smalljobsnaija">Twitter</a></i>
                                                         <address>
                                 <figure>
+                                    <a href="https://nomatechnology.com"></a>
                                     Noma Integrated Technology Solutions<br>
                                     <i class="fa fa-copyright" aria-hidden="true"></i>2016
                                 </figure>
                                 
                                 
-                                <strong>Email:</strong> <a href="#">admin@smalljobsnaija.com</a>
+                                <strong>Email:</strong> <a href="mailto:admin@smalljobsnaija.com">admin@smalljobsnaija.com</a>
                                 <br>
                                 
                               

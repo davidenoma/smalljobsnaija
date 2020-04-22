@@ -7,9 +7,10 @@ use App\Mail\ConnectTalent;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Image;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 
 
 class ProfileController extends Controller
@@ -41,6 +42,35 @@ class ProfileController extends Controller
         $welcomeName = Auth::user();
         return view('/user/publicprofile',compact('welcomeName'));
     }
+   public function correctImageOrientation($filename) {
+        if (function_exists('exif_read_data')) {
+          $exif = exif_read_data($filename);
+          dd($exif);
+          if($exif && isset($exif['Orientation'])) {
+            $orientation = $exif['Orientation'];
+            if($orientation != 1){
+              $img = imagecreatefromjpeg($filename);
+              $deg = 0;
+              switch ($orientation) {
+                case 3:
+                  $deg = 180;
+                  break;
+                case 6:
+                  $deg = 270;
+                  break;
+                case 8:
+                  $deg = 90;
+                  break;
+              }
+              if ($deg) {
+                $img = imagerotate($img, $deg, 0);        
+              }
+              // then rewrite the rotated image back to the disk as $filename 
+              imagejpeg($img, $filename->getClientOriginalName(), 95);
+            } // if there is some rotation necessary
+          } // if have the exif orientation info
+        } // if function exists      
+      }
     public function updateProfile(Request $request){    
           $request -> validate([
             'image' => 'image'
@@ -64,15 +94,22 @@ class ProfileController extends Controller
             $user -> update();
         }
         else{
-            // Storage::putFileAs(
-            //     'public', $request->file('image'), Auth::user()->id."_".$request->file('image')->getClientOriginalName()
+            // $img = Image::make($request->file('image'))->resize(300, 200,function($constraint){
+            //     $constraint->aspectRatio();
+            // })->encode('jpg',75);
+            // Image::configure(array('driver' => 'imagick'));
+                      
+
+            // $img = Image::make($request->file('image'));
+            // $img->storeAs(
+            //     'public', Auth::user()->id."_".$request->file('image')->getClientOriginalName()
             // );
-            $image = $request -> file('image');
-            
-            $image ->move('storage', $image ->getClientOriginalName());
-            
-            $user -> image = $image->getClientOriginalName();
-            // Auth::user()->id."_".$request->file('image')->getClientOriginalName();
+            $image = $request->file('image');
+            $this->correctImageOrientation($image);
+            Storage::putFileAs(
+                'public', $image   , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
+            );           
+            $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
             $user -> update();  
         }
         
