@@ -42,7 +42,7 @@ class ProfileController extends Controller
         $welcomeName = Auth::user();
         return view('/user/publicprofile',compact('welcomeName'));
     }
-   public function correctImageOrientation($filename) {
+   public function correctImageOrientation($filename, Request $request) {
         if (function_exists('exif_read_data')) {
           $exif = exif_read_data($filename);
         //   dd($exif);
@@ -66,11 +66,15 @@ class ProfileController extends Controller
                 $img = imagerotate($img, $deg, 0);        
               }
               // then rewrite the rotated image back to the disk as $filename 
-              imagejpeg($img, $filename->getClientOriginalName(), 95);
+            //   Storage::putFileAs(
+            //     'public', $img  , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
+            // );           
+             imagejpeg($img, 'storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
             } // if there is some rotation necessary
           } // if have the exif orientation info
         } // if function exists      
       }
+      
     public function updateProfile(Request $request){    
           $request -> validate([
             'image' => 'image'
@@ -105,10 +109,10 @@ class ProfileController extends Controller
             //     'public', Auth::user()->id."_".$request->file('image')->getClientOriginalName()
             // );
             $image = $request->file('image');
-            $this->correctImageOrientation($image);
-            Storage::putFileAs(
-                'public', $image   , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
-            );           
+            $this->correctImageOrientation($image,$request);
+            // Storage::putFileAs(
+            //     'public', $image   , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
+            // );           
             $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
             $user -> update();  
         }
