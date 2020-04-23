@@ -14,7 +14,7 @@ class SearchController extends Controller
     }
    public function index(Request $request){
   
-      $users = User::paginate(12)->onEachSide(1);           
+      $users = User::paginate(12)->onEachSide(3);           
       return view('/searchResult',compact('users'));
     }
 

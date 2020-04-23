@@ -3175,7 +3175,7 @@ textarea.form-control {
     height: 100%;
 }
 .background-image img {
-    display: none;
+    display: true;
 }
 .background-image.original-size {
     background-size: inherit;
@@ -3564,7 +3564,9 @@ textarea.form-control {
         top: 3rem !important;
         bottom: auto !important;
     }
-    .author {}
+    .author {
+        
+    }
     .author.big {
         padding-top: 19rem;
         position: relative;
