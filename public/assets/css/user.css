@@ -129,7 +129,7 @@
     border-top-right-radius: 0.2rem;
     border-bottom-right-radius: 0.2rem;
   }
-  .img-thumbnail{max-width:100%;height:auto}
+  .img-thumbnail{max-width:40rem;max-height:15rem}
   .img-thumbnail{
     padding:.25rem;
     background-color:transparent;

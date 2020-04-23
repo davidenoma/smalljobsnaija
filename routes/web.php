@@ -69,7 +69,7 @@ Route::prefix('/user') -> group(function(){
 
     Route::get('/chat', 'MessageController@index');
 
-    
+
     Route::get('/chat/archive', 'MessageController@archive');
     Route::get('/chat/sent', 'MessageController@sent');
     Route::get('/chat/starred', 'MessageController@starred');
@@ -91,6 +91,7 @@ Route::get('/user/feeds',function(){
 Route::get('/user/profile', 'ProfileController@index');
 
 Route::get('/user/publicprofile', 'ProfileController@publicProfile');
+Route::get('/user/jobboard', 'UserController@jobboard');
 
 Route::get('/talent/{username}', 'SearchController@publicSearchProfile');
 

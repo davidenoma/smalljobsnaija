@@ -108,15 +108,18 @@
                                                 <i  class="fa fa-fw fa-star text-warning" title="Almost There!"></i>
                                                 <i  class="fa fa-fw fa-star text-warning" title="Almost There!"></i>
                                                 <i  class="fa fa-fw fa-star text-warning" title="Almost There!"></i>
-                                                <h4>Rating & 1 Review(s)  </h4>
+                                               
                                                
                                             </div>
+                                            <br>
+                                            <h4>Rating & 1 Review(s)  </h4>
                                                                                                                          
                                         </figure>
-                                        <br>
+                                        
+                                        
                                         <button type="button" class="btn btn-sm btn-rounded btn-warning float-left" > <i class="fa fa-briefcase" aria-hidden="true"></i> Hire Talent</button>
                                        
-                                        <br> <br>
+                                        
                                         <button type="button" class="btn btn-sm btn-rounded btn-success float-left" data-toggle="modal" data-target="#modal-compose"> <i class="fa fa-inbox" aria-hidden="true"></i> Message</button>
                                     </div>
                                     <div class="additional-info">

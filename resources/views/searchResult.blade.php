@@ -78,7 +78,7 @@ SmallJobsNaija- Search Top Talents
                                     <div class="col-md-6 single-result">
                                         <div class="float-left">
                                             <a href="/talent/{{$user->username}}"> 
-                                                <img class="img-avatar" src="/assets/img/avatar12.jpg" alt=""> 
+                                            <img  src="/storage/{{$user->image}}" class="img-thumbnail" alt="{{$user->username}}"> 
                                             
                                             </a>
                                             

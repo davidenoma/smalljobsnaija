@@ -19,5 +19,9 @@ class UserController extends Controller
     public function profile(){
         
     }
+    public function jobboard(){
+        return view('user.jobboard');
+
+    }
     
 }

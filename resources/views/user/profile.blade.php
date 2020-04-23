@@ -30,7 +30,7 @@
                    
                     <!--end col-md-3-->
                     <div class="col-md-9">
-                        <form class="form" method="POST" action="/user/updateProfile" enctype="multipart/form-data">
+                        <form class="form" method="POST" action="/user/updateProfile" enctype="multipart/form-data"  >
                             @csrf
                             <div class="row">
                                 <div class="col-md-8">
@@ -43,7 +43,7 @@
                                                     <img src="/storage/{{Auth::user()->image}}"  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
                                                     </div>
                                                     <div class="single-file-input {{$errors->has('image')? 'has-error':''}}">
-                                                    <input type="file" id="image" name="image" value="">
+                                                    <input type="file" id="image" name="image" value="" accept="image/jpg,image/jpeg">
                                                         <div class="btn btn-framed btn-primary small">Upload a picture</div>
                                                     </div>
                                                 </div>      

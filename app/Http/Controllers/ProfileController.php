@@ -122,7 +122,7 @@ class ProfileController extends Controller
 
         return view('user/publicprofile',compact('welcomeName'));
 
-}
+        }
  
 
 }
