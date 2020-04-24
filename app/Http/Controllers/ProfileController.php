@@ -123,6 +123,11 @@ class ProfileController extends Controller
         return view('user/publicprofile',compact('welcomeName'));
 
         }
+
+        public function publicSearchProfile($username){           
+            $welcomeName = User::where('username',$username)->first();
+            return view('user.publicprofile',compact('welcomeName'));
+        }
  
 
 }

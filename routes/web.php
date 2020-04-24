@@ -93,7 +93,7 @@ Route::get('/user/profile', 'ProfileController@index');
 Route::get('/user/publicprofile', 'ProfileController@publicProfile');
 Route::get('/user/jobboard', 'UserController@jobboard');
 
-Route::get('/talent/{username}', 'SearchController@publicSearchProfile');
+Route::get('/talent/{username}', 'ProfileController@publicSearchProfile');
 
 //Controllers for Search
 

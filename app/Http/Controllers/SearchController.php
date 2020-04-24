@@ -9,7 +9,7 @@ class SearchController extends Controller
 {
     //
     public function __construct(){
-     // $this->middleware('auth')->except('logout');
+     
       
     }
    public function index(Request $request){
