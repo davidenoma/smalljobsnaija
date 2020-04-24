@@ -48,6 +48,7 @@ SmallJobsNaija- Registration Form
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                        
 
                         <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                         name="phone" placeholder="Phone Number" 
@@ -61,21 +62,21 @@ SmallJobsNaija- Registration Form
                         @enderror
                         
                         <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
-                        name="talent" placeholder="Enter your skill" 
+                        name="talent" placeholder="Enter your skill (Leave Empty for Regular User)" 
                     value="{{old('talent')}}"
-                        required>
+                        >
 
                         @error('talent')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-
+                       
                         <input class="form-control @error('area') is-invalid @enderror" id="area" type="text" 
-                        name="area" placeholder="Your area" 
+                        name="area" placeholder="Your area, street, road etc. " 
                     value="{{old('area')}}"
                         required>
-
+                        <p>Please use a very precise location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
                         @error('area')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

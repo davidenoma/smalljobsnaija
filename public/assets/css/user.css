@@ -28,6 +28,28 @@
     border-style: solid;
     margin-bottom: 1rem;
 }
+.content-homepage {
+  margin: 0 auto;
+  padding: 12px 12px 1px;
+  width: 100%;
+  overflow-x: visible;
+}
+.content-homepage .content-full {
+  padding-bottom: 12px;
+}
+.nice-copy-story p,
+p.nice-copy-story {
+  line-height: 1.8;
+  font-size: 1.285714rem;
+  color: #626262;
+}
+
+.nice-copy-story h2,
+.nice-copy-story h3,
+.nice-copy-story h4 {
+  margin-top: 50px;
+}
+
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;

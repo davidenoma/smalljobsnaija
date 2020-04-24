@@ -53,7 +53,7 @@
                 <a class="block block-rounded" href="{{url('/user/chat')}}">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center" style="color: #008000;">
-                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Chat</div>
+                                <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Inbox</div>
                                 <i class="fa fa-inbox fa-2x"></i>
 
                             </div>
