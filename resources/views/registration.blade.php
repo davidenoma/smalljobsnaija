@@ -76,14 +76,14 @@ SmallJobsNaija- Registration Form
                         name="area" placeholder="Your area, street, road etc. " 
                     value="{{old('area')}}"
                         required>
-                        <p>Please use a very precise location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
+                        <p>Kindly an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
                         @error('area')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                      
-                        <label for="state">Choose state</label>
+                        
                         <select name="state" id="state" class=" @error('state') is-invalid @enderror" id="state" type="text" 
                         name="state" placeholder="Your state" 
                     value="{{old('state')}}" data-placeholder="Select State" >
@@ -153,24 +153,13 @@ SmallJobsNaija- Registration Form
                                
                             
                         
-                        {{-- <div class="other-links">
-                        <span>Or register with</span>
-                            <ul> 
-                                      <a href="/auth/facebook">  <img src="assets/icons/icons8-facebook-64 (1).png" alt="" ></a>
-                                    <a href="/auth/google"><img src="assets/icons/icons8-google-64.png" alt=""></a> 
-                                    
-                                    
-                            </ul>
-                
-            
-                         
-                            
-                          
-
-                        </div> --}}
+           
                     </div>  
                 </div>
             </div>
         {{-- </div> --}}
+    </div>
+    <div class="form-content">
+
     </div>
     @endsection
