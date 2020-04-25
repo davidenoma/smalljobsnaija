@@ -158,8 +158,9 @@ SmallJobsNaija- Registration Form
                 </div>
             </div>
         {{-- </div> --}}
-    </div>
-    <div class="form-content">
+        <div class="form-holder" style="padding-bottom: 10rem">
 
+        </div>
     </div>
+  
     @endsection
