@@ -42,12 +42,14 @@ class ProfileController extends Controller
         return view('/user/publicprofile',compact('welcomeName'));
     }
    public function correctImageOrientation($filename, Request $request) {
+    
         if (function_exists('exif_read_data')) {
           $exif = exif_read_data($filename);
          if($exif && isset($exif['Orientation'])) {
             $orientation = $exif['Orientation'];
             if($orientation != 1){
              $img = imagecreatefromjpeg($filename);
+            
               $deg = 0;
               switch ($orientation) {
                 case 3:
@@ -63,18 +65,18 @@ class ProfileController extends Controller
               if ($deg) {
                 $img = imagerotate($img, $deg, 0);        
               }
-              // then rewrite the rotated image back to the disk as $filename 
-            //   Storage::putFileAs(
-            //     'storage', $img  , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
-            // );           
-            // $img ->move('storage', $img ->getClientOriginalName());
-             imagejpeg($img, 'storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
+
+              imagejpeg($img, 'storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
+            }
+            else{
+              $img = imagecreatefromjpeg($filename);
+              imagejpeg($img, 'storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
             } // if there is some rotation necessary
           } // if have the exif orientation info
         } // if function exists      
       }
       
-    public function updateProfile(Request $request){    
+  public function updateProfile(Request $request){    
           $request -> validate([
             'image' => 'image'
           ]);
@@ -99,15 +101,13 @@ class ProfileController extends Controller
         else{
             // $img = Image::make($request->file('image'))->resize(300, 200,function($constraint){
             //     $constraint->aspectRatio();
-            // })->encode('jpg',75);
-            // Image::configure(array('driver' => 'imagick'));
-                      
-
+            // })->encode('jpg',75);                            
             // $img = Image::make($request->file('image'));
             // $img->storeAs(
             //     'public', Auth::user()->id."_".$request->file('image')->getClientOriginalName()
             // );
             $image = $request->file('image');
+            
             $this->correctImageOrientation($image,$request);
             // Storage::putFileAs(
             //     'public', $image   , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
@@ -124,10 +124,10 @@ class ProfileController extends Controller
 
         }
 
-        public function publicSearchProfile($username){           
+    public function publicSearchProfile($username){           
             $welcomeName = User::where('username',$username)->first();
             return view('user.publicprofile',compact('welcomeName'));
-        }
+    }
  
 
 }

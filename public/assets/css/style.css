@@ -3174,7 +3174,7 @@ textarea.form-control {
     height: 100%;
 }
 .background-image img {
-    display: true;
+    display: block;
 }
 .background-image.original-size {
     background-size: inherit;
