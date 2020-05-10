@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-SmallJobsNaija- A platform to Find, Connect, and Showcase talents in your area 
+Find talents for small jobs in your area
 @endsection
 
 @section('content')

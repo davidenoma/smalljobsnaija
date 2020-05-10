@@ -2152,6 +2152,7 @@ select {
   display: -webkit-flex;
   display: flex;
 }
+
 @media only screen and (max-width: 1039px) {
   .create__head {
     display: none;

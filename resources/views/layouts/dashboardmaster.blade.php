@@ -16,21 +16,10 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Noma Integrated Technology">
-    <meta name="description" content="A Community based social platform for top talents to be found in
-    your area for no cv, student, part time, blue collar small jobs.
-    .We help you find skilled talents and freelancers to solve your Digital, Enterrtainment, 
-    Web, Plumbing, Electrical, Artistic, Fashion, Educational, Repair, Food, Cleaning, Design and all no
-    cv jobs near you" >
-    <meta name="keywords" content=" websites for, do part time job,    online jobs for students, part time jobs,    part time jobs near me,  online part time jobs,    part time,    student jobs,    casual jobs available,    jobs hiring near me part time no experience,    career for arts students,
-    science tutor jobs near me,    casual jobs,    weekend jobs near me,    freelance sites,
-    freelancer,    freelance writing,    freelancing websites,  
-    article writing,    application letter for teacher,    job application letter for teacher,    application letter for the post of a teacher,
-    writing jobs,    jobs under art course,    online writing jobs,    graphic design jobs,    content writing jobs,
-    freelance writing jobs,     graphic design jobs,    design engineer,    security guard,    cyber security jobs,
-       photo shoot,    photography,    photo studio near me,    jobs for interior designers,    
-    dog training,    seamstress,        careers in music,      web developer,    front end web developer,
-    web design and development,    backend developer,    web programming, do part time job web sites,  photography jobs website,
-    freelance writing website, article writing service, 
+    <meta name="description" content="Quickly find top talents who search for jobs near me to meet your needs! " >
+    <meta name="keywords" content="search for jobs, work for home, vacancy for job, google for jobs, online jobs for students,hot nigerian jobs, jobs near me, jobs in lagos, jobs in Nigeria,
+    jobs near me, jobs in nigeria, online jobs, jobs, job vacancy, job openings near me jobs in dubai, career, jobs in canada, job hunting, 
+    looking for a job, online jobs for teens, jobs for students, apply for jobs, apply for jobs online, post jobs for free, vacancy for teachers, earn money online without investment for students, jobs for writers, jobs for computer science, jobs for nurses, websites for jobs, 
     "> 
     
 
