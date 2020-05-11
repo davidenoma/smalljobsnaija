@@ -53,7 +53,8 @@
           "sameAs": [
             "https://www.facebook.com/nomatechnology",
             "https://twitter.com/@smalljobsnaija",
-            "https://www.linkedin.com/company/noma-technology"
+            "https://www.linkedin.com/company/noma-technology",
+            "https://instagram.com/nomatechnology"
           ]
         }
       </script>
