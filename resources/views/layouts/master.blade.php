@@ -21,6 +21,10 @@
     jobs near me, jobs in nigeria, online jobs, jobs, job vacancy, job openings near me jobs in dubai, career, jobs in canada, job hunting, 
     looking for a job, online jobs for teens, jobs for students, apply for jobs, apply for jobs online, post jobs for free, vacancy for teachers, earn money online without investment for students, jobs for writers, jobs for computer science, jobs for nurses, websites for jobs, 
     "> 
+    <meta property="og:title" content="Small Jobs Naija" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://smalljosnaija.com" />
+<meta property="og:description" content="Quickly find top talents who search for jobs near me to meet your needs!" />
     
     
     <link href="https://fonts.googleapis.com/css?family=DM+Sans|Libre+Franklin|Montserrat&display=swap" rel="stylesheet">
