@@ -28,7 +28,7 @@ class SearchController extends Controller
     $location = substr($request->location,0,3);
     $talent  = substr($request ->talent,0,3);
     // dd($location,$talent);
-    $users = User::where('talent', 'like', '%'. $talent. '%')->where('location','like', '%'.$location.'%')->inRandomOrder()->paginate(12);
+    $users = User::where('talent', 'like', '%'. $talent. '%')->where('location','like', '%'.$location.'%')->paginate(12);
     
 
     return view('/searchResult')->with('users',$users);
