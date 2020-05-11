@@ -133,14 +133,15 @@
                         <a href="#" class="brand">
                             <img src="assets/img/logo-crop.png" alt="" height="100px" width="100px">
                         </a>
-                        <p>
-                            We are a community based social platform that helps you showcase your talent 
-                            and connect or find talents in your area to for gigs.
+                        <p style="color:white;opacity:100;">
+                            We help you find talents for small jobs near you. <br> 
+                                We showcase and find talents for jobs near you like writing, stylists, 
+                                painting, designing, teaching and others.
                           
                         </p>
                     </div>
                     <!--end col-md-5-->
-                    <div class="col-md-5">
+                    <div class="col-md-5" style="color:white;opacity:100">
                         <h4>Navigation</h4>
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
@@ -172,7 +173,7 @@
                         </div>
                     </div>
                     <!--end col-md-3-->
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="color:white;opacity:100">
                         <h4>Social Links</h4>
                         <i class="fa fa-facebook" aria-hidden="true"><a href="https://facebook.com/nomatechnology">Facebook</a></i>
                         <i class="fa fa-instagram" aria-hidden="true"> <a href="https://instagram.com/nomatechnology">Instagram</a></i>

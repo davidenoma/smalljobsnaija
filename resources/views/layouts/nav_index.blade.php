@@ -48,8 +48,8 @@
         <div class="page-title">
             <div class="container">
                 <h1 class="opacity-60 center">
-                    We all love searching for things, <br/><br/>
-                    but Our passion is helping you find top Talents in your area!
+                    Find Top talents for Small Jobs near you!
+                    
                 </h1>
             </div>
             <!--end container-->
@@ -62,24 +62,24 @@
                     <!--Main Form-->
                     <div class="main-search-form">
                         <div class="form-row">
-                            <div class="col-md-3 col-sm-3">
+                            <div class="col-md-4 col-sm-4">
                                 <div class="form-group">
-                                    <label for="what" class="col-form-label">Find Talent:</label>
+                                    <label for="what" class="col-form-label">Talent</label>
                                     <input name="talent" type="text" class="form-control" id="what" placeholder="e.g. Plumber, Tailor, Writer, DJ, Programmer">
                                 </div>
                                 <!--end form-group-->
                             </div>
-                            <!--end col-md-3-->
-                            <div class="col-md-3 col-sm-3">
+                            <!--end col-md-4-->
+                            <div class="col-md-4 col-sm-4">
                                 <div class="form-group">
-                                    <label for="input-location" class="col-form-label">Your Area:</label>
+                                    <label for="input-location" class="col-form-label">Your Area</label>
                                     <input name="location" type="text" class="form-control" id="input-location" placeholder="e.g. Covenant Uni, Ikeja, Rumuola,">
                                     <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                                 </div>
                                 <!--end form-group-->
                             </div>
-                            <!--end col-md-3-->
-                            <div class="col-md-3 col-sm-3">
+                            <!--end col-md-4-->
+                            {{-- <div class="col-md-4 col-sm-4">
                           
                                     <div class="form-group">
                                             <label for="category" class="col-form-label">Distance near you:</label>
@@ -87,15 +87,15 @@
                                                 <option value="">Distance</option>
                                                 <option value="1">1km</option>
                                                 <option value="2">5km</option>
-                                                <option value="3">10km</option>
+                                                <option value="4">10km</option>
                                                 <option value="4">50km</option>
                                                 <option value="5">100km</option>
                                             </select>
                                         </div>
                                
-                                <!--end form-group-->
-                            </div>
-                            <!--end col-md-3-->
+                               
+                            </div> --}}
+                            <!--end col-md-4-->
                             <div class="col-md-3 col-sm-3">
                                 <button type="submit" class="btn btn-primary width-100" >Search</button>
                             </div>
@@ -107,9 +107,6 @@
                         <!--end form-row-->
                     </div>
                
-                    <div class="alternative-search-form">
-
-                        </div>
                         <!--end collapse-->
                     </div>
                     
@@ -117,13 +114,7 @@
                 <!--end container-->
             </form>                           
             <!--============ End  Form ======================================================================-->
-        <div class="background">
-            <div class="background-image">
-                <img src="assets/img/hero-background-image-01.jpg" alt="">
-            </div>
-            <!--end background-image-->
-        </div>
-        <!--end background-->
+    
     </div>
     <!--end hero-wrapper-->
 </header>
