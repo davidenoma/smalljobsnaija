@@ -72,66 +72,19 @@ SmallJobsNaija- Registration Form
                         </span>
                         @enderror
                        
-                        <input class="form-control @error('area') is-invalid @enderror" id="area" type="text" 
-                        name="area" placeholder="Your area, street, road etc. " 
-                    value="{{old('area')}}"
+                        <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
+                        name="location" placeholder="Your location, street, road etc. " 
+                    value="{{old('location')}}"
                         required>
                         <p>Kindly an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
-                        @error('area')
+                        @error('location')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
                      
                         
-                        <select name="state" id="state" class=" @error('state') is-invalid @enderror" id="state" type="text" 
-                        name="state" placeholder="Your state" 
-                    value="{{old('state')}}" data-placeholder="Select State" >
-                            <option>Abia
-                            </option><option>Adamawa 
-                            </option><option>Akwa Ibom
-                            </option><option>Anambra
-                            </option><option>Bauchi 
-                            </option><option>Bayelsa 
-                            </option><option>Benue
-                            </option><option>Borno 
-                            </option><option>Cross River 
-                            </option><option>Delta 
-                            </option><option>Ebonyi 
-                            </option><option>Edo
-                            </option><option>Ekiti
-                            </option><option>Enugu 
-                            </option><option>FCT 
-                            </option><option>Gombe 
-                            </option><option>Imo 
-                            </option><option>Jigawa 
-                            </option><option>Kaduna 
-                            </option><option>Kano 
-                            </option><option>Katsina
-                            </option><option>Kebbi 
-                            </option><option>Kogi 
-                            </option><option>Kwara
-                            </option><option>Lagos
-                            </option><option>Nassarawa 
-                            </option><option>Niger
-                            </option><option>Ogun 
-                            </option><option>Ondo 
-                            </option><option>Osun
-                            </option><option>Oyo 
-                            </option><option>Plateau 
-                            </option><option>Rivers 
-                            </option><option>Sokoto 
-                            </option><option>Taraba 
-                            </option><option>Yobe 
-                            </option><option>Zamfara</option>
-                        </select>
-                        <br>
-                        @error('state')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                        <br>
+        
                         <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                         @error('password')
                         <span class="invalid-feedback" role="alert">
