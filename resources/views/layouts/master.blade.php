@@ -23,7 +23,8 @@
     "> 
     <meta property="og:title" content="Small Jobs Naija" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://smalljosnaija.com" />
+<meta property="og:url" content="https://smalljobsnaija.com" />
+<meta property="og:image" content="/assets/img/logo-crop.png" />
 <meta property="og:description" content="Quickly find top talents who search for jobs near me to meet your needs!" />
     
     
