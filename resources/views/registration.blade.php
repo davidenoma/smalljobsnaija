@@ -37,7 +37,7 @@ SmallJobsNaija- Registration Form
                             <label for="Talent">Choose Account Type</label>
                             <select  name="type" id="type" onchange="check()" >
                                 <option value="talent">Talent</option>
-                                <option value="customer">Customer</option>
+                                <option value="customer">Employer</option>
                             </select>
                          
                             <br>
@@ -73,7 +73,7 @@ SmallJobsNaija- Registration Form
                         @enderror
                         
                         <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
-                        name="talent" placeholder="Enter your skill (Leave Empty for Regular User)" 
+                        name="talent" placeholder="Your skill, talent or craft" 
                     value="{{old('talent')}}"
                         >
 
@@ -87,7 +87,7 @@ SmallJobsNaija- Registration Form
                         name="location" placeholder="Your location, street, road etc. " 
                     value="{{old('location')}}"
                         required>
-                        <p id="location-info">Kindly an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
+                        <p id="location-info">Kindly use an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
                         @error('location')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
