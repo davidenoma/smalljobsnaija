@@ -75,7 +75,7 @@ SmallJobsNaija- Registration Form
                         <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
                         name="talent" placeholder="Your skill, talent or craft" 
                     value="{{old('talent')}}"
-                        >
+                        required>
 
                         @error('talent')
                         <span class="invalid-feedback" role="alert" id="talent-span">
@@ -136,6 +136,7 @@ SmallJobsNaija- Registration Form
             }
             
             if (document.getElementById('type').value === 'talent'){
+                document.getElementById('talent').value = '  ';
                 document.getElementById('talent').hidden = false;
             document.getElementById('location-info').hidden = false;
             }

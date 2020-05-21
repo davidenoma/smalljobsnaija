@@ -31,6 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
+
     protected $redirectTo = '/user/home';
 
     /**
@@ -55,7 +56,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'username' => ['required', 'string', 'max:255', 'unique:users', 'alpha_dash'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
-            'talent' => ['string'],
+            // 'talent' => ['string'],
             'first_name' => ['string'],
             'last_name' => ['string'],
             'location' => ['required'],
@@ -72,10 +73,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
-
-            
-        
+    {                   
             $user =  User::create([
                 'username' => $data['username'],
                 'email' => $data['email'],
