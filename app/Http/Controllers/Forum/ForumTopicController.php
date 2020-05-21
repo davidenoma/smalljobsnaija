@@ -22,6 +22,7 @@ class ForumTopicController extends Controller
         return view('forum.forumtopics',compact('forumtopics'));       
             
     }
+    
         public function mostRecentPost($id){
         
         DB::select(' select max(updated_at) from forum_posts where forum_topic_id = ?',[$id]);

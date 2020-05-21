@@ -3,6 +3,7 @@
 @section('title')
 SmallJobsNaija- Frequently Asked Questions
 @endsection
+@section('content')
 @include('layouts.nav_new')
 <section class="content">
     <section class="block">
@@ -15,18 +16,19 @@ SmallJobsNaija- Frequently Asked Questions
                             <div class="form-group">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter your search">
                             </div>
-                            <!--end form-group-->
+                            
                         </form>
                     </section>
                     <section>
                         <div class="answer">
                             <div class="box">
                                 <h3>What are we?</h3>
-                                <p>SmallJobsNaija is a community based social network platform.
+                                <p>SmallJobsNaija is a platform for people to connect and find talents for small jobs near me. 
+                                    We connect talents with people to do jobs near me. 
                             </div>
                             <figure>Was this answer helpful? <a href="#">Yes<i class="fa fa-thumbs-up"></i></a> <a href="#">No<i class="fa fa-thumbs-down"></i></a></figure>
                         </div>
-                        <!--end answer-->
+                        
                         <div class="answer">
                             <div class="box">
                                 <h3>Is SmallJobsNaija free of charge?</h3>
@@ -76,15 +78,16 @@ SmallJobsNaija- Frequently Asked Questions
                     <aside class="sidebar">
                         <h2>Search Talents</h2>
                         <!--============ Side Bar Search Form ===============================================-->
-                        <form class="sidebar-form form">
+                        <form class="sidebar-form form" method="POST" action="/search">
+                            @csrf
                             <div class="form-group">
                                 <label for="what" class="col-form-label">Talent (skill)</label>
-                                <input name="keyword" type="text" class="form-control" id="what" placeholder="What are you looking for?">
+                                <input name="talent" value="{{old('talent')}}" type="text" class="form-control" id="what" placeholder="What are you looking for?">
                             </div>
                             <!--end form-group-->
                             <div class="form-group">
                                 <label for="input-location" class="col-form-label">Where?</label>
-                                <input name="location" type="text" class="form-control" id="input-location" placeholder="Enter Location">
+                                <input name="location" value="{{old('location')}}" type="text" class="form-control" id="input-location" placeholder="Enter Location">
                                 <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                             </div>
            
@@ -103,3 +106,4 @@ SmallJobsNaija- Frequently Asked Questions
     </section>
     <!--end block-->
 </section>
+@endsection

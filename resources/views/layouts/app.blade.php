@@ -26,13 +26,13 @@
     <!-- Styles -->
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     {{-- <link rel="stylesheet" id="css-main" href="/assets/css/codebase.min.css"> --}}
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">  
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">  
+    <link rel="stylesheet" href="/assets/css/style.min.css">
   
-    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    {{-- <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css"> --}}
 
     <link rel="stylesheet" href="/assets/fonts/font-awesome.css" >
-    <link rel="stylesheet" href="/assets/css/user.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/user.min.css" type="text/css">
     
     <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
     

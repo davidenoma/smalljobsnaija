@@ -29,22 +29,22 @@
     
     
     <link href="https://fonts.googleapis.com/css?family=DM+Sans|Libre+Franklin|Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css" type="text/css">     
-    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">     
+    <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="stylesheet" href="/assets/fonts/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css">
-    <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-style.min.css">    
+    <link rel="stylesheet" href="/assets/css/user.min.css">
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-style.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-theme8.css">
-    
-
-   
-    <link rel="stylesheet" href="/assets/css/user.css">
     <link rel="icon" src="/assets/img/logo-crop.png" sizes="192x192" >
+    {{-- <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css"> --}}
+    <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-theme8.min.css">      
+    {{-- <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css"> --}}
+    {{-- <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css"> --}}
+   
+   
   <title>  @yield('title') </title>
     @yield('styles')
+
     
 </head>
 <body>
@@ -142,27 +142,30 @@
                 <!--end background-->
             </div>
         </footer>
+        
 </body>
 
 
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-
-<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-    
-<script src="assets/js/selectize.min.js"></script>
+{{-- <script type="text/javascript" src="assets/js/popper.min.js"></script> --}}
 
-<script src="assets/js/codebase.core.min.js">
+    
+{{-- <script src="assets/js/selectize.min.js"></script> --}}
+
+{{-- <script src="assets/js/codebase.core.min.js">
 </script>
 
 <script src="assets/js/codebase.app.min.js">
-</script>
+</script> --}}
 
 <!-- Page JS Plugins -->
 <!-- Page JS Code -->
-<script src="assets/js/db_minimal.min.js"></script>
-<script src="assets/js/masonry.pkgd.min.js"></script>
-<script src="assets/js/icheck.min.js"></script>
-<script src="assets/js/jquery.validate.min.js"></script>
-<script src="assets/js/custom.js"></script>
+{{-- <script src="assets/js/db_minimal.min.js"></script> --}}
+
+{{-- <script src="assets/js/icheck.min.js"></script> --}}
+
 </html>

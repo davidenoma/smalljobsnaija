@@ -30,7 +30,18 @@ SmallJobsNaija- Registration Form
                             <a href="{{route('registration')}}" class="active">Registration Form</a>
                         </div>
                         <form method="POST" action="{{ route('register') }}">
+                           
+
                             @csrf
+                            <br>
+                            <label for="Talent">Choose Account Type</label>
+                            <select  name="type" id="type" onchange="check()" >
+                                <option value="talent">Talent</option>
+                                <option value="customer">Customer</option>
+                            </select>
+                         
+                            <br>
+                            <br>
                             <input type="text" name="username" placeholder="User Name" id="username" 
                             type="text" class="form-control @error('username') is-invalid @enderror" 
                              value="{{ old('username') }}" required autocomplete="username" autofocus >
@@ -67,7 +78,7 @@ SmallJobsNaija- Registration Form
                         >
 
                         @error('talent')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="invalid-feedback" role="alert" id="talent-span">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
@@ -76,7 +87,7 @@ SmallJobsNaija- Registration Form
                         name="location" placeholder="Your location, street, road etc. " 
                     value="{{old('location')}}"
                         required>
-                        <p>Kindly an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
+                        <p id="location-info">Kindly an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
                         @error('location')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -111,10 +122,25 @@ SmallJobsNaija- Registration Form
                 </div>
             </div>
         {{-- </div> --}}
-      
+        
     </div>
     <div class="form-body" style="padding-bottom: 10rem">
 
     </div>
+    <script type="text/javascript"> 
+        function check(){
+            if (document.getElementById('type').value === 'customer'){
+                document.getElementById('talent').hidden = true;
+            document.getElementById('location-info').hidden = true;
+            
+            }
+            
+            if (document.getElementById('type').value === 'talent'){
+                document.getElementById('talent').hidden = false;
+            document.getElementById('location-info').hidden = false;
+            }
+           
+        }
+    </script>
   
     @endsection
