@@ -8,15 +8,15 @@
             <div class="card">
                
                 <div class="card-header">
-                <h3>Talent Login
-                    </h3>  
+                    <h3>Employer Login
+                        </h3>  
+                    
+                    </div>
+                    
                 
-                </div>
-                
-            
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="/employer/login">
                         @csrf
 
                         <div class="form-group row">
@@ -25,7 +25,7 @@
                             <div class="col-md-6">
                                 <input class="form-control {{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}"
                                 type="text" id="name" value="{{ old('username') ?: old('email') }}" 
-                                 placeholder="E-mail Address/Username" name="name" required >
+                                 placeholder="E-mail Address/Phone" name="name" required >
 
                                 
                                 @error('username')
@@ -68,13 +68,13 @@
                                         {{ __('Login') }}
                                     </button>
                                 </div>
-                                
                             </div>
                         </div>
-                        
+
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <a href="/employer/login"><button class="btn btn-warning center " type="button">Employer Sign In</button></a>
+                              
+                                <a href="/login"><button class="btn btn-warning center " type="button">Talent Sign In</button></a>
                                 @if (Route::has('register'))
                                 <a style="color:#008000" class="btn btn-link" href="{{ route('registration') }}">
                                     Register

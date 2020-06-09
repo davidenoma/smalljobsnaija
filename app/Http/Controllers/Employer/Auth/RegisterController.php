@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Employer\Auth;
 
-use App\User;
+
 use App\Employer;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -33,7 +33,7 @@ class RegisterController extends Controller
      * @var string
      */
 
-    protected $redirectTo = '/user/home';
+    protected $redirectTo = '/employer/home';
 
     /**
      * Create a new controller instance.
@@ -43,7 +43,7 @@ class RegisterController extends Controller
     public function __construct() 
     {
         $this->middleware('guest');
-        $this -> middleware('guest:employer');
+        
     }
 
     // /**
@@ -56,9 +56,8 @@ class RegisterController extends Controller
     {
             
         return Validator::make($data, [
-            'username' => ['required', 'string', 'max:255', 'unique:users', 'alpha_dash'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
-            // 'talent' => ['string'],
+            'username' => ['required', 'string', 'max:255', 'unique:employers', 'alpha_dash'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:employers,email'],            
             'first_name' => ['string'],
             'last_name' => ['string'],
             'location' => ['required'],
@@ -75,75 +74,34 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {    
-        
-         
+    {           
+             
         
             
-            $user =  User::create([
+            $employer =  Employer::create([
                 'username' => $data['username'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'phone' => $data['phone'],
                  'location' => $data['location'],
-                'talent' => $data['talent']
+                
             ]);    
             
             
-        try{
-            Mail::to($data['email'])->send(new WelcomeMail($data['username']));
-        }
-        catch(Exception $e){
-            auth()->login($user);
-        }
+        // try{
+        //     Mail::to($data['email'])->send(new WelcomeMail($data['username']));
+        // }
+        // catch(Exception $e){
+        //     auth()->login($user);
+        // }
             
 
         
         
-        return $user;
+        return $employer;
 
     }
 
-    //Redirect to the facebook authentication page
-    public function redirectToProvider($provider){
-        return Socialite::driver($provider)->redirect();
 
-    } 
-    public function finalizeSocial(){
-        return view('finalsocial');
-    }
-    public function handleProviderCallback($provider){
-        $newSocial = true;
-        
-        try {
-            $socialUser = Socialite::driver($provider)->stateless()->user();
-        } catch (Exception $e) {
-            return redirect('/');
-        }
-        //Check if we have logged provider
-        $socialProvider = SocialProvider::where('provider_id',$socialUser->getId())->first();
-        if(!$socialProvider){
-            //create a new user and provider
-           // dd($socialProvider);
-            
-            $user = User::firstOrCreate(
-                ['email' => $socialUser->getEmail()],
-                ['username' => $socialUser->getName()]
-                
-                
-            );
-            $user -> socialProviders()->create(
-                ['provider_id'=> $socialUser -> getId(), 'provider'=> $provider]
-            );
-
-        }
-        else{
-            $user = $socialProvider->user;
-        }
-        auth()->login($user);
-        return redirect('/home')->with($newSocial);
-      //  return $user;
-       // return $user ->  getEmail();
-    }
   
 }

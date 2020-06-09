@@ -21,20 +21,21 @@ SmallJobsNaija- Registration Form
 @section('content')
 @include('layouts.nav_new')
     <div class="form-body">
-    
+    <h1 class="center" style="color:white">Registration </h1>
+    <br>
         {{-- <div class="row"> --}}
              <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
                             <div class="page-links">    
-                            <a  class="active">Talent</a>
-                            <a href="/employer/registration"  class="">Employer</a>
+                                <a class="active">Employer</a>
+                                <a href="/registration"  class="">Talent</a> 
+                           
                         </div>
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="/employer/registration">
                            
 
-                            @csrf
-                           
+                            @csrf                                                 
                             <input type="text" name="username" placeholder="User Name" id="username" 
                             type="text" class="form-control @error('username') is-invalid @enderror" 
                              value="{{ old('username') }}" required autocomplete="username" autofocus >
@@ -65,22 +66,13 @@ SmallJobsNaija- Registration Form
                         </span>
                         @enderror
                         
-                        <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
-                        name="talent" placeholder="Your skill, talent or craft" 
-                    value="{{old('talent')}}"
-                        >
-
-                        @error('talent')
-                        <span class="invalid-feedback" role="alert" id="talent-span">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+         
                        
                         <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
                         name="location" placeholder="Your location, street, road etc. " 
                     value="{{old('location')}}"
                         required>
-                        <p id="location-info">Kindly use an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
+                       
                         @error('location')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -105,11 +97,7 @@ SmallJobsNaija- Registration Form
                             </div>
                            
                         </form>
-                        
-                            
-                               
-                            
-                        
+                                                                                                        
            
                     </div>  
                 </div>
@@ -123,7 +111,7 @@ SmallJobsNaija- Registration Form
                 <div class="row" >
                     <div class="col-md-4 center" style="color:#008000;padding-top:0">
                         <a href="#" class="brand">
-                            <img src="assets/img/logo-crop.png" alt="" height="100px" width="100px">
+                            <img src="/assets/img/logo-crop.png" alt="" height="100px" width="100px">
                         </a>
                         <p style="color:#008000;opacity:100"> 
                             We help you find talents for small jobs near you. 
@@ -196,4 +184,5 @@ SmallJobsNaija- Registration Form
             <!--end background-->
         </div>
     </footer>
+  
     @endsection

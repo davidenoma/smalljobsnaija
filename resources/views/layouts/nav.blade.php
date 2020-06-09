@@ -10,21 +10,28 @@
             <button type="button" class="btn btn-circle btn-dual-secondary" data-toggle="layout" data-action="header_search_on">
                 <i class="fa fa-search" style="color:white;"></i>
             </button>
+
+            
         
         </div>
 
         <div class="content-header-section">
-
-        <ul class="ml-auto"> 
-           
+         
+        
+           <div class="right" >
+            
+        </div>
             @guest
-           <li class="nav-item">
-                <a style="color:white;" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-            </li>
-        @if (Route::has('register'))
-            <li class="nav-item">
-                <a style="color:white;" class="nav-link" href="{{ route('registration') }}">{{ __('Register') }}</a>
-            </li>
+            {{-- <li class="nav-item"> --}}
+                
+                <a  class="" href="{{ route('login') }}"> <h4 style="color:white;" >{{ __('Login') }}</h4> </a>
+             {{-- </li> --}}
+         @if (Route::has('register'))
+             {{-- <li class="nav-item"> --}}
+                 <a style="color:white;" class="" href="{{ route('registration') }}"> <h4 style="color:white;">{{ __('Register') }} </h4></a>
+             {{-- </li> --}}
+           </div>
+         
 
         @endif
             @else

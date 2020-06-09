@@ -25,6 +25,14 @@ Route::get('/','HomeController@index') -> name('homepage');
 
 Route::get('/registration', 'HomeController@search') -> name('registration');
 
+Route::get('/employer/registration', 'Employer\EmployerController@registration');
+Route::post('/employer/registration', 'Employer\Auth\RegisterController@register');
+Route::get('/employer/login', 'Employer\EmployerController@login');
+
+Route::post('/employer/login', 'Employer\Auth\LoginController@login');
+Route::get('/employer/home','Employer\EmployerController@index');
+Route::get('/employer/logout', 'Employer\Auth\LoginController@logout');
+
 Route::get('/about', function () {
     return view('homepage.about');
 }); 
@@ -91,7 +99,7 @@ Route::get('/user/feeds',function(){
 Route::get('/user/profile', 'ProfileController@index');
 
 Route::get('/user/publicprofile', 'ProfileController@publicProfile');
-Route::get('/user/jobboard', 'UserController@jobboard');
+
 
 Route::get('/talent/{username}', 'ProfileController@publicSearchProfile');
 
@@ -110,3 +118,4 @@ Route::get('/admin/home', 'AdminController@index' );
 
 Route::get('/admin/login', 'AdminController@login');
 
+//Controllers for Employer
