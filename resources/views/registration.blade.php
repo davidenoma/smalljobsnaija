@@ -122,14 +122,14 @@ SmallJobsNaija- Talent Registration Form
        
     </div>
     <div class="form-body" style="height:40%"></div>
-    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0;margin-top: 7rem">
+    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0;">
         <br>
         <div class="wrapper">
             <div class="container" style="color:#008000;padding-top:0">
                 <div class="row" >
                     <div class="col-md-4 center" style="color:#008000;padding-top:0">
                         <a href="#" class="brand">
-                            <img src="assets/img/logo-crop.png" alt="" height="100px" width="100px">
+                            <img src="/assets/img/logo-crop.png" alt="" height="100px" width="100px">
                         </a>
                         <p style="color:#008000;opacity:100"> 
                             We help you find talents for small jobs near you. 
