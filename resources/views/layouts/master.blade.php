@@ -36,10 +36,10 @@
     <link rel="stylesheet" href="/assets/css/user.min.css">
 
     <link rel="icon" src="/assets/img/logo-crop.png" sizes="192x192" >
-    {{-- <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css"> --}}
+    <link rel="stylesheet" href="/assets/css/selectize.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="/assets/css/iofrm-theme8.min.css">      
-    {{-- <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css"> --}}
-    {{-- <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css"> --}}
+    <link rel="stylesheet" href="/assets/css/shortcodes.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/responsive.css" type="text/css">
    
    
   <title>  @yield('title') </title>
@@ -76,21 +76,6 @@
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-{{-- <script type="text/javascript" src="assets/js/popper.min.js"></script> --}}
 
-    
-{{-- <script src="assets/js/selectize.min.js"></script> --}}
-
-{{-- <script src="assets/js/codebase.core.min.js">
-</script>
-
-<script src="assets/js/codebase.app.min.js">
-</script> --}}
-
-<!-- Page JS Plugins -->
-<!-- Page JS Code -->
-{{-- <script src="assets/js/db_minimal.min.js"></script> --}}
-
-{{-- <script src="assets/js/icheck.min.js"></script> --}}
 
 </html>

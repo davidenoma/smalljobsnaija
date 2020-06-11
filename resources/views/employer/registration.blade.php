@@ -106,9 +106,9 @@ SmallJobsNaija- Employer Registration Form
         
     </div>
     <div class="form-body" style="height:40%"></div>
-    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0">
+    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0; position: static">
         <div class="wrapper">
-            <div class="" style="color:#008000;padding-top:0">
+            <div class="container" style="color:#008000;padding-top:0">
                 <div class="row" >
                     <div class="col-md-4 center" style="color:#008000;padding-top:0">
                         <a href="#" class="brand">
@@ -187,3 +187,4 @@ SmallJobsNaija- Employer Registration Form
     </footer>
   
     @endsection
+   
