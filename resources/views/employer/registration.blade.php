@@ -105,8 +105,8 @@ SmallJobsNaija- Employer Registration Form
         {{-- </div> --}}
         
     </div>
-    <div class="form-body" style="height:40%"></div>
-    <div class="container">
+    
+    {{-- <div class="container">
         <footer class="footer" style="background-color: white; color: #008000;padding-top: 0; bottom:0">
             <div class="wrapper">
                 <div class="container" style="color:#008000;padding-top:0">
@@ -186,7 +186,8 @@ SmallJobsNaija- Employer Registration Form
                 <!--end background-->
             </div>
         </footer>
-    </div>
+    </div> --}}
+    @include('layouts.footer')
    
   
     @endsection
