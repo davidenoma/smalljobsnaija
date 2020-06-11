@@ -102,7 +102,7 @@ SmallJobsNaija- Talent Registration Form
                         <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
                         By clicking "Register" button, you agree with our <a href="/termsofservice" style="color:white;">Terms & Conditions.</a>and 
                         <a href="/privacypolicy"  style="color:white;">Privacy Policy.</a>
-                            <div class="form-button center" style="padding-bottom: 100rem">
+                            <div class="form-button center" style="margin-top :0px">
                                 <button id="submit" type="submit" class="ibtn width-100" style="font-size: 18px"> Register</button>
                             </div>
                        
