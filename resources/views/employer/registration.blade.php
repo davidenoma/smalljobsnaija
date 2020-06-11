@@ -1,112 +1,152 @@
-@extends('layouts.master')
+@extends('layouts.dashboardmaster')
 @section('title')
 SmallJobsNaija- Employer Registration Form
 @endsection
-@section('styles')
-<style>
-        #navbar{
-            color: white;
-        }
-        .navbar-nav{
-            color: white;
-        }
-        .hero .hero-wrapper {
-    padding-bottom: unset;
-}
-        
-    </style>
-
-@endsection
-
 @section('content')
-@include('layouts.nav_new')
-    <div class="form-body">
-    <h1 class="center" style="color:white">Employer Registration </h1>
-    <br>
-        {{-- <div class="row"> --}}
-             <div class="form-holder">
-                <div class="form-content">
-                    <div class="form-items">
-                            <div class="page-links">    
-                                <a class="active">Employer</a>
-                                <a href="/registration"  class="">Talent</a> 
-                           
-                        </div>
-                        <form method="POST" action="/employer/registration">
-                           
 
-                            @csrf                                                 
-                            <input type="text" name="username" placeholder="User Name" id="username" 
-                            type="text" class="form-control @error('username') is-invalid @enderror" 
-                             value="{{ old('username') }}" required autocomplete="username" autofocus >
-                            @error('username')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                            <input class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
-                            name="email" placeholder="E-mail Address" 
-                        value="{{old('email')}}"
-                            required>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                        
-
-                        <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
-                        name="phone" placeholder="Phone Number" 
-                    value="{{old('phone')}}"
-                        required>
-
-                        @error('phone')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                        
-         
-                       
-                        <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
-                        name="location" placeholder="Your location, street, road etc. " 
-                    value="{{old('location')}}"
-                        required>
-                       
-                        @error('location')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                     
-                        
-        
-                        <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+<div id = "page-container" class="page page-header-fixed page-header-glass main-content-boxed">
 
 
-                        <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
-                        By clicking "Register" button, you agree with our <a href="/termsofservice" style="color:white;">Terms & Conditions.</a>and 
-                        <a href="/privacypolicy"  style="color:white;">Privacy Policy.</a>
-                            <div class="form-button center " style="margin-top:0px">
-                                <button id="submit" type="submit" class="ibtn width-100" style="font-size: 18px"> Register</button>
-                            </div>
-                           
-                        </form>
-                                                                                                        
-           
-                    </div>  
+@include('layouts.nav')
+
+<main id="main-container" style="background-image: url(/assets/img/austin-d-72XZgeY3IY4-unsplash.jpg)"> 
+      <div class="content">
+     
+            
+              
+              <div class="block">
+
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Employer/Business Owner Registreation </h3>
                 </div>
-            </div>
-        {{-- </div> --}}
-        
+                
+             
+
+                  <div class="block-content">
+                    <ul class="nav nav-tabs nav-tabs-alt">
+                        <li class="nav-item">
+                            <a class="nav-link active">Employer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration">Talent</a>
+                        </li>
+                      </ul>
+                      <div class="block-header block-header-default">
+                        <h3 class="block-title">Employer or Business Owner Registration </h3>
+                    </div>
+                      <div class="row justify-content-center py-20">
+                          <div class="col-xl-6">
+                              <!-- jQuery Validation functionality is initialized in js/pages/be_forms_validation.min.js which was auto compiled from _es6/pages/be_forms_validation.js -->
+                              <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
+                              <form class="js-validation-bootstrap" action="/employer/registration" method="post">
+                                @csrf
+                                  <div class="form-group row">
+                                      <label class="col-lg-4 col-form-label" for="username">Username <span class="text-danger">*</span></label>
+                                      <div class="col-lg-8">
+                                        <input type="text" name="username" placeholder="User Name" id="username" 
+                                        type="text" class="form-control @error('username') is-invalid @enderror" 
+                                         value="{{ old('username') }}" required autocomplete="username" autofocus >
+                                        @error('username')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row">
+                                      <label class="col-lg-4 col-form-label" for="email">Email <span class="text-danger">*</span></label>
+                                      <div class="col-lg-8">
+                                        <input class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
+                                        name="email" placeholder="E-mail Address" 
+                                    value="{{old('email')}}"
+                                        required>
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-lg-4 col-form-label" for="phone">Phone <span class="text-danger">*</span></label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
+                                        name="phone" placeholder="Phone Number" 
+                                    value="{{old('phone')}}"
+                                        required>
+                
+                                        @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-4 col-form-label" for="location">Location <span class="text-danger">*</span></label>
+                                    <div class="col-lg-8">
+                                        <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
+                                        name="location" placeholder="Your location, street, road etc. " 
+                                    value="{{old('location')}}"
+                                        required>
+                                       
+                                        @error('location')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                  <div class="form-group row">
+                                      <label class="col-lg-4 col-form-label" for="password">Password <span class="text-danger">*</span></label>
+                                      <div class="col-lg-8">
+                                        <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label class="col-lg-4 col-form-label" for="password_confirm">Confirm Password <span class="text-danger">*</span></label>
+                                      <div class="col-lg-8">
+                                        <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
+                                      </div>
+                                 
+                       
+                                
+                              
+                                  </div>
+                                  <div class="form-group row">
+                                                                       
+                                    {{-- <div class="col-lg-8"> --}}
+                                        <label>
+                                     
+                                              By clicking "Register" button, you agree with our <a href="/termsofservice">Terms & Conditions.</a>and 
+                                            <a href="/privacypolicy" >Privacy Policy.</a>
+                                        </label>
+                                        <div class="col-lg-8 center ">
+                                            <button type="submit" class="btn btn-lg btn-success min-width-125 " >Register</button>
+                                        </div>
+                                    {{-- </div> --}}
+                                </div>
+                                
+                              </form>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
     </div>
+</main>
+
+ 
+
+</div>
     
-    {{-- <div class="container">
         <footer class="footer" style="background-color: white; color: #008000;padding-top: 0; bottom:0">
             <div class="wrapper">
                 <div class="container" style="color:#008000;padding-top:0">
@@ -186,8 +226,8 @@ SmallJobsNaija- Employer Registration Form
                 <!--end background-->
             </div>
         </footer>
-    </div> --}}
-    @include('layouts.footer')
+    
+    {{-- @include('layouts.footer') --}}
    
   
     @endsection
