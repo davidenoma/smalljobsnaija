@@ -106,85 +106,88 @@ SmallJobsNaija- Employer Registration Form
         
     </div>
     <div class="form-body" style="height:40%"></div>
-    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0; position: absolute">
-        <div class="wrapper">
-            <div class="container" style="color:#008000;padding-top:0">
-                <div class="row" >
-                    <div class="col-md-4 center" style="color:#008000;padding-top:0">
-                        <a href="#" class="brand">
-                            <img src="/assets/img/logo-crop.png" alt="" height="100px" width="100px">
-                        </a>
-                        <p style="color:#008000;opacity:100"> 
-                            We help you find talents for small jobs near you. 
-                            <br> 
-                            <br>
-                            Small Jobs helps to showcase and find talents for jobs near you like writing, styling, 
-                            painting, designing, teaching and others.
-                            <br> 
-                            <br>
-                            Find Talents and Post Jobs for free
-                          
-                        </p>
+    <div class="container">
+        <footer class="footer" style="background-color: white; color: #008000;padding-top: 0;">
+            <div class="wrapper">
+                <div class="container" style="color:#008000;padding-top:0">
+                    <div class="row" >
+                        <div class="col-md-4 center" style="color:#008000;padding-top:0">
+                            <a href="#" class="brand">
+                                <img src="/assets/img/logo-crop.png" alt="" height="100px" width="100px">
+                            </a>
+                            <p style="color:#008000;opacity:100"> 
+                                We help you find talents for small jobs near you. 
+                                <br> 
+                                <br>
+                                Small Jobs helps to showcase and find talents for jobs near you like writing, styling, 
+                                painting, designing, teaching and others.
+                                <br> 
+                                <br>
+                                Find Talents and Post Jobs for free
+                              
+                            </p>
+                        </div>
+                        <!--end col-md-5-->
+                        <div class="col-md-4 center" style="color:#008000;opacity:100" >
+                            <h2>Navigation</h2>
+                       
+                                    <nav>
+                                        <ul class="list-unstyled" style="color:#008000;padding-top:0;opacity:100">
+                                            <li>
+                                                <a style="color:#008000" href="/">Home</a>
+                                            </li>
+                                             <li>
+                                                <a style="color:#008000" href="/forumtopics">Forums</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:#008000" href="/blog">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:#008000" href="/faqs">Frequently Asked Questions</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:#008000" href="/termsofservice">Terms of Service</a>
+                                            </li>
+                                            <li>
+                                                <a style="color:#008000" href="/privacypolicy">Privacy Policy</a>
+                                            </li>
+                                           
+                                           
+                                        </ul>
+                                    </nav>                    
+                        </div>
+                        <!--end col-md-3-->
+                        <div class="col-md-4 center" >
+                            <h2>Social Links</h2>
+                            
+                            <a href="https://facebook.com/nomatechnology" style="color:#008000;"><i class="fa fa-facebook-official fa-3x " aria-hidden="true"></i></a></i>
+                             <a href="https://instagram.com/nomatechnology" style="color:#008000;"> <i class="fa fa-instagram fa-3x  "></i></a>
+                            <a href="https://twitter.com/smalljobsnaija" style="color:#008000;"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></i>
+                                                        <address>
+                                <figure>
+                                    <a href="https://nomatechnology.com" style="color:#008000;"> Noma Integrated Technology Solutions</a>
+                                   <br>
+                                    <i class="fa fa-copyright" aria-hidden="true"></i>2016
+                                </figure>
+                                
+                                
+                                <strong>Email:</strong> <a href="mailto:admin@smalljobsnaija.com " style="color:#008000;">admin@smalljobsnaija.com</a>
+                                <br>
+                                
+                              
+                                
+                            </address>
+                        </div>
+                        <!--end col-md-4-->
                     </div>
-                    <!--end col-md-5-->
-                    <div class="col-md-4 center" style="color:#008000;opacity:100" >
-                        <h2>Navigation</h2>
-                   
-                                <nav>
-                                    <ul class="list-unstyled" style="color:#008000;padding-top:0;opacity:100">
-                                        <li>
-                                            <a style="color:#008000" href="/">Home</a>
-                                        </li>
-                                         <li>
-                                            <a style="color:#008000" href="/forumtopics">Forums</a>
-                                        </li>
-                                        <li>
-                                            <a style="color:#008000" href="/blog">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a style="color:#008000" href="/faqs">Frequently Asked Questions</a>
-                                        </li>
-                                        <li>
-                                            <a style="color:#008000" href="/termsofservice">Terms of Service</a>
-                                        </li>
-                                        <li>
-                                            <a style="color:#008000" href="/privacypolicy">Privacy Policy</a>
-                                        </li>
-                                       
-                                       
-                                    </ul>
-                                </nav>                    
-                    </div>
-                    <!--end col-md-3-->
-                    <div class="col-md-4 center" >
-                        <h2>Social Links</h2>
-                        
-                        <a href="https://facebook.com/nomatechnology" style="color:#008000;"><i class="fa fa-facebook-official fa-3x " aria-hidden="true"></i></a></i>
-                         <a href="https://instagram.com/nomatechnology" style="color:#008000;"> <i class="fa fa-instagram fa-3x  "></i></a>
-                        <a href="https://twitter.com/smalljobsnaija" style="color:#008000;"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></i>
-                                                    <address>
-                            <figure>
-                                <a href="https://nomatechnology.com" style="color:#008000;"> Noma Integrated Technology Solutions</a>
-                               <br>
-                                <i class="fa fa-copyright" aria-hidden="true"></i>2016
-                            </figure>
-                            
-                            
-                            <strong>Email:</strong> <a href="mailto:admin@smalljobsnaija.com " style="color:#008000;">admin@smalljobsnaija.com</a>
-                            <br>
-                            
-                          
-                            
-                        </address>
-                    </div>
-                    <!--end col-md-4-->
+                    <!--end row-->
                 </div>
-                <!--end row-->
+               
+                <!--end background-->
             </div>
-           
-            <!--end background-->
-        </div>
-    </footer>
+        </footer>
+    </div>
+   
   
     @endsection
    
