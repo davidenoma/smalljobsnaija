@@ -24,7 +24,7 @@ class RedirectIfAuthenticated
         }
 
       
-            if (Auth::guard($guard)->check()) {
+        if (Auth::guard($guard)->check()) {
                 if ($request->path() == "/user/profile"){
                     return redirect('/user/profile');
                 }

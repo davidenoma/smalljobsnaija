@@ -69,7 +69,7 @@ class RegisterController extends Controller
  
     /**
      * Create a new user instance after a valid registration.
-     *
+     *  	
      * @param  array  $data
      * @return \App\User
      */
@@ -100,6 +100,10 @@ class RegisterController extends Controller
         
         return $employer;
 
+    }
+    public function showRegistrationForm()
+    {
+        return view('employer.registration');
     }
 
 

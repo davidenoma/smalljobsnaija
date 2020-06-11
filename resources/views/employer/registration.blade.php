@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-SmallJobsNaija- Registration Form
+SmallJobsNaija- Employer Registration Form
 @endsection
 @section('styles')
 <style>
@@ -21,7 +21,7 @@ SmallJobsNaija- Registration Form
 @section('content')
 @include('layouts.nav_new')
     <div class="form-body">
-    <h1 class="center" style="color:white">Registration </h1>
+    <h1 class="center" style="color:white">Employer Registration </h1>
     <br>
         {{-- <div class="row"> --}}
              <div class="form-holder">

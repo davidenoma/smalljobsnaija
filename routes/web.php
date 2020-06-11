@@ -25,18 +25,20 @@ Route::get('/','HomeController@index') -> name('homepage');
 
 Route::get('/registration', 'HomeController@search') -> name('registration');
 
-Route::get('/employer/registration', 'Employer\EmployerController@registration');
+Route::get('/employer/registration', 'Employer\Auth\RegisterController@showRegistrationForm');
 Route::post('/employer/registration', 'Employer\Auth\RegisterController@register');
-Route::get('/employer/login', 'Employer\EmployerController@login');
+Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
 
 Route::post('/employer/login', 'Employer\Auth\LoginController@login');
+
 Route::get('/employer/home','Employer\EmployerController@index');
+
 Route::get('/employer/logout', 'Employer\Auth\LoginController@logout');
 
 Route::get('/about', function () {
     return view('homepage.about');
 }); 
-Route::get('/faqs', function () {
+Route::get('/faqs', function () {   
     return view('homepage.faqs');
 });
 Route::get('/privacypolicy',function(){

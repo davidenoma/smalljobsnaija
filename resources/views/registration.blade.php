@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-SmallJobsNaija- Registration Form
+SmallJobsNaija- Talent Registration Form
 @endsection
 @section('styles')
 <style>
@@ -20,8 +20,10 @@ SmallJobsNaija- Registration Form
 
 @section('content')
 @include('layouts.nav_new')
+
     <div class="form-body">
-    
+        <h1 class="center" style="color:white"> Registration </h1>
+
         {{-- <div class="row"> --}}
              <div class="form-holder">
                 <div class="form-content">
@@ -103,8 +105,9 @@ SmallJobsNaija- Registration Form
                             <div class="form-button center ">
                                 <button id="submit" type="submit" class="ibtn width-100" style="font-size: 18px"> Register</button>
                             </div>
-                           
+                           <br>
                         </form>
+                        <br>
                         
                             
                                
@@ -117,7 +120,10 @@ SmallJobsNaija- Registration Form
         {{-- </div> --}}
         
     </div>
+    <br>
+    <br>
     <footer class="footer" style="background-color: white; color: #008000;padding-top: 0">
+        <br>
         <div class="wrapper">
             <div class="container" style="color:#008000;padding-top:0">
                 <div class="row" >

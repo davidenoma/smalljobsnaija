@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Employer\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -62,6 +63,14 @@ class LoginController extends Controller
     public function guard(){
         return Auth::guard('employer');
     }
+
+    public function showLoginForm()
+    {
+    
+        return view('employer.login');
+    }
+
+   
  
 
     
