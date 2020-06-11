@@ -27,11 +27,12 @@ Route::get('/registration', 'HomeController@search') -> name('registration');
 
 Route::get('/employer/registration', 'Employer\Auth\RegisterController@showRegistrationForm');
 Route::post('/employer/registration', 'Employer\Auth\RegisterController@register');
+
 Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
 
 Route::post('/employer/login', 'Employer\Auth\LoginController@login');
 
-Route::get('/employer/home','Employer\EmployerController@index');
+// Route::get('/employer/home','Employer\EmployerController@index');
 
 Route::get('/employer/logout', 'Employer\Auth\LoginController@logout');
 

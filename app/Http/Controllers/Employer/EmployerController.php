@@ -10,7 +10,7 @@ class EmployerController extends Controller
     //
     public function __construct()
     {
-      $this -> middleware('auth:employer')->except('logout');
+      $this -> middleware('auth')->except('logout');
     }
     public function index(){
         if(auth()->guest()){
@@ -26,6 +26,6 @@ class EmployerController extends Controller
     public function login(){
         return view('employer.login');
     }
-    
+
 
 }
