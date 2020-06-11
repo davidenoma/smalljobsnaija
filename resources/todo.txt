@@ -1,4 +1,0 @@
-add message_type varchar(255)
-$sql = "ALTER TABLE `messages` CHANGE `loc_id` `loc_id` BIGINT(20) UNSIGNED NULL";
-ALTER TABLE `users` ADD `user_type` INT(1) NOT NULL AFTER `image`;
-

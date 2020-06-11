@@ -23,16 +23,22 @@ Route::get('/newSocialUser', function () {
 //Home Page, Login and Registration routes
 Route::get('/','HomeController@index') -> name('homepage');
 
-Route::get('/registration', 'HomeController@search') -> name('registration');
+
+Route::get('/registration', 'HomeController@register') -> name('registration');
 
 Route::get('/employer/registration', 'Employer\Auth\RegisterController@showRegistrationForm');
 Route::post('/employer/registration', 'Employer\Auth\RegisterController@register');
 
-Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
+// Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
+Route::get('/employer/login', function(){
+    return view('employer.login');
+});
+
 
 Route::post('/employer/login', 'Employer\Auth\LoginController@login');
 
-// Route::get('/employer/home','Employer\EmployerController@index');
+
+Route::get('/employer/home','Employer\EmployerController@index');
 
 Route::get('/employer/logout', 'Employer\Auth\LoginController@logout');
 
@@ -51,7 +57,9 @@ Route::get('/termsofservice',function(){
 
 Auth::routes();
 
-
+Route::get('/login',function(){
+    return view('auth.login');
+})->name('login')->middleware('guest');
 //Controllers for forums
 
 
@@ -75,7 +83,7 @@ Route::get('forumtopics/{category}', 'Forum\ForumTopicController@category');
 
 
 Route::prefix('/user') -> group(function(){
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'Auth\TalentController@home');
 
 
     Route::get('/chat', 'MessageController@index');

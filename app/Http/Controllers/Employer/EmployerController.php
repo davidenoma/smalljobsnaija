@@ -10,14 +10,15 @@ class EmployerController extends Controller
     //
     public function __construct()
     {
-      $this -> middleware('auth')->except('logout');
+      
     }
     public function index(){
-        if(auth()->guest()){
-
-            return view('index');
-        }
-        $welcomeName = Auth::user();
+        
+        // if( auth('employer')){
+        //     return view('index');
+        // }
+       
+        $welcomeName =  Auth::guard('employer')->user();
         return view('employer.home', compact("welcomeName"));
     }
     public function registration(){

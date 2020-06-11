@@ -7,21 +7,14 @@
 @section('content')
 
 <div id="page-container" class="main-content-boxed">
-      {{-- <main id="main-container" style="min-height: 0px;"> --}}
-
-        <!-- Header -->
-        @include('layouts.nav')
+  
+        @include('layouts.nav_dashboard')
         
         <div class="bg-white">
             <div class="content content-full">
                 <div class="pt-50 pb-30 text-center">
                     <h1 class="font-w300 mb-10">Dashboard</h1>
-                    {{-- {{dd(Auth::user())}}
-                                  <h2 class="h4 text-muted font-w300 mb-0">Welcome <strong>@if(Auth::user()->username == 'null')
-                           {{Auth::user()->email }}
-                        @else
-                        {{Auth::user() ->username}} --}}
-                        {{-- @endif</strong>, everything looks good.</h2> --}}
+           
                 </div>
             </div>
         </div>

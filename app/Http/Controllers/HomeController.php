@@ -17,7 +17,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-      
+      $this->middleware('guest');
+      $this->middleware('guest:employer');
     }
 
     /**
@@ -27,14 +28,15 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        if(auth()->guest()){
+        
+        if(auth()->guest() && auth('employer')->guest()){
             return view('index');
         }
-        $welcomeName = Auth::user();
+    
         
-        return view('/user/home',compact('welcomeName'));
+        
     }
-    public function search(){
+    public function register(){
         return view ('/registration');
     }
     

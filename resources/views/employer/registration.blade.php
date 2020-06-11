@@ -2,14 +2,19 @@
 @section('title')
 SmallJobsNaija- Employer Registration Form
 @endsection
+
+
 @section('content')
 
-<div id = "page-container" class="page page-header-fixed page-header-glass main-content-boxed">
+<div id = "page-container" class="main-content-boxed">
 
 
 @include('layouts.nav')
+    <div class="clearfix"></div>
 
-<main id="main-container" style="background-image: url(/assets/img/austin-d-72XZgeY3IY4-unsplash.jpg)"> 
+    <div class="content">
+        
+    </div>
       <div class="content">
      
             
@@ -17,7 +22,7 @@ SmallJobsNaija- Employer Registration Form
               <div class="block">
 
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Employer/Business Owner Registreation </h3>
+                    <h3 class="block-title">Employer/Business Owner Registration </h3>
                 </div>
                 
              
@@ -36,8 +41,6 @@ SmallJobsNaija- Employer Registration Form
                     </div>
                       <div class="row justify-content-center py-20">
                           <div class="col-xl-6">
-                              <!-- jQuery Validation functionality is initialized in js/pages/be_forms_validation.min.js which was auto compiled from _es6/pages/be_forms_validation.js -->
-                              <!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
                               <form class="js-validation-bootstrap" action="/employer/registration" method="post">
                                 @csrf
                                   <div class="form-group row">
@@ -53,6 +56,19 @@ SmallJobsNaija- Employer Registration Form
                                     @enderror
                                       </div>
                                   </div>
+                                  <div class="form-group row">
+                                    <label class="col-lg-4 col-form-label" for="businessname">Business </label>
+                                    <div class="col-lg-8">
+                                      <input type="text" name="businessname" placeholder="Business or Company Name" id="username" 
+                                      type="text" class="form-control @error('businessname') is-invalid @enderror" 
+                                       value="{{ old('businessname') }}"  autocomplete="businessname"  >
+                                      @error('username')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
+                                    </div>
+                                </div>
 
                                   <div class="form-group row">
                                       <label class="col-lg-4 col-form-label" for="email">Email <span class="text-danger">*</span></label>
@@ -141,7 +157,7 @@ SmallJobsNaija- Employer Registration Form
                   </div>
               </div>
     </div>
-</main>
+
 
  
 
@@ -227,7 +243,7 @@ SmallJobsNaija- Employer Registration Form
             </div>
         </footer>
     
-    {{-- @include('layouts.footer') --}}
+    
    
   
     @endsection
