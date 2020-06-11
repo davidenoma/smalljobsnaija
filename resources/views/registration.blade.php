@@ -122,7 +122,7 @@ SmallJobsNaija- Talent Registration Form
        
     </div>
     <div class="form-body" style="height:40%"></div>
-    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0;">
+    <footer class="footer" style="background-color: white; color: #008000;padding-top: 0;bottom: 0">
         <br>
         <div class="wrapper">
             <div class="container" style="color:#008000;padding-top:0">
