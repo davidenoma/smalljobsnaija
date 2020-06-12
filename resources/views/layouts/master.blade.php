@@ -87,7 +87,7 @@
                             
                           </p>
                       </div>
-                      <!--end col-md-5-->
+                      
                       <div class="col-md-4 center" style="color:#008000;opacity:100" >
                           <h2>Navigation</h2>
                      
@@ -116,7 +116,7 @@
                                       </ul>
                                   </nav>                    
                       </div>
-                      <!--end col-md-3-->
+                      
                       <div class="col-md-4 center" >
                           <h2>Social Links</h2>
                           
@@ -138,12 +138,12 @@
                               
                           </address>
                       </div>
-                      <!--end col-md-4-->
+                   
                   </div>
-                  <!--end row-->
+                 
               </div>
              
-              <!--end background-->
+              
           </div>
       </footer>
 </body>

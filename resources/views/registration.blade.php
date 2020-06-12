@@ -42,7 +42,7 @@ SmallJobsNaija- Talent Registration Form
                           <div class="row justify-content-center py-20">
                               <div class="col-xl-6">
                                  
-                                  <form class="js-validation-bootstrap" action="/registration" method="post">
+                                  <form class="js-validation-bootstrap" action="/register" method="POST">
                                     @csrf
                                       <div class="form-group row">
                                           <label class="col-lg-4 col-form-label" for="username">Username <span class="text-danger">*</span></label>
