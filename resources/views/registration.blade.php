@@ -45,7 +45,7 @@ SmallJobsNaija- Talent Registration Form
                                   <form class="js-validation-bootstrap" action="/register" method="POST">
                                     @csrf
                                       <div class="form-group row">
-                                          <label class="col-lg-4 col-form-label" for="username">Username <span class="text-danger">*</span></label>
+                                         
                                           <div class="col-lg-8">
                                             <input type="text" name="username" placeholder="User Name" id="username" 
                                             type="text" class="form-control @error('username') is-invalid @enderror" 
@@ -58,7 +58,7 @@ SmallJobsNaija- Talent Registration Form
                                           </div>
                                       </div>
                                       <div class="form-group row">
-                                        <label class="col-lg-4 col-form-label" for="talent">Talent <span class="text-danger">*</span></label>
+                                     
                                         <div class="col-lg-8">
                                             <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
                                             name="talent" placeholder="Your skill, talent or craft" 
@@ -76,7 +76,7 @@ SmallJobsNaija- Talent Registration Form
                              
     
                                       <div class="form-group row">
-                                          <label class="col-lg-4 col-form-label" for="email">Email <span class="text-danger">*</span></label>
+                                          
                                           <div class="col-lg-8">
                                             <input class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
                                             name="email" placeholder="E-mail Address" 
@@ -90,7 +90,7 @@ SmallJobsNaija- Talent Registration Form
                                           </div>
                                       </div>
                                       <div class="form-group row">
-                                        <label class="col-lg-4 col-form-label" for="phone">Phone <span class="text-danger">*</span></label>
+                                      
                                         <div class="col-lg-8">
                                             <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                                             name="phone" placeholder="Phone Number" 
@@ -107,7 +107,7 @@ SmallJobsNaija- Talent Registration Form
                                     </div>
                     
                                     <div class="form-group row">
-                                        <label class="col-lg-4 col-form-label" for="location">Location <span class="text-danger">*</span></label>
+
                                         <div class="col-lg-8">
                                             <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
                                             name="location" placeholder="Your location, street, road etc. " 
@@ -122,7 +122,7 @@ SmallJobsNaija- Talent Registration Form
                                         </div>
                                     </div>
                                       <div class="form-group row">
-                                          <label class="col-lg-4 col-form-label" for="password">Password <span class="text-danger">*</span></label>
+                                          
                                           <div class="col-lg-8">
                                             <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                                             @error('password')
@@ -133,7 +133,7 @@ SmallJobsNaija- Talent Registration Form
                                           </div>
                                       </div>
                                       <div class="form-group row">
-                                          <label class="col-lg-4 col-form-label" for="password_confirm">Confirm Password <span class="text-danger">*</span></label>
+                                         
                                           <div class="col-lg-8">
                                             <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
                                           </div>
