@@ -31,11 +31,16 @@
        
     <link rel="stylesheet" id="css-main" href="/assets/css/codebase.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">  
-    <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
-    <link rel="stylesheet" type="text/css" id="css-theme" href="/assets/css/earth.css">
+        <link rel="stylesheet" type="text/css" id="css-theme" href="/assets/css/earth.css">
+        <link rel="stylesheet" href="jobboard.style.min.css.css">
+
+        <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
+
     <link rel="icon" src="/assets/img/logo-crop.png" sizes="192x192" >
     
   <title>  @yield('title') </title>
+  
+  
 </head>
 <body >
    

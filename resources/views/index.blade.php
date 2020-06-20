@@ -42,8 +42,13 @@ SmallJobsNaija: Find talents for small jobs near you
       
 
     </header>
-    
-    <main id="main-container" style="background-image: url(/assets/img/austin-d-72XZgeY3IY4-unsplash.jpg)">
+    <div class="background">
+        <div class="background-image">
+            <img src="" alt="">
+        </div>
+        <!--end background-image-->
+    </div>
+    <main id="main-container" style="background-image: url(/assets/img/small-jobs-background.jpg)">
         <div class="content"  >
             <div class="hero-wrapper">
                 <form class="hero-form form" method="GET" action="/search"  >
@@ -52,7 +57,7 @@ SmallJobsNaija: Find talents for small jobs near you
                      
                             <div class="page-title" style="padding-top: 100px;padding-bottom: 20px">
                                 <div class="container">
-                                    <h1 class="center" style="color:white">
+                                    <h1 class="center" style="color:#008000;background-color: white">
                                         Find Top talents for Small Jobs near you!
                                         
                                     </h1>
@@ -65,7 +70,7 @@ SmallJobsNaija: Find talents for small jobs near you
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             {{-- <label for="what" class="col-form-label" style="color:white">Find</label> --}}
-                                            <input name="talent" type="text" class="form-control" id="what" placeholder="Talent, Skill or Craft">
+                                            <input name="talent" type="text" class="form-control" id="what" placeholder="Enter Talent, Skill or Craft">
                                         </div>
                                         <!--end form-group-->
                                     </div>
@@ -88,7 +93,7 @@ SmallJobsNaija: Find talents for small jobs near you
                                         <div class="col-md-3 col-sm-3"> </div>
                                         <div class="col-md-6 col-sm-6 center">
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-rounded btn-primary width-100" > <h3 style="color:yellow">Search</h3></button>
+                                                <button type="submit" class="btn btn-rounded btn-primary width-100" > <h3 style="color:white">Search</h3></button>
                                             </div>
                                             
                                         </div>
@@ -104,16 +109,163 @@ SmallJobsNaija: Find talents for small jobs near you
         </div>
 
     </main>
+       
+      
+        {{-- <section class="content" style="background-color: white">
+            <div class="container">
+                <h2 class="center">Find Talents in Categories</h2>
+                <br>
+                <ul class="categories-list clearfix">
+                   
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-pets-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Pets</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Dogs</a>
+                            <a href="#">Cats</a>
+                            <a href="#">Exotic</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-real-estate-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Real Estate</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Houses</a>
+                            <a href="#">Apartments</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-jobs-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Jobs</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Find Job</a>
+                            <a href="#">Offer Job</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-cars-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Car</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">New</a>
+                            <a href="#">Used</a>
+                            <a href="#">Rent</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-mobile-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Mobile</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Apple</a>
+                            <a href="#">Samsung</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-cameras-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Cameras</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Photo</a>
+                            <a href="#">Video</a>
+                            <a href="#">Lenses</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-sport-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Sport</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Ski</a>
+                            <a href="#">Bike</a>
+                            <a href="#">Hockey</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-electro-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Electro</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">TV</a>
+                            <a href="#">Radio</a>
+                            <a href="#">PC</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-clothing-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Clothing</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Shirts</a>
+                            <a href="#">Trousers</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-books-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Books</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Fantasy</a>
+                            <a href="#">History</a>
+                            <a href="#">Sci-Fi</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                    <li>
+                        <i class="category-icon">
+                            <img src="assets/icons/category-music-b.png" alt="">
+                        </i>
+                        <h3><a href="#">Music</a></h3>
+                        <div class="sub-categories">
+                            <a href="#">Rock</a>
+                            <a href="#">Techno</a>
+                            <a href="#">Folk</a>
+                        </div>
+                    </li>
+                    <!--end category item-->
+                </ul>
+                <!--end categories-list-->
+            </div>
+            <!--end container-->
+        </section>
+        --}}
+
+    
     <section class="content" style="background-color: white">
-        <section class="block">
+        <section class="">
             <div class="container">
              
                 <div class="row justify-content-center">
                    
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <form class="form clearfix" method="POST" action="{{ route('login') }}" >
                             @csrf
                             <div class="form-group">
+                                <h3>Login or Register</h3>
                                 
                                 <input class="form-control {{ $errors->has('username') || $errors->has('email') ? ' is-invalid' : '' }}"
                                 type="text" id="name" value="{{ old('username') ?: old('email') }}" 
@@ -156,21 +308,31 @@ SmallJobsNaija: Find talents for small jobs near you
                         </p>
                        
                     </div>
-                    <!--end col-md-6-->
+                     <div class="col-md-5">
+                        <a href="https://twitter.com/smalljobsnaija?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @smalljobsnaija</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <br>
+                        <a class="twitter-timeline" data-width="750" data-height="500" href="https://twitter.com/smalljobsnaija?ref_src=twsrc%5Etfw">Tweets by smalljobsnaija</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                     </div>
                 </div>
                 <!--end row-->
             </div>
             <!--end container-->
         </section>
-        <!--end block-->
+        
     </section>
+    <section class="content center" style="background-color: white">
+
+       
+    </section>
+
+    
+     
+ 
         
         
 
         
     
-
-
 
 
 
@@ -237,7 +399,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         <a href="https://twitter.com/smalljobsnaija" style="color:#008000;"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a></i>
                                                     <address>
                             <figure>
-                                <a href="https://nomatechnology.com" style="color:#008000;"> Noma Integrated Technology Solutions</a>
+                                <a href="https://nomatechnology.com" style="color:#008000;" target="_new"> Noma Integrated Technology Solutions</a>
                                <br>
                                 <i class="fa fa-copyright" aria-hidden="true"></i>2016
                             </figure>
