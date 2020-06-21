@@ -30,6 +30,7 @@ class AdminController extends Controller
         public function index(){
             $latestUsers = User::orderBy('created_at','desc')->take(10)->get();
             $allUsers =  User::all()->count();
+            
             return view('admin.home',compact('latestUsers','allUsers'));
 
         }
