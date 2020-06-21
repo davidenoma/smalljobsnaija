@@ -81,7 +81,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                          
                                           <div class="col-lg-8" >
-                                            <input style="font-size: 1rem" type="text" name="username" placeholder="User Name" id="username" 
+                                            <input style="font-size: 1rem;padding:1rem" type="text" name="username" placeholder="User Name" id="username" 
                                             type="text" class="form-control @error('username') is-invalid @enderror" 
                                              value="{{ old('username') }}" required autocomplete="username"  >
                                             @error('username')
@@ -131,7 +131,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                      
                                         <div class="col-lg-8">
-                                            <input style="font-size: 1rem" class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
+                                            <input style="font-size: 1rem;padding:1rem" class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
                                             name="talent" placeholder="Your skill, talent or craft" 
                                         value="{{old('talent')}}"
                                             >
@@ -149,7 +149,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                           
                                           <div class="col-lg-8">
-                                            <input style="font-size: 1rem" class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
+                                            <input style="font-size: 1rem;padding:1rem" class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
                                             name="email" placeholder="E-mail Address" 
                                         value="{{old('email')}}"
                                             required>
@@ -163,7 +163,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                       
                                         <div class="col-lg-8">
-                                            <input style="font-size: 1rem" class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
+                                            <input style="font-size: 1rem;padding:1rem" class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                                             name="phone" placeholder="Phone Number" 
                                         value="{{old('phone')}}"
                                             required>
@@ -180,7 +180,7 @@ SmallJobsNaija- Talent Registration Form
                                     <div class="form-group row">
 
                                         <div class="col-lg-8">
-                                            <input style="font-size: 1rem" class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
+                                            <input style="font-size: 1rem;padding:1rem" class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
                                             name="location" placeholder="Your location, street, road etc. " 
                                         value="{{old('location')}}"
                                             required>
@@ -195,7 +195,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                           
                                           <div class="col-lg-8">
-                                            <input style="font-size: 1rem" id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
+                                            <input style="font-size: 1rem;padding:1rem" id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
