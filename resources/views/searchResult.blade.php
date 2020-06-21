@@ -50,7 +50,7 @@ SmallJobsNaija- Search Top Talents
                                 <i  class="fa fa-fw fa-star text-warning" ></i>
                                 <i  class="fa fa-fw fa-star text-warning" ></i></span>
 
-                            <span class="location" style="font-size: 1.4rem"><i class="fa fa-map-o"></i>{{$user->location}}</span>
+                            <span class="location"><i class="fa fa-map-o"></i>{{$user->location}}</span>
                                 
                             
                         </a>
