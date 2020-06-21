@@ -21,6 +21,7 @@
     jobs near me, jobs in nigeria, online jobs, jobs, job vacancy, job openings near me jobs in dubai, career, jobs in canada, job hunting, 
     looking for a job, online jobs for teens, jobs for students, apply for jobs, apply for jobs online, post jobs for free, vacancy for teachers, earn money online without investment for students, jobs for writers, jobs for computer science, jobs for nurses, websites for jobs, 
     "> 
+    <link rel="canonical" href="https://smalljobsnaija.com" />
     
 
     <!-- Scripts -->
@@ -39,6 +40,7 @@
     <link rel="icon" src="/assets/img/logo-crop.png" sizes="192x192" >
     
   <title>  @yield('title') </title>
+  <link rel="canonical" href="https://smalljobsnaija.com/registration">
   
   
 </head>
