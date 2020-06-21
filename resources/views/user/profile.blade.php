@@ -90,10 +90,47 @@
                                             <label for="talent" class="col-form-label required" >Your Talent</label>
                                         <input name="talent" type="text" class="form-control" id="talent" placeholder="Your Talent" value="{{$welcomeName->talent}}">
                                         </div>
+                                        <div class="form-group">
+                                            <label for="category" class="col-form-label required" >Your Category</label>
+                                            
+                                  
+                                        <select id="category" name="category" selected="selected" >
+                                            
+                                                
+                                                <option value="Accounting And Business"> Accounting And Business
+                                                </option>
+                                                                                               <option value="Admin Support">Admin Support</option>
+                                                                                               
+                                                                                                 <option value="Construction And Building">Construction And Building</option>
+                                                                                               <option value="Design And Art">Design And Art</option>
+                                                                                               <option value="Entertainment ">Entertainment </option>
+                                                                                               <option value="Fashion">Fashion </option>
+                                                                                               <option value="Fitness">Fitness</option>
+                                                                                               <option value="Food and Drinks">Food and Drinks</option>
+                                                                                               <option value="IT Services">IT Services</option>
+                                                                                             
+                                                                                               
+                                                                                               
+                                                                                               <option value="Marketing And Advertising">Marketing And Advertising</option>
+                                                                                               <option value="Music And Audio">Music And Audio</option>
+                                                                                                   <option value="Photography And Videography">Photography And Videography</option>
+                                                                                                   <option value="Teaching And Education ">Teaching And Education </option>
+                                                                                                   <option value="Technical Services">Technical Services</option>
+                                                                                                   <option value="Transportation And Logistics">Transportation And Logistics</option>
+                                                                                               <option value="Vocational And Manual">Vocational And Manual</option>
+                                                                                               <option value="Web And Software Development">Web And Software Development</option>                                             
+                                                                                                <option value="Writing">Writing</option>
+                                            </select>
+                                            <script type="text/javascript">
+                                                
+                                                    $("#category").val("{{$welcomeName->category}}").attr("selected",true);
+                                                
+                                             </script>
+                                        </div>
                                         <!--end row-->
                                         <div class="form-group">
                                             <label for="location" class="col-form-label required">Your Location</label>
-                                            <input name="location" type="text" class="form-control" id="input-location2" placeholder="Your Location" value="{{$welcomeName->location}}" required>
+                                            <input name="location" type="text" class="form-control" id="location" placeholder="Your Location" value="{{$welcomeName->location}}" required>
                                         </div>
                                         <!--end form-group-->
                                         <div class="form-group">

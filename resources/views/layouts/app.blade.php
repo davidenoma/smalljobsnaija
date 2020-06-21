@@ -33,7 +33,7 @@
 
     <link rel="stylesheet" href="/assets/fonts/font-awesome.css" >
     <link rel="stylesheet" href="/assets/css/user.min.css" type="text/css">
-    
+    <script src="/assets/js/jquery.min.js"></script>
     <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
     
     
@@ -103,7 +103,21 @@
     <script src="/assets/js/codebase.core.min.js"></script>
     <script src="/assets/js/codebase.app.min.js"></script>
     <script src="/assets/js/be_comp_rating.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp8XdPDEu9dRjuZQRfgIFyPBRMLm5JcOE&libraries=places"></script>
     <script src="/assets/js/jquery-raty/jquery.raty.js"></script>
+    <script>
+        var searchInput = 'search_input';
+      
+        $(document).ready(function(){
+      var autocomplete;
+      autocomplete = new google.maps.places.Autocomplete((document.getElementById('location')),{
+        types : ['geocode'],
+        
+      })
+      autocomplete.setComponentRestrictions(
+                  {'country': ['ng']});
+        });
+      </script>
     
 </body>
 </html>

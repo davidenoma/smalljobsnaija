@@ -92,6 +92,7 @@ class ProfileController extends Controller
         $user -> location = $request->location ;
         $user -> talent = $request -> talent;
         $user -> about = $request -> about;
+        $user -> category = $request -> category;
         $user -> first_name = $request -> firstname;
         $user -> last_name = $request -> lastname;
 

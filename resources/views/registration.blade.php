@@ -7,12 +7,46 @@ SmallJobsNaija- Talent Registration Form
 
 @section('content')
 
-<div id = "page-container" class=" main-content-boxed">
-    @include('layouts.nav')
+<div id = "page-container" class="page page-header-fixed page-header-glass main-content-boxed">
+    <header id="page-header" style="background-color: #008000;">
+        <div class="content-header">
+            <div class="content-header-section">
+     
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="/assets/img/small-jobs-logo.svg" alt="" width="100" height="100">
+                </a>            
+        
+        </div>
+        <div class="content-header-section">
+            <!-- User Dropdown -->
+            <div class="btn-group" role="group" >
+        
+                  
+                   <a href="/login">   <button type="button" class="btn btn-rounded btn-noborder btn-outline-primary min-width-125"> <h3 style="color:white">Login</h3></button></a>
+                <a href="/registration">   <button type="button" class="btn btn-rounded btn-noborder btn-outline-primary min-width-125"><h3 style="color:white">Register</h3></button></a>
+                  
+                    <button type="button" class="btn btn-rounded btn-noborder btn-outline-warning min-width-125"><h3 style="color:yellow">Post a Job</h3> </button>
+                
+              
+            </div>
+            
+
+            <!-- Notifications -->
+            <div class="btn-group" role="group">
+                
+            </div>
+            
+
+         
+        </div>
+        </div>
+      
+
+    </header>
 
    
     
-    <main id="main-container" style="background-image: url(/assets/img/austin-d-72XZgeY3IY4-unsplash.jpg)"> 
+    <main id="main-container" > 
         <div class="clear-fix">
             </div>  
         <div class="content">
@@ -42,12 +76,12 @@ SmallJobsNaija- Talent Registration Form
                           <div class="row justify-content-center py-20">
                               <div class="col-xl-6">
                                  
-                                  <form class="js-validation-bootstrap" action="/register" method="POST">
+                                  <form class="js-validation-bootstrap" action="/register" method="POST"  >
                                     @csrf
                                       <div class="form-group row">
                                          
-                                          <div class="col-lg-8">
-                                            <input type="text" name="username" placeholder="User Name" id="username" 
+                                          <div class="col-lg-8" >
+                                            <input style="font-size: 1rem" type="text" name="username" placeholder="User Name" id="username" 
                                             type="text" class="form-control @error('username') is-invalid @enderror" 
                                              value="{{ old('username') }}" required autocomplete="username"  >
                                             @error('username')
@@ -58,9 +92,46 @@ SmallJobsNaija- Talent Registration Form
                                           </div>
                                       </div>
                                       <div class="form-group row">
+                                          <div class="col-lg-8">
+                                            <select id="category" name="category" class="form-control @error('category') is-invalid @enderror" value="{{old('category')}}"  >
+                                                <option value="" selected > Choose a Category</option>
+                                                <option value=" Accounting And Business"> Accounting And Business
+                                                </option>
+                                                                                               <option value="Admin Support">Admin Support</option>
+                                                                                               
+                                                                                                 <option value="Construction And Building">Construction And Building</option>
+                                                                                               <option value="Design And Art">Design And Art</option>
+                                                                                               <option value="Entertainment ">Entertainment </option>
+                                                                                               <option value="Fashion">Fashion </option>
+                                                                                               <option value="Fitness">Fitness</option>
+                                                                                               <option value="Food and Drinks">Food and Drinks</option>
+                                                                                               <option value="IT Services">IT Services</option>
+                                                                                             
+                                                                                               
+                                                                                               
+                                                                                               <option value="Marketing And Advertising">Marketing And Advertising</option>
+                                                                                               <option value="Music And Audio">Music And Audio</option>
+                                                                                                   <option value="Photography And Videography">Photography And Videography</option>
+                                                                                                   <option value="Teaching And Education ">Teaching And Education </option>
+                                                                                                   <option value="Technical Services">Technical Services</option>
+                                                                                                   <option value="Transportation And Logistics">Transportation And Logistics</option>
+                                                                                               <option value="Vocational And Manual">Vocational And Manual</option>
+                                                                                               <option value="Web And Software Development">Web And Software Development</option>                                             
+                                                                                                <option value="Writing">Writing</option>
+                                            </select>
+
+                                            @error('category')
+                                            <span class="invalid-feedback" role="alert" id="category-span">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
+                                          </div>
+                                       
+                                      </div>
+                                      <div class="form-group row">
                                      
                                         <div class="col-lg-8">
-                                            <input class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
+                                            <input style="font-size: 1rem" class="form-control @error('talent') is-invalid @enderror" id="talent" type="text" 
                                             name="talent" placeholder="Your skill, talent or craft" 
                                         value="{{old('talent')}}"
                                             >
@@ -78,7 +149,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                           
                                           <div class="col-lg-8">
-                                            <input class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
+                                            <input style="font-size: 1rem" class="form-control @error('email') is-invalid @enderror" id = "email" type="email" 
                                             name="email" placeholder="E-mail Address" 
                                         value="{{old('email')}}"
                                             required>
@@ -92,7 +163,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                       
                                         <div class="col-lg-8">
-                                            <input class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
+                                            <input style="font-size: 1rem" class="form-control @error('phone') is-invalid @enderror" id="phone" type="tel" 
                                             name="phone" placeholder="Phone Number" 
                                         value="{{old('phone')}}"
                                             required>
@@ -109,11 +180,11 @@ SmallJobsNaija- Talent Registration Form
                                     <div class="form-group row">
 
                                         <div class="col-lg-8">
-                                            <input class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
+                                            <input style="font-size: 1rem" class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
                                             name="location" placeholder="Your location, street, road etc. " 
                                         value="{{old('location')}}"
                                             required>
-                                            <p id="location-info">Kindly use an accurate location <i class="fa fa-location-arrow" aria-hidden="true"></i> to enable you get found.</p>
+                                            
                                             @error('location')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -124,7 +195,7 @@ SmallJobsNaija- Talent Registration Form
                                       <div class="form-group row">
                                           
                                           <div class="col-lg-8">
-                                            <input id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
+                                            <input style="font-size: 1rem" id="password" class="form-control @error('password') is-invalid @enderror" type="password" name="password" autocomplete="new-password" placeholder="Password" required>
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -132,16 +203,8 @@ SmallJobsNaija- Talent Registration Form
                                             @enderror
                                           </div>
                                       </div>
-                                      <div class="form-group row">
-                                         
-                                          <div class="col-lg-8">
-                                            <input id="password-confirm" class="form-control" type="password" name="password_confirmation" placeholder="Confirm Password" required>
-                                          </div>
-                                     
-                           
-                                    
-                                  
-                                      </div>
+                               
+                                 
                                       <div class="form-group row">
                                                                            
                                         

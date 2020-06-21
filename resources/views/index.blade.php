@@ -42,12 +42,7 @@ SmallJobsNaija: Find talents for small jobs near you
       
 
     </header>
-    <div class="background">
-        <div class="background-image">
-            <img src="" alt="">
-        </div>
-        <!--end background-image-->
-    </div>
+
     <main id="main-container" style="background-image: url(/assets/img/small-jobs-background.jpg)">
         <div class="content"  >
             <div class="hero-wrapper">
@@ -78,7 +73,7 @@ SmallJobsNaija: Find talents for small jobs near you
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
                                             {{-- <label for="input-location" class="col-form-label" style="color:white">Your Area</label> --}}
-                                            <input name="location" type="text" class="form-control" id="input-location" placeholder="Your Location ">
+                                            <input name="location" type="text" class="form-control" id="location" placeholder="Your Location ">
                                             <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                                         </div>
                                         <!--end form-group-->
@@ -268,6 +263,26 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                         </i>
                         <h3><a href="/search">Web and Software Development</a></h3>
+                        
+                    </li>
+                </ul>
+                <ul class="categories-list clearfix" style="color: white;padding-top: 0">
+                    <li>
+                        <i class="category-icon">
+                        <i class="fa fa-bolt fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Vocational or Manual Works</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                        <i class="fa fa-wrench fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Technical Services</a></h3>
                         
                     </li>
                 </ul>
