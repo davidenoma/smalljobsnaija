@@ -28,7 +28,7 @@
 
        
     <link rel="stylesheet" type="text/css" id="css-main" href="/assets/css/codebase.min.css">
-    
+    <link rel="stylesheet" href="/assets/fonts/icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">  
     <link rel="stylesheet" type="text/css" id="css-theme" href="/assets/css/earth.css">
     

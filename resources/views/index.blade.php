@@ -93,7 +93,7 @@ SmallJobsNaija: Find talents for small jobs near you
                                         <div class="col-md-3 col-sm-3"> </div>
                                         <div class="col-md-6 col-sm-6 center">
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-rounded btn-primary width-100" > <h3 style="color:white">Search</h3></button>
+                                                <button type="submit" class="btn btn-rounded btn-primary width-50" > <h3 style="color:white">Search</h3></button>
                                             </div>
                                             
                                         </div>
@@ -110,149 +110,175 @@ SmallJobsNaija: Find talents for small jobs near you
 
     </main>
        
-      
-        {{-- <section class="content" style="background-color: white">
+      <section class="content">
+            <section class="block" style="background-color: white">
             <div class="container">
                 <h2 class="center">Find Talents in Categories</h2>
                 <br>
-                <ul class="categories-list clearfix">
+                <ul class="categories-list clearfix" style="color: white">
                    
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-pets-b.png" alt="">
+                          <i class="fa fa-book fa-3x" aria-hidden="true"></i>
+                          {{-- <i class="fa fa-money fa-3x"  aria-hidden="true"></i> --}}
+                           
                         </i>
-                        <h3><a href="#">Pets</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Dogs</a>
-                            <a href="#">Cats</a>
-                            <a href="#">Exotic</a>
-                        </div>
+                        <h3>
+                            
+                            <a href="/search">Accounting and Business</a></h3>
+                        
                     </li>
                     <!--end category item-->
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-real-estate-b.png" alt="">
+                            <i class="fa fa-table fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="#">Real Estate</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Houses</a>
-                            <a href="#">Apartments</a>
-                        </div>
+                        <h3><a href="/search">Administrative Support</a></h3>
+                        
                     </li>
                     <!--end category item-->
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-jobs-b.png" alt="">
+                         <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="#">Jobs</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Find Job</a>
-                            <a href="#">Offer Job</a>
-                        </div>
+                        <h3><a href="/search">Design and Art</a></h3>
+                      
                     </li>
                     <!--end category item-->
 
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-cars-b.png" alt="">
+                            <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="#">Car</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">New</a>
-                            <a href="#">Used</a>
-                            <a href="#">Rent</a>
-                        </div>
+                        <h3><a href="/search">IT Services</a></h3>
+                       
                     </li>
+                </ul>
                     <!--end category item-->
+                 <br>
+                 <ul class="categories-list clearfix" style="color: white;padding-top: 0">
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-mobile-b.png" alt="">
+                            <i class="fa fa-shopping-basket fa-3x" aria-hidden="true"> </i>
+                            
                         </i>
-                        <h3><a href="#">Mobile</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Apple</a>
-                            <a href="#">Samsung</a>
-                        </div>
+                        <h3><a href="/search">Food and Drinks</a></h3>
+                        
                     </li>
-                    <!--end category item-->
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-cameras-b.png" alt="">
+                            <i class="fa fa-building fa-3x" aria-hidden="true"></i>
+                            
                         </i>
-                        <h3><a href="#">Cameras</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Photo</a>
-                            <a href="#">Video</a>
-                            <a href="#">Lenses</a>
-                        </div>
+                        <h3><a href="/search">Building  and Construction</a></h3>
+                        
                     </li>
-                    <!--end category item-->
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-sport-b.png" alt="">
+                            
+                            <i class="fa fa-microphone fa-3x" aria-hidden="true"></i>
+                            
                         </i>
-                        <h3><a href="#">Sport</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Ski</a>
-                            <a href="#">Bike</a>
-                            <a href="#">Hockey</a>
-                        </div>
+                        <h3><a href="/search">Entertainment</a></h3>
+                        
                     </li>
-                    <!--end category item-->
-
                     <li>
                         <i class="category-icon">
-                            <img src="assets/icons/category-electro-b.png" alt="">
+                            <i class="fa fa-television fa-3x" aria-hidden="true"></i>
+                            
+                            
                         </i>
-                        <h3><a href="#">Electro</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">TV</a>
-                            <a href="#">Radio</a>
-                            <a href="#">PC</a>
-                        </div>
+                        <h3><a href="/search">Advertisement and Marketing</a></h3>
+                        
                     </li>
-                    <!--end category item-->
-                    <li>
-                        <i class="category-icon">
-                            <img src="assets/icons/category-clothing-b.png" alt="">
-                        </i>
-                        <h3><a href="#">Clothing</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Shirts</a>
-                            <a href="#">Trousers</a>
-                        </div>
-                    </li>
-                    <!--end category item-->
-                    <li>
-                        <i class="category-icon">
-                            <img src="assets/icons/category-books-b.png" alt="">
-                        </i>
-                        <h3><a href="#">Books</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Fantasy</a>
-                            <a href="#">History</a>
-                            <a href="#">Sci-Fi</a>
-                        </div>
-                    </li>
-                    <!--end category item-->
-                    <li>
-                        <i class="category-icon">
-                            <img src="assets/icons/category-music-b.png" alt="">
-                        </i>
-                        <h3><a href="#">Music</a></h3>
-                        <div class="sub-categories">
-                            <a href="#">Rock</a>
-                            <a href="#">Techno</a>
-                            <a href="#">Folk</a>
-                        </div>
-                    </li>
+     
                     <!--end category item-->
                 </ul>
+                <ul class="categories-list clearfix" style="color: white;padding-top: 0">
+                    <li>
+                        <i class="category-icon">
+                            <i class="fa fa-music fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Music and Audio</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                            
+                            <i class="fa fa-scissors fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Fashion</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                    <i class="fa fa-bus fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Transportation</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                            <i class="fa fa-heartbeat fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Health and Fitness</a></h3>
+                        
+                    </li>
+                </ul>
+                <ul class="categories-list clearfix" style="color: white;padding-top: 0">
+                    <li>
+                        <i class="category-icon">
+                            <i class="fa fa-picture-o fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Photography and Videography</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                        <i class="fa fa-id-badge fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Teaching</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                            <i class="fa fa-sticky-note fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Writing</a></h3>
+                        
+                    </li>
+                    <li>
+                        <i class="category-icon">
+                        <i class="fa fa-internet-explorer fa-3x" aria-hidden="true"></i>
+                            
+                            
+                        </i>
+                        <h3><a href="/search">Web and Software Development</a></h3>
+                        
+                    </li>
+                </ul>
+                
                 <!--end categories-list-->
             </div>
             <!--end container-->
-        </section>
-        --}}
+        </section> 
+      </section>
+     
+       
 
     
     <section class="content" style="background-color: white">
@@ -262,7 +288,7 @@ SmallJobsNaija: Find talents for small jobs near you
                 <div class="row justify-content-center">
                    
                     <div class="col-md-5">
-                        <form class="form clearfix" method="POST" action="{{ route('login') }}" >
+                        <form class="form clearfix" method="POST" action="{{ route('login') }}" style="font-size: 1rem">
                             @csrf
                             <div class="form-group">
                                 <h3>Login or Register</h3>
