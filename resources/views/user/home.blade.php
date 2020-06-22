@@ -72,7 +72,7 @@
                 </div>
                
                 <div class="col-6 col-xl-3">
-                    <a class="block block-rounded" href="/user/jobboard">
+                    <a class="block block-rounded" href="/blog">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center" style="color: #008000;">
                                 <div class="font-size-h2 font-w700 mb-0 text-primary-dark">Job Board</div>
