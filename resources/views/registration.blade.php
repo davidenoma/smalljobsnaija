@@ -2,7 +2,7 @@
 @section('title')
 SmallJobsNaija- Talent Registration Form
 @endsection
-
+<link rel="canonical" href="https://smalljobsnaija.com/registration">
 
 
 @section('content')
