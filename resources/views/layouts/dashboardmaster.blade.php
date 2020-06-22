@@ -41,7 +41,7 @@
     
   <title>  @yield('title') </title>
   <link rel="canonical" href="https://smalljobsnaija.com/registration">
-  
+  <script data-ad-client="ca-pub-1334157382323517" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   
 </head>
 <body >

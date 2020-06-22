@@ -26,7 +26,7 @@
     <meta property="og:description" content="Quickly find top talents who search for jobs near me to meet your needs!" />
     
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
-
+    <script data-ad-client="ca-pub-1334157382323517" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
     <link rel="stylesheet" href="/assets/fonts/font-awesome.css">
     

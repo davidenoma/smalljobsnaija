@@ -35,6 +35,7 @@
     <!-- Custom -->
     <link rel="stylesheet" href="/assets/css/forum-style.css">
     <link rel="icon" href="/assets/img/logo-crop.png" sizes="192x192" >
+    <script data-ad-client="ca-pub-1334157382323517" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <title>  @yield('title') </title>
 </head>
 <body>
