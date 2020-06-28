@@ -12,7 +12,7 @@ SmallJobsNaija: Find talents for small jobs near you
             <div class="content-header-section">
      
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="/assets/img/small-jobs-logo.svg" alt="" width="100" height="100">
+                <img src="/assets/img/small-jobs-logo.svg" alt="smalljobslogo" width="100" height="100">
                 </a>            
         
         </div>
@@ -23,8 +23,10 @@ SmallJobsNaija: Find talents for small jobs near you
                   
                    <a href="/login">   <button type="button" class="btn btn-rounded btn-noborder btn-outline-primary min-width-125"> <h3 style="color:white">Login</h3></button></a>
                 <a href="/registration">   <button type="button" class="btn btn-rounded btn-noborder btn-outline-primary min-width-125"><h3 style="color:white">Register</h3></button></a>
-                  
+                  <a href="/createforumtopic">
                     <button type="button" class="btn btn-rounded btn-noborder btn-outline-warning min-width-125"><h3 style="color:yellow">Post a Job</h3> </button>
+                </a>
+                   
                 
               
             </div>
@@ -104,8 +106,21 @@ SmallJobsNaija: Find talents for small jobs near you
         </div>
 
     </main>
+    <div class="form-row">
+        <div class="col-md-3 col-sm-3"> </div>
+        <div class="col-md-6 col-sm-6 center">
+            <a href="/blog">
+            <div class="form-group">
+                <button type="button" class="btn btn-rounded btn-primary width-100"  > <i class="fa fa-briefcase fa-3x" aria-hidden="true"></i>  <h3 style="color:white">Find Jobs</h3></button>
+            </div>
+        </a>
+           
+            
+        </div>
+        <div class="col-md-3 col-sm-3"> </div>
+    </div>
        
-      <section class="content">
+      <section class="content" style="background-color: white">
             <section class="block" style="background-color: white">
             <div class="container">
                 <h2 class="center">Find Talents in Categories</h2>
