@@ -37,5 +37,18 @@ class AdminController extends Controller
         public function login(){
 
         }
+        public function updateCategory(Request $request){
+            
+            $user = User::find($request->id);
+            $user -> category = $request->category;
+            $user -> update();
+            return redirect()->back();
+
+
+        }
+        public function viewCategory(){
+            $users = User::where('category','')->get();
+            return view('admin.getusers',compact('users'));
+        }
     }
 

@@ -55,32 +55,11 @@ SmallJobsNaija- Search Top Talents
                             
                         </a>
                     </div>
-                    <!-- Company List Start -->
-
-                    <!-- Company List Start -->
-                    {{-- <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
-                        <a href="company-single.html" class="company-list">
-                            <span class="company-logo"><img src="assets/images/companies/company-2.png" alt="company-1"></span>
-                            <h6 class="title">Astha</h6>
-                            <span class="open-job">1 open positions</span>
-                            <span class="location"><i class="fa fa-map-o"></i>Dhaka, Bangladesh</span>
-                        </a>
-                    </div> --}}
-                    <!-- Company List Start -->
+      
                     @endforeach
 
                 </div>
-                <!-- Company List Wrap Start -->
-
-                <!-- Pagination Start -->
-                {{-- <ul class="pagination pagination-center mt-5">
-                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
-                </ul> --}}
+      
                 
                 <div class="pagination pagination-center mt-5">
                     <nav aria-label="Pagination">
@@ -104,7 +83,7 @@ SmallJobsNaija- Search Top Talents
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 mb-3">
-                                        <input name="talent" type="text" class="form-control" id="talent" placeholder="What are you looking for?">
+                                    <input name="talent" type="text" class="form-control" id="talent" placeholder="What are you looking for?" value="{{$request->talent}}">
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label>Category</label>
@@ -138,7 +117,7 @@ SmallJobsNaija- Search Top Talents
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label>Location</label>
-                                        <input name="location" type="text" class="form-control" id="location" placeholder="Enter Location">
+                                        <input name="location" type="text" class="form-control" id="location" placeholder="{{$request->location}}" value="{{$request->location}}">
                                         <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                                     </div>
                                  

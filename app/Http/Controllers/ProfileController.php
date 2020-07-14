@@ -77,6 +77,8 @@ class ProfileController extends Controller
           } // if have the exif orientation info
         } // if function exists      
       }
+    
+      
       
   public function updateProfile(Request $request){    
           $request -> validate([

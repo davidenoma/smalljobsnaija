@@ -18,20 +18,21 @@ class SearchController extends Controller
       return view('/searchResult',compact('users'));
     }
 
-    public function publicSearchProfile($username){           
+    public function publicSearchProfile($username){ 
+
       $welcomeName = User::where('username',$username)->first();
       return view('user.publicprofile',compact('welcomeName'));
   }
 
   public function search(Request $request){
     
-    $location = substr($request->location,0,3);
-    $talent  = substr($request ->talent,0,3);
+    $location = substr($request->location,0,4);
+    $talent  = substr($request ->talent,0,4);
     // dd($location,$talent);
     $users = User::where('talent', 'like', '%'. $talent. '%')->where('location','like', '%'.$location.'%')->paginate(12);
     
 
-    return view('/searchResult')->with('users',$users);
+    return view('/searchResult', compact('users','request'));
     
   }
 

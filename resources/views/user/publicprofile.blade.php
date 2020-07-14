@@ -100,7 +100,8 @@
                                         </h4>
                                      
                                         <figure>
-                                               
+                                        {{-- <p>{{$welcomeName->ratings->score}}</p> --}}
+                                            
                                             <div class="float-left">
                                                                                     
                                                 <i  class="fa fa-fw fa-star text-warning" title="Almost There!"></i>
@@ -170,7 +171,7 @@
                                             </div>
                                             <!--end meta-->
                                             <p>
-                                             User comment
+                                             Admin comment
                                             </p>
                                         </div>
                                         <!--end author-description-->

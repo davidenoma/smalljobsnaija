@@ -26,22 +26,6 @@ Route::get('/','HomeController@index') -> name('homepage');
 
 Route::get('/registration', 'HomeController@register') -> name('registration');
 
-Route::get('/employer/registration', 'Employer\Auth\RegisterController@showRegistrationForm');
-Route::post('/employer/registration', 'Employer\Auth\RegisterController@register');
-
-// Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
-Route::get('/employer/login', function(){
-    return view('employer.login');
-});
-
-
-Route::post('/employer/login', 'Employer\Auth\LoginController@login');
-
-
-Route::get('/employer/home','Employer\EmployerController@index');
-
-Route::get('/employer/logout', 'Employer\Auth\LoginController@logout');
-
 Route::get('/about', function () {
     return view('homepage.about');
 }); 
@@ -94,10 +78,6 @@ Route::prefix('/user') -> group(function(){
     Route::get('/chat/starred', 'MessageController@starred');
     Route::get('/chat/draft', 'MessageController@draft');
     Route::get('/chat/trash', 'MessageController@trash');
-
-
-
-
     Route::post('/updateProfile', 'ProfileController@updateProfile');
 });
 //Controllers for feed
@@ -129,4 +109,18 @@ Route::get('/admin/home', 'AdminController@index' );
 
 Route::get('/admin/login', 'AdminController@login');
 
+Route::get('/admin/updateCategory', 'AdminController@viewCategory' );
+Route::post('/admin/updateCategory', 'AdminController@updateCategory');
+
 //Controllers for Employer
+Route::prefix('/employer')->group(function(){
+    Route::get('/registration', 'Employer\Auth\RegisterController@showRegistrationForm');
+    Route::post('/registration', 'Employer\Auth\RegisterController@register');    
+    // Route::get('/employer/login', 'Employer\Auth\LoginController@showLoginForm');
+    Route::get('/login', function(){
+        return view('employer.login');
+    });        
+    Route::post('/login', 'Employer\Auth\LoginController@login');       
+    Route::get('/home','Employer\EmployerController@index');
+    Route::get('/logout', 'Employer\Auth\LoginController@logout');
+});
