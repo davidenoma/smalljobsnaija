@@ -47,7 +47,7 @@ class AdminController extends Controller
 
         }
         public function viewCategory(){
-            $users = User::where('category','')->where('talent','>','')->get();
+            $users = User::where('category','')->where('talent','>','')->paginate(20);
             return view('admin.getusers',compact('users'));
         }
     }

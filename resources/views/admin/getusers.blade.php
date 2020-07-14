@@ -90,6 +90,13 @@
                                    
                                 </tbody>
                             </table>
+                            <div class="pagination ">
+                                <nav aria-label="Pagination">
+                                    {{$users->links()}}
+                                    
+                                </nav>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
