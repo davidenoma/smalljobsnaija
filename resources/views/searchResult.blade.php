@@ -91,12 +91,12 @@ SmallJobsNaija- Search Top Talents
                                             <option value="1">Any category</option>
                                             <option value=" Accounting And Business"> Accounting And Business
                                             </option>
-                                                                                           <option value="Admin Support">Admin Support</option>
+                                                                                           <option value="Admin (Office) Support">Admin (Office) Support</option>
                                                                                            
                                                                                              <option value="Construction And Building">Construction And Building</option>
                                                                                            <option value="Design And Art">Design And Art</option>
                                                                                            <option value="Entertainment ">Entertainment </option>
-                                                                                           <option value="Fashion">Fashion </option>
+                                                                                           <option value="Fashion (Beauty)">Fashion (Beauty) </option>
                                                                                            <option value="Fitness">Fitness</option>
                                                                                            <option value="Food and Drinks">Food and Drinks</option>
                                                                                            <option value="IT Services">IT Services</option>
@@ -106,6 +106,7 @@ SmallJobsNaija- Search Top Talents
                                                                                            <option value="Marketing And Advertising">Marketing And Advertising</option>
                                                                                            <option value="Music And Audio">Music And Audio</option>
                                                                                                <option value="Photography And Videography">Photography And Videography</option>
+                                                                                               <option value="Public Relations">Public Relations</option>
                                                                                                <option value="Teaching And Education ">Teaching And Education </option>
                                                                                                <option value="Technical Services">Technical Services</option>
                                                                                                <option value="Transportation And Logistics">Transportation And Logistics</option>
