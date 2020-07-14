@@ -14,7 +14,7 @@
         <div class="content">
             <div class="row " data-toggle="appear">
          
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="block block-rounded block-bordered">
                         <div class="block-header block-header-default border-b">
                             <h3 class="block-title">Users</h3>
