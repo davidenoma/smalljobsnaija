@@ -38,20 +38,20 @@ class ProfileController extends Controller
         $welcomeName = Auth::user();
         
        return view('/user/profile',compact('welcomeName'));
-}
+    }
     public function publicProfile(){
         $welcomeName = Auth::user();
         return view('/user/publicprofile',compact('welcomeName'));
     }
+  //Function to correct the image upload orientation from mobile phone sources.
    public function correctImageOrientation($filename, Request $request) {
     
-        if (function_exists('exif_read_data')) {
+        if (function_exists('exif_read_data')) {          
           $exif = exif_read_data($filename);
          if($exif && isset($exif['Orientation'])) {
             $orientation = $exif['Orientation'];
             if($orientation != 1){
-             $img = imagecreatefromjpeg($filename);
-            
+             $img = imagecreatefromjpeg($filename);            
               $deg = 0;
               switch ($orientation) {
                 case 3:
@@ -68,7 +68,7 @@ class ProfileController extends Controller
                 $img = imagerotate($img, $deg, 0);        
               }
 
-              imagejpeg($img, 'storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
+              imagejpeg($img, '/storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
             }
             else{
               $img = imagecreatefromjpeg($filename);
@@ -80,13 +80,12 @@ class ProfileController extends Controller
     
       
       
-  public function updateProfile(Request $request){    
+      //To update user profile details
+      public function updateProfile(Request $request){    
           $request -> validate([
             'image' => 'image'
-          ]);
-        // $user = App\User::find(1);        
+          ]);            
         $welcomeName = Auth::user(); 
-
         $user = User::find($welcomeName->id);
         $user -> email = $request->email;
         $user -> username = $request->name;       
@@ -96,40 +95,26 @@ class ProfileController extends Controller
         $user -> about = $request -> about;
         $user -> category = $request -> category  ;
         $user -> first_name = $request -> firstname;
-        $user -> last_name = $request -> lastname;
-
-    
-        
+        $user -> last_name = $request -> lastname;    
         if ($request ->file('image') == null){
             $user -> update();
         }
         else{
-            // $img = Image::make($request->file('image'))->resize(300, 200,function($constraint){
-            //     $constraint->aspectRatio();
-            // })->encode('jpg',75);                            
-            // $img = Image::make($request->file('image'));
-            // $img->storeAs(
-            //     'public', Auth::user()->id."_".$request->file('image')->getClientOriginalName()
-            // );
             $image = $request->file('image');
-            
             $this->correctImageOrientation($image,$request);
-            // Storage::putFileAs(
-            //     'public', $image   , Auth::user()->id."_".$request->file('image')->getClientOriginalName()
-            // );           
             $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
             $user -> update();  
         }
-        
-        
         $welcomeName = Auth::user(); 
-        
-
         return view('user/publicprofile',compact('welcomeName'));
 
         }
 
-    public function publicSearchProfile($username){           
+      
+
+
+        //To return user profile when searched for.
+        public function publicSearchProfile($username){           
             $welcomeName = User::where('username',$username)->first();
             return view('user.publicprofile',compact('welcomeName'));
     }

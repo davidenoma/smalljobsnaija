@@ -106,4 +106,8 @@ Route::prefix('/employer')->group(function(){
     Route::post('/login', 'Employer\Auth\LoginController@login');       
     Route::get('/home','Employer\EmployerController@index');
     Route::get('/logout', 'Employer\Auth\LoginController@logout');
+    Route::get('/postjob','Employer\EmployerController@postjob');
+    Route::get('/timeline','Employer\EmployerController@timeline');
+    Route::get('/managejobs','Employer\EmployerController@managejobs');
+    Route::get('/profile','Employer\EmployerController@profile');
 });
