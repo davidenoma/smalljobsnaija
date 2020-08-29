@@ -22,10 +22,7 @@ Route::get('/newSocialUser', function () {
 
 //Home Page, Login and Registration routes
 Route::get('/','HomeController@index') -> name('homepage');
-
-
 Route::get('/registration', 'HomeController@register') -> name('registration');
-
 Route::get('/about', function () {
     return view('homepage.about');
 }); 
@@ -44,35 +41,25 @@ Auth::routes();
 Route::get('/login',function(){
     return view('auth.login');
 })->name('login')->middleware('guest');
+
+
 //Controllers for forums
 
 
 Route::get('/forumtopics', 'Forum\ForumTopicController@show');
-
-
 Route::get('/createforumtopic', 'Forum\ForumTopicController@create');
-
 Route::post('/createforumtopic', 'Forum\ForumTopicController@save');
-
 Route::get('/forumtopics/title/{id}/{topic}', 'Forum\ForumTopicController@topic');
-
 Route::post('/forumtopics/{id}/comment','Forum\ForumCommentController@create')->name('addcomment');
-
 Route::get('forumtopics/{category}', 'Forum\ForumTopicController@category');
 
 
 
-//Controllers for messaging 
-
-
+//Controllers for User 
 
 Route::prefix('/user') -> group(function(){
     Route::get('/home', 'Auth\TalentController@home');
-
-
     Route::get('/chat', 'MessageController@index');
-
-
     Route::get('/chat/archive', 'MessageController@archive');
     Route::get('/chat/sent', 'MessageController@sent');
     Route::get('/chat/starred', 'MessageController@starred');
@@ -80,6 +67,7 @@ Route::prefix('/user') -> group(function(){
     Route::get('/chat/trash', 'MessageController@trash');
     Route::post('/updateProfile', 'ProfileController@updateProfile');
 });
+
 //Controllers for feed
 Route::get('/user/feeds',function(){
     return view('user.feeds');
@@ -88,10 +76,7 @@ Route::get('/user/feeds',function(){
 
 //Controllers for Profile 
 Route::get('/user/profile', 'ProfileController@index');
-
 Route::get('/user/publicprofile', 'ProfileController@publicProfile');
-
-
 Route::get('/talent/{username}', 'ProfileController@publicSearchProfile');
 
 //Controllers for Search
@@ -106,9 +91,7 @@ Route::get('/welcomeMail', 'MailController@index');
 
 //Controllers for Admin Dashboard 
 Route::get('/admin/home', 'AdminController@index' );
-
 Route::get('/admin/login', 'AdminController@login');
-
 Route::get('/admin/updateCategory', 'AdminController@viewCategory' );
 Route::post('/admin/updateCategory', 'AdminController@updateCategory');
 
