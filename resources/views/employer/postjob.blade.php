@@ -1,6 +1,6 @@
 @extends('layouts.forumsmaster')
 @section('title')
-SmallJobsNaija- Forum Create Topic
+SmallJobsNaija- Forum Create Job Post
 @endsection
 
 @section('main')
@@ -10,15 +10,15 @@ SmallJobsNaija- Forum Create Topic
         @csrf
     <div class="create">
         <div class="create__head">
-            <div class="create__title"><img src="/assets/fonts/icons/main/New_Topic.svg" alt="New topic">Create New Topic</div>
-            <span>Forum Guidelines</span>
+            <div class="create__title"><img src="/assets/fonts/icons/main/New_Topic.svg" alt="New topic">Create New Job Post</div>
+           
         </div>
 
         
         
         <div class="create__section">
             <label class="create__label" for="topic">Job Title</label>
-            <input type="text" class="form-control" id="topic" name="topic" placeholder="Add here">
+            <input type="text" class="form-control" id="topic" name="topic" placeholder="Job Title">
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -57,6 +57,15 @@ SmallJobsNaija- Forum Create Topic
             </div>
         
         </div>
+        
+
+        <div class="create__sectionn">
+
+            <label class="create__label"for="location" >Location</label>
+            <input type="text" class="form-control" name="location" id = "location"placeholder="Job Location">
+        </div>
+
+        <br>
         <div class="create__section create__textarea">
             <label class="create__label" for="description" >Job Description</label>
  

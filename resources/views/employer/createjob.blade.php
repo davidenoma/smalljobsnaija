@@ -11,7 +11,7 @@ SmallJobsNaija- Forum Create Topic
     <div class="create">
         <div class="create__head">
             <div class="create__title"><img src="/assets/fonts/icons/main/New_Topic.svg" alt="New topic">Create New Topic</div>
-            <span>Forum Guidelines</span>
+            
         </div>
 
         

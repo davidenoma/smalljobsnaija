@@ -53,7 +53,7 @@
                     <form action="#">
                         <label>
                             <i class="icon-Search js-header-search-btn-open"></i>
-                            <input type="search" placeholder="Search all forums" class="form-control">
+                            <input type="search" class="form-control">
                         </label>
                     </form>
                   

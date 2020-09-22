@@ -13,11 +13,11 @@ SmallJobsNaija- Manage Jobs and Offers
                 <a href="/employer/managejobs"><div class="btn"><i class="fa fa-home" aria-hidden="true" style="color:white"> </i>Jobs Home   </div> </a>
             </div>
 
-            <div class="nav__select">
+            {{--<div class="nav__select">
                
                 <div class="btn-select" data-dropdown-btn="categories" style="color:white"> Category</div>
                 
-                {{-- <nav class="dropdown dropdown--design-01" style="color:white" data-dropdown-list="categories">
+                 <nav class="dropdown dropdown--design-01" style="color:white" data-dropdown-list="categories">
                     
                     <ul class="dropdown__catalog row">
                         <li class="col-xs-6"><a href="/forumjobs/politics" class="category"><i class="bg-f9bc64"></i>Politics</a></li>
@@ -36,9 +36,9 @@ SmallJobsNaija- Manage Jobs and Offers
                         <li class="col-xs-6"><a href="/forumtopics/career" class="category"><i class="bg-777da7"></i>Career</a></li>
                         <li class="col-xs-6"><a href="/forumtopics/health" class="category"><i class="bg-368f8b"></i>Health</a></li>
                     </ul>
-                </nav> --}}
+                </nav> 
             </div> 
-            
+            --}}
             
             <div class="nav__select" style="float:right">
                 
@@ -64,6 +64,7 @@ SmallJobsNaija- Manage Jobs and Offers
             <div class="posts__topic">Job Title</div>
             <div class="posts__category">Location</div>
             <div class="posts__users">Category</div>                      
+            <div class="posts__users">Offers</div>   
             <div class="posts__activity">Last Active Time</div>
         </div>
         <div class="posts__body">
@@ -84,6 +85,8 @@ SmallJobsNaija- Manage Jobs and Offers
                     </div>
                 <div class="posts__category"><a href="#" class="category"><i class="bg-368f8b"></i>{{$job -> category}}</a></div>
                 </div>
+                <div class="posts__category"><a href="#" class="category"><i class="bg-368f8b"></i>{{$job -> joboffers()->count() }}</a></div>
+            </div>
                 <div class="posts__section-right">
                     <div class="posts__users">
                         <div>
