@@ -51,31 +51,32 @@
                                        
                                         <td class="d-none d-sm-table-cell">
                                             <select id="category" name="category" >
-                                                <option value="" selected > Choose a Category</option>
-                                                <option value=" Accounting And Business"> Accounting And Business
-                                                </option>
-                                                                                               <option value="Admin (Office) Support">Admin (Office) Support</option>
-                                                                                               
-                                                                                                 <option value="Construction And Building">Construction And Building</option>
-                                                                                               <option value="Design And Art">Design And Art</option>
-                                                                                               <option value="Entertainment ">Entertainment </option>
-                                                                                               <option value="Fashion (Beauty)">Fashion (Beauty) </option>
-                                                                                               <option value="Fitness">Fitness</option>
-                                                                                               <option value="Food and Drinks">Food and Drinks</option>
-                                                                                               <option value="IT Services">IT Services</option>
-                                                                                             
-                                                                                               
-                                                                                               
-                                                                                               <option value="Marketing And Advertising">Marketing And Advertising</option>
-                                                                                               <option value="Music And Audio">Music And Audio</option>
-                                                                                                   <option value="Photography And Videography">Photography And Videography</option>
-                                                                                                   <option value="Public Relations">Public Relations</option>
-                                                                                                   <option value="Teaching And Education ">Teaching And Education </option>
-                                                                                                   <option value="Technical Services">Technical Services</option>
-                                                                                                   <option value="Transportation And Logistics">Transportation And Logistics</option>
-                                                                                               <option value="Vocational And Manual">Vocational And Manual</option>
-                                                                                               <option value="Web And Software Development">Web And Software Development</option>                                             
-                                                                                                <option value="Writing">Writing</option>
+                                                <option value=""  > Choose a Category</option>
+                                                    
+                            <option value=""> Choose a Category</option>
+                            <option value="Accounting And Business"> Accounting And Business
+                           </option>
+                          <option value="Admin (Office) Support">Admin (Office) Support</option>
+                          
+                            <option value="Construction And Building">Construction And Building</option>
+                          <option value="Design And Art">Design And Art</option>
+                          <option value="Entertainment ">Entertainment </option>
+                          <option value="Fashion or Beauty">Fashion or Beauty </option>
+                          <option value="Fitness">Fitness</option>
+                          <option value="Food and Drinks">Food and Drinks</option>
+                          <option value="Home Services">Home Services</option>
+                          <option value="IT Services">IT Services</option>
+                         <option value="Marketing And Advertising">Marketing And Advertising</option>
+                          <option value="Music And Audio">Music And Audio</option>
+                              <option value="Photography And Videography">Photography And Videography</option>
+                               <option value="Pets' care">Pets' care</option>
+                               <option value="Public Relations">Public Relations</option>
+                              <option value="Teaching And Education ">Teaching And Education </option>
+                              <option value="Technical Services">Technical Services</option>
+                              <option value="Transportation And Logistics">Transportation And Logistics</option>
+                          <option value="Vocational And Manual">Vocational And Manual</option>
+                          <option value="Web And Software Development">Web And Software Development</option>                                             
+                           <option value="Writing">Writing</option>
                                             </select>
                                            
                                         </td>
