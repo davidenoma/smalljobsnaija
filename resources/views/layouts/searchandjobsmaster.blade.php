@@ -10,6 +10,40 @@
     
       gtag('config', 'UA-100008897-2');
     </script>
+    <script language="javascript">
+        function SelectRedirect(){
+        // ON selection of section this function will work
+        //alert( document.getElementById('s1').value);
+        
+        switch(document.getElementById('s1').value)
+        {
+        case "PHP":
+        window.location="../php_tutorial/site_map.php";
+        break;
+        
+        case "ASP":
+        window.location="../asp-tutorial/site_map.php";
+        break;
+        
+        case "MySQL":
+        window.location="../sql_tutorial/site_map.php";
+        break;
+        case "JS":
+        window.location="site_map.php";
+        break;
+        
+        case "HTML":
+        window.location="../html_tutorial/site_map.php";
+        break;
+        
+        /// Can be extended to other different selections of SubCategory //////
+        default:
+        window.location="../"; // if no selection matches then redirected to home page
+        break;
+        }// end of switch 
+        }
+        ////////////////// 
+        </script>
     
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

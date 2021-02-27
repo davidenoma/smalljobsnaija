@@ -261,7 +261,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Teaching</a></h3>
+                        <h3><a href="/search/Teaching">Teaching</a></h3>
                         
                     </li>
                     <li>
@@ -459,7 +459,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             <figure>
                                 <a href="https://nomatechnology.com" style="color:#008000;" target="_new"> Noma Integrated Technology Solutions</a>
                                <br>
-                                <i class="fa fa-copyright" aria-hidden="true"></i>2016
+                                <i class="fa fa-copyright" aria-hidden="true"></i>2021
                             </figure>
                             
                             

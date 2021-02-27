@@ -15,13 +15,13 @@ SmallJobsNaija- Search Top Talents
                 
                 <div class="job-list-toolbar">
                     <p>Showing {{$users -> count()}} results</p>
-                    <p>Sort by:
-                        <select>
+                    {{-- <p>Sort by:
+                        <select class="filter-search">
                             <option>Most Recent</option>
                             <option >Top Rated</option>
                             <option>Most Popular</option>
                         </select>
-                    </p>
+                    </p> --}}
                 </div>
                 <!-- Company List Wrap Start -->
                 <div class="company-list-wrap row">

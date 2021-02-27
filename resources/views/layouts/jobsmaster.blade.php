@@ -183,7 +183,7 @@
                             <figure>
                                 <a href="https://nomatechnology.com"></a>
                                 Noma Integrated Technology Solutions<br>
-                                <i class="fa fa-copyright" aria-hidden="true"></i>2016
+                                <i class="fa fa-copyright" aria-hidden="true"></i>2021
                             </figure>
                             
                             
