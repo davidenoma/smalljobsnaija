@@ -18,7 +18,7 @@ SmallJobsNaija- Search Top Talents
                     <p>Sort by:
                         <select>
                             <option>Most Recent</option>
-                            <option>Top Rated</option>
+                            <option >Top Rated</option>
                             <option>Most Popular</option>
                         </select>
                     </p>
@@ -83,7 +83,7 @@ SmallJobsNaija- Search Top Talents
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 mb-3">
-                                    <input name="talent" type="text" class="form-control" id="talent" placeholder="What are you looking for?" value="{{$request->talent}}">
+                                    <input name="talent" type="text" class="form-control" id="talent" placeholder="What are you looking for?" value="@isset ($request) {{$request->talent}} @endisset">
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label>Category</label>
@@ -118,7 +118,7 @@ SmallJobsNaija- Search Top Talents
                                     </div>
                                     <div class="col-12 mb-3">
                                         <label>Location</label>
-                                        <input name="location" type="text" class="form-control" id="location" placeholder="{{$request->location}}" value="{{$request->location}}">
+                                        <input name="location" type="text" class="form-control" id="location" value="@isset ($request) {{$request->location}} @endisset">
                                         <span class="geo-location input-group-addon" data-toggle="tooltip" data-placement="top" title="Find My Position"><i class="fa fa-map-marker"></i></span>
                                     </div>
                                  

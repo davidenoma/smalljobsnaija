@@ -22,6 +22,7 @@ Route::get('/newSocialUser', function () {
 
 //Home Page, Login and Registration routes
 Route::get('/','HomeController@index') -> name('homepage');
+
 Route::get('/registration', 'HomeController@register') -> name('registration');
 Route::get('/about', function () {
     return view('homepage.about');
@@ -84,6 +85,7 @@ Route::get('/talent/{username}', 'ProfileController@publicSearchProfile');
 Route::get('/searchtalent', 'SearchController@index');
 Route::get('/search', 'SearchController@search');
 Route::post('/search', 'SearchController@search');
+Route::get('/search/{category}', 'SearchController@searchCategory');
 
 //Controllers for Mail 
 Route::get('/welcomeMail', 'MailController@index');

@@ -35,5 +35,11 @@ class SearchController extends Controller
     return view('/searchResult', compact('users','request'));
     
   }
+  public function searchCategory(Request $request,$category){
+    $users = User::where('category',$category)->paginate(12);
+    return view('/searchResult',compact('users'));
+
+
+  }
 
 }

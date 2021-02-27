@@ -123,6 +123,8 @@ SmallJobsNaija: Find talents for small jobs near you
       <section class="content" style="background-color: white">
             <section class="block" style="background-color: white">
             <div class="container">
+
+                <!-- Diffferent categories of the talents -->
                 <h2 class="center">Find Talents in Categories</h2>
                 <br>
                 <ul class="categories-list clearfix" style="color: white">
@@ -135,7 +137,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         </i>
                         <h3>
                             
-                            <a href="/search">Accounting and Business</a></h3>
+                            <a href="/search/Accounting and Business">Accounting and Business</a></h3>
                         
                     </li>
                     <!--end category item-->
@@ -143,7 +145,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         <i class="category-icon">
                             <i class="fa fa-table fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="/search">Administrative Support</a></h3>
+                        <h3><a href="/search/Administrative Support">Administrative Support</a></h3>
                         
                     </li>
                     <!--end category item-->
@@ -151,7 +153,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         <i class="category-icon">
                          <i class="fa fa-paint-brush fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="/search">Design and Art</a></h3>
+                        <h3><a href="/search/Design and Art">Design and Art</a></h3>
                       
                     </li>
                     <!--end category item-->
@@ -160,7 +162,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         <i class="category-icon">
                             <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
                         </i>
-                        <h3><a href="/search">IT Services</a></h3>
+                        <h3><a href="/search/IT Services">IT Services</a></h3>
                        
                     </li>
                 </ul>
@@ -172,7 +174,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             <i class="fa fa-shopping-basket fa-3x" aria-hidden="true"> </i>
                             
                         </i>
-                        <h3><a href="/search">Food and Drinks</a></h3>
+                        <h3><a href="/search/Food and Drinks" >Food and Drinks</a></h3>
                         
                     </li>
                     <li>
@@ -180,7 +182,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             <i class="fa fa-building fa-3x" aria-hidden="true"></i>
                             
                         </i>
-                        <h3><a href="/search">Building  and Construction</a></h3>
+                        <h3><a href="/search/Building and Construction">Building and Construction</a></h3>
                         
                     </li>
                     <li>
@@ -189,7 +191,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             <i class="fa fa-microphone fa-3x" aria-hidden="true"></i>
                             
                         </i>
-                        <h3><a href="/search">Entertainment</a></h3>
+                        <h3><a href="/search/Entertainment">Entertainment</a></h3>
                         
                     </li>
                     <li>
@@ -198,7 +200,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Advertisement and Marketing</a></h3>
+                        <h3><a href="/search/Advertisement and Marketing">Advertisement and Marketing</a></h3>
                         
                     </li>
      
@@ -211,7 +213,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Music and Audio</a></h3>
+                        <h3><a href="/search/Music and Audio">Music and Audio</a></h3>
                         
                     </li>
                     <li>
@@ -221,7 +223,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Fashion</a></h3>
+                        <h3><a href="/search/Fashion">Fashion</a></h3>
                         
                     </li>
                     <li>
@@ -230,7 +232,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Transportation</a></h3>
+                        <h3><a href="/search/Transportation">Transportation</a></h3>
                         
                     </li>
                     <li>
@@ -239,7 +241,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Health and Fitness</a></h3>
+                        <h3><a href="/search/Health and Fitness">Health and Fitness</a></h3>
                         
                     </li>
                 </ul>
@@ -250,7 +252,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Photography and Videography</a></h3>
+                        <h3><a href="/search/Photography and Videography">Photography and Videography</a></h3>
                         
                     </li>
                     <li>
@@ -268,7 +270,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Writing</a></h3>
+                        <h3><a href="/search/Writing">Writing</a></h3>
                         
                     </li>
                     <li>
@@ -277,7 +279,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Web and Software Development</a></h3>
+                        <h3><a href="/search/Web and Software Development">Web and Software Development</a></h3>
                         
                     </li>
                 </ul>
@@ -288,7 +290,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Vocational or Manual Works</a></h3>
+                        <h3><a href="/search/Vocational or Manual Works">Vocational or Manual Works</a></h3>
                         
                     </li>
                     <li>
@@ -297,7 +299,7 @@ SmallJobsNaija: Find talents for small jobs near you
                             
                             
                         </i>
-                        <h3><a href="/search">Technical Services</a></h3>
+                        <h3><a href="/search/Technical Services">Technical Services</a></h3>
                         
                     </li>
                 </ul>
