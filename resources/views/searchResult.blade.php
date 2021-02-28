@@ -35,12 +35,12 @@ SmallJobsNaija- Search Top Talents
                     <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 col-12">
                         <a href="/talent/{{$user->username}}" class="company-list">
                             <span class="company-logo"><img 
-                                @if ($user->image === null)
-                               
-                                @else
+                                @if ($user->image == null)
                                 src="/assets/img/avatar12.jpg"
+                                @else
+                                    src="{{asset('/storage/images/'.$user->image)}}"
                                 @endif
-                                 alt="{{$user->username}}">
+                                >
                                 </span>
                                 <h4 class="title">  {{$user -> username}}</h4>
                             <h6 class="title">  {{$user -> talent}}</h6>

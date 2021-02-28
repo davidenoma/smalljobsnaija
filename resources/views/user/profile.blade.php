@@ -38,9 +38,14 @@
                                     <section>   
                                             
                                             <div class="col-md-6">
-                                                <div class="">
+                                                <div class=""> 
                                                     <div class="">
-                                                    <img src="/storage/{{Auth::user()->image}}"  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
+                                                        {{-- {{asset('/storage/images/'.Auth::user()->image)}} --}}
+                                                    <img @if ($welcomeName->image == null)
+                                                    src="/assets/img/avatar12.jpg"
+                                                    @else
+                                                        src="{{asset('/storage/images/'.$welcomeName->image)}}"
+                                                    @endif  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
                                                     </div>
                                                     <div class="single-file-input {{$errors->has('image')? 'has-error':''}}">
                                                     <input type="file" id="image" name="image" value="" accept="image/jpg,image/jpeg">

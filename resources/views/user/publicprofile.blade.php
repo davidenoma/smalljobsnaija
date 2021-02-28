@@ -84,7 +84,11 @@
                             <div class="author big">
                                 <div class="author-image">
                                     <div class="background-image">
-                                        <img  src="/storage/{{$welcomeName->image}}" alt="{{$welcomeName->image}}" class="img-thumbnail">
+                                        <img @if ($welcomeName->image == null)
+                                        src="/assets/img/avatar12.jpg"
+                                        @else
+                                            src="{{asset('/storage/images/'.$welcomeName->image)}}"
+                                        @endif alt= "{{asset('/storage/images/'.$welcomeName->image)}}" class="img-thumbnail">
                                     </div>
                                 </div>
                                 <!--end author-image-->
@@ -98,7 +102,7 @@
                                         <h4 class="location">
                                             <a href="#">{{$welcomeName->location}}</a>
                                         </h4>
-                                     
+                                    
                                         <figure>
                                         {{-- <p>{{$welcomeName->ratings->score}}</p> --}}
                                             

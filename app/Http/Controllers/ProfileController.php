@@ -95,15 +95,20 @@ class ProfileController extends Controller
         $user -> about = $request -> about;
         $user -> category = $request -> category  ;
         $user -> first_name = $request -> firstname;
-        $user -> last_name = $request -> lastname;    
+        $user -> last_name = $request -> lastname; 
+        // $user -> update();   
         if ($request ->file('image') == null){
             $user -> update();
         }
         else{
             $image = $request->file('image');
-            $this->correctImageOrientation($image,$request);
-            $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
-            $user -> update();  
+            // $this->correctImageOrientation($image,$request);
+            $filename = $request -> image -> getClientOriginalName();
+            $request -> image -> storeAs('images',$filename,'public');
+            // $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
+            $user -> image = $filename;
+            // $user -> update(['image'=>$filename);  
+            $user -> update();
         }
         $welcomeName = Auth::user(); 
         return view('user/publicprofile',compact('welcomeName'));

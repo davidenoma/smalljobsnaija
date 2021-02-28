@@ -93,7 +93,7 @@ SmallJobsNaija- Talent Registration Form
                                       </div>
                                       <div class="form-group row">
                                           <div class="col-lg-8">
-                                            <select id="category" name="category" class="form-control @error('category') is-invalid @enderror" value="{{old('category')}}"  >
+                                            <select id="category" name="category" class="form-control @error('category') is-invalid @enderror" value="{{old('category')}}"  required>
                                                 <option value=""> Choose a Category</option>
                                                                                                  <option value="Accounting And Business"> Accounting And Business
                                                                                                 </option>
