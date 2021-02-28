@@ -46,7 +46,7 @@ SmallJobsNaija: Find talents for small jobs near you
     </header>
 
     <main id="main-container" 
-    {{-- style="background-image: url(/assets/img/small-jobs-background.jpg)" --}}
+    style="background-color: white"
     >
         <div class="content"  >
             <div class="hero-wrapper">
@@ -56,7 +56,7 @@ SmallJobsNaija: Find talents for small jobs near you
                      
                             <div class="page-title" style="padding-top: 100px;padding-bottom: 20px">
                                 <div class="container">
-                                    <h1 class="center" style="color:#008000;background-color: white">
+                                    <h1 class="center" style="color:#008000">
                                         Find Top talents for Small Jobs near you!
                                         
                                     </h1>
