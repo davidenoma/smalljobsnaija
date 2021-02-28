@@ -67,7 +67,7 @@ SmallJobsNaija- Talent Registration Form
                                 <a class="nav-link active">Talent</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/employer/registration">Employer/Business Owner</a>
+                                <a class="nav-link" href="/employer/registration">Need Talents ?/Employer/Business Owner</a>
                             </li>
                           </ul>
                           <div class="block-header block-header-default">

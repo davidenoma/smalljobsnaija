@@ -22,7 +22,7 @@ SmallJobsNaija- Employer Registration Form
               <div class="block">
 
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Employer/Business Owner Registration </h3>
+                    <h3 class="block-title">Need Talents ?/Employer/Business Owner Registration </h3>
                 </div>
                 
              

@@ -45,7 +45,9 @@ SmallJobsNaija: Find talents for small jobs near you
 
     </header>
 
-    <main id="main-container" style="background-image: url(/assets/img/small-jobs-background.jpg)">
+    <main id="main-container" 
+    {{-- style="background-image: url(/assets/img/small-jobs-background.jpg)" --}}
+    >
         <div class="content"  >
             <div class="hero-wrapper">
                 <form class="hero-form form" method="GET" action="/search"  >
