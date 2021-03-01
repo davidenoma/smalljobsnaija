@@ -115,5 +115,19 @@ Route::prefix('/employer')->group(function(){
 });
 
 Route::get('/storage/{extra}', function ($extra) {
-    return redirect("/public/storage/$extra");
-    })->where('extra', '.*');
+//  /   return redirect("/public/storage/$extra");
+$path = storage_path($extra);
+
+if (!File::exists($path)){
+    abort(404);
+
+}
+$file = File::get($path);
+$type = File::mimeType($path);
+
+$response =  Response::make($file, 200);
+$response-> header("Content-type",$type);
+
+return $response;
+    });
+    // ->where('extra', ‘'.*'’);
