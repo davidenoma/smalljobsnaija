@@ -113,3 +113,7 @@ Route::prefix('/employer')->group(function(){
     Route::get('/managejobs','Employer\EmployerController@managejobs');
     Route::get('/profile','Employer\EmployerController@profile');
 });
+
+Route::get('/storage/{extra}', function ($extra) {
+    return redirect("/public/storage/$extra");
+    })->where('extra', '.*');

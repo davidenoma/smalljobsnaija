@@ -364,7 +364,7 @@ SmallJobsNaija: Find talents for small jobs near you
                         <a href="/employer/login"><button class="btn btn-warning center " type="button">Employer Sign In</button></a>
                         <hr>
                         <p>
-                            Forgot Password? <a href="/reset" class="link">Reset Password</a>
+                            Forgot Password? <a href="password/reset" class="link">Reset Password</a>
                         </p>
                        
                     </div>
