@@ -44,7 +44,8 @@
                                                     <img @if ($welcomeName->image == null)
                                                     src="assets/img/avatar12.jpg"
                                                     @else
-                                                        src="{{asset('storage/images/'.$welcomeName->image)}}"
+                                                    {{-- {{asset('storage/images/'.$welcomeName->image)}} --}}
+                                                        src={{"/storage/images/".$welcomeName->image}}
                                                     @endif  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
                                                     </div>
                                                     <div class="single-file-input {{$errors->has('image')? 'has-error':''}}">

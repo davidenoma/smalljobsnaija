@@ -104,7 +104,7 @@ class ProfileController extends Controller
             $image = $request->file('image');
             // $this->correctImageOrientation($image,$request);
             $filename = $request -> image -> getClientOriginalName();
-            $request -> image -> storeAs('images',$filename,'public');
+            $request -> image -> storeAs('storage/images',$filename,'public');
             // $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
             $user -> image = $filename;
             // $user -> update(['image'=>$filename);  

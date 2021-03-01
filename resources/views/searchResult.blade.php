@@ -38,7 +38,7 @@ SmallJobsNaija- Search Top Talents
                                 @if ($user->image == null)
                                 src="/assets/img/avatar12.jpg"
                                 @else
-                                    src="{{asset('/storage/images/'.$user->image)}}"
+                                    src={{"/storage/images/".$user->image}}
                                 @endif
                                 >
                                 </span>

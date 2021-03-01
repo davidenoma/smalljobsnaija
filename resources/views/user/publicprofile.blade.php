@@ -87,8 +87,9 @@
                                         <img @if ($welcomeName->image == null)
                                         src="/assets/img/avatar12.jpg"
                                         @else
-                                            src="{{asset('/storage/images/'.$welcomeName->image)}}"
-                                        @endif alt= "{{asset('/storage/images/'.$welcomeName->image)}}" class="img-thumbnail">
+                                        
+                                            src={{"/storage/images/".$welcomeName->image}}
+                                        @endif alt= {{"/storage/images/".$welcomeName->image}} class="img-thumbnail">
                                     </div>
                                 </div>
                                 <!--end author-image-->
