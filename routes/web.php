@@ -114,20 +114,20 @@ Route::prefix('/employer')->group(function(){
     Route::get('/profile','Employer\EmployerController@profile');
 });
 
-Route::get('/storage/{extra}', function ($extra) {
-//  /   return redirect("/public/storage/$extra");
-$path = storage_path($extra);
+// Route::get('/storage/{extra}', function ($extra) {
+// //  /   return redirect("/public/storage/$extra");
+// $path = storage_path($extra);
 
-if (!File::exists($path)){
-    abort(404);
+// if (!File::exists($path)){
+//     abort(404);
 
-}
-$file = File::get($path);
-$type = File::mimeType($path);
+// }
+// $file = File::get($path);
+// $type = File::mimeType($path);
 
-$response =  Response::make($file, 200);
-$response-> header("Content-type",$type);
+// $response =  Response::make($file, 200);
+// $response-> header("Content-type",$type);
 
-return $response;
-    });
+// return $response;
+//     });
     // ->where('extra', ‘'.*'’);
