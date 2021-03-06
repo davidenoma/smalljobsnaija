@@ -44,7 +44,7 @@
                                                     <img @if ($welcomeName->image == null)
                                                     src="assets/img/avatar12.jpg"
                                                     @else
-                                                    {{-- {{asset('storage/images/'.$welcomeName->image)}} --}}
+                                                    {{-- {{asset('/storage/images/'.$welcomeName->image)}} --}}
                                                         src={{"/storage/images/".$welcomeName->image}}
                                                     @endif  alt="{{Auth::user()->image}}" style="max-width: 100%; max-height: 50%" class="img-thumbnail" translate="yes">
                                                     </div>

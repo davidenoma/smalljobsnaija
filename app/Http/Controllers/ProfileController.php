@@ -65,7 +65,7 @@ class ProfileController extends Controller
                   break;
               }
               if ($deg) {
-                $img = imagerotate($img, $deg, 0);        
+                $img = imagerotate($img, $deg, 0);        ;
               }
 
               imagejpeg($img, '/storage/'.Auth::user()->id."_".$request->file('image')->getClientOriginalName(), 95);
@@ -104,7 +104,8 @@ class ProfileController extends Controller
             $image = $request->file('image');
             // $this->correctImageOrientation($image,$request);
             $filename = $request -> image -> getClientOriginalName();
-            $request -> image -> storeAs('images',$filename,'public');
+           // $request -> image -> storeAs('images',$filename,'public');
+            move_uploaded_file($image,'storage/images/'.$filename);
             // $user -> image = Auth::user()->id."_".$request->file('image')->getClientOriginalName();            
             $user -> image = $filename;
             // $user -> update(['image'=>$filename);  

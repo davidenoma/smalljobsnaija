@@ -10,14 +10,14 @@
     
       gtag('config', 'UA-100008897-2');
     </script>
-    <script language="javascript">
+    {{-- <script language="javascript">
         function SelectRedirect(){
         // ON selection of section this function will work
         //alert( document.getElementById('s1').value);
         
-        switch(document.getElementById('s1').value)
+        switch(document.getElementById('filter-search').value)
         {
-        case "PHP":
+        case "Most Recent":
         window.location="../php_tutorial/site_map.php";
         break;
         
@@ -44,7 +44,7 @@
         }
         ////////////////// 
         </script>
-    
+     --}}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="Noma Integrated Technology">
