@@ -88,7 +88,7 @@
                                         src="/assets/img/avatar12.jpg"
                                         @else
                                         {{-- https://smalljobsnaija.com/storage/images/ --}}
-                                            src={{'/uploads/'.$welcomeName->image}}
+                                            src={{'/uploads/images/'.$welcomeName->image}}
                                         @endif alt= {{"/storage/images/".$welcomeName->image}} class="img-thumbnail">
                                     </div>
                                 </div>
