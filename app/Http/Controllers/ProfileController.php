@@ -105,9 +105,9 @@ class ProfileController extends Controller
             // $this->correctImageOrientation($image,$request);
             $filename = $request -> image -> getClientOriginalName();
            
-            $request -> image -> storeAs('images',$filename);
+            // $request -> image -> storeAs('images',$filename);
 
-            $filepath = public_path('uploads/images/');
+            $filepath = 'uploads/images/';
 
             move_uploaded_file($_FILES['image']['tmp_name'], $filepath.$filename);
 
