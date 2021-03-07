@@ -87,8 +87,8 @@
                                         <img @if ($welcomeName->image == null)
                                         src="/assets/img/avatar12.jpg"
                                         @else
-                                        
-                                            src={{"/storage/images/".$welcomeName->image}}
+                                        {{-- https://smalljobsnaija.com/storage/images/ --}}
+                                            src={{'/uploads/'.$welcomeName->image}}
                                         @endif alt= {{"/storage/images/".$welcomeName->image}} class="img-thumbnail">
                                     </div>
                                 </div>
