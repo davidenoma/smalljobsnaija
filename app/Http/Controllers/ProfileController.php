@@ -106,7 +106,12 @@ class ProfileController extends Controller
             $filename = $request -> image -> getClientOriginalName();
            
             $request -> image -> storeAs('images',$filename);
-         
+
+            $filepath = public_path('uploads/images/');
+
+            move_uploaded_file($_FILES['image']['tmp_name'], $filepath.$filename);
+
+    // move_uploaded_file($_FILES['filename']['tmp_name'], public_path('uploads/newfolder').$filename);
           
             //  move_uploaded_file( $_FILES['file']['tmp_name'],'/uploads/images/'.$filename); 
             // move_uploaded_file($image,'/uploads/images'.$filename);
