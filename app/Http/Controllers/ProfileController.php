@@ -113,7 +113,6 @@ class ProfileController extends Controller
 
     // move_uploaded_file($_FILES['filename']['tmp_name'], public_path('uploads/newfolder').$filename);
           
-            //  move_uploaded_file( $_FILES['file']['tmp_name'],'/uploads/images/'.$filename); 
             // move_uploaded_file($image,'/uploads/images'.$filename);
             // $image -> move('/uploads/images/',$filename);
             // move_uploaded_file($filename,'/uploads/images/');
