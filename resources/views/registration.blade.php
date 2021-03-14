@@ -189,7 +189,7 @@ SmallJobsNaija- Talent Registration Form
                                             <input style="font-size: 1rem;padding:1rem" class="form-control @error('location') is-invalid @enderror" id="location" type="text" 
                                             name="location" placeholder="Your location, street, road etc. " 
                                         value="{{old('location')}}"
-                                            required>
+                                            >
                                             
                                             @error('location')
                                             <span class="invalid-feedback" role="alert">
